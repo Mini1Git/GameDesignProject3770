@@ -5,6 +5,7 @@ public class player : MonoBehaviour
 {
     public Rigidbody2D rb;
     public float speed = 10;
+    public int health = 10;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
