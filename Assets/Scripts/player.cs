@@ -1,3 +1,4 @@
+using Mono.Cecil;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -9,41 +10,75 @@ public class player : MonoBehaviour
 
     public GameObject mainHand;
     public GameObject offHand;
+    
+
+    PlayerInput playerInput;
+    InputAction move;
+    InputAction attackMain;
+    InputAction attackOff;
+    Vector2 moveDirection = Vector2.zero;
+
+    private void Awake()
+    {
+        rb = GetComponent<Rigidbody2D>(); // get the rigidbody on the game Object.
+        playerInput = new PlayerInput();
+    }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         
     }
+    private void OnEnable() // when this script is enabled.
+    {
+        playerInput.Enable();
+        move = playerInput.PlayerGame.Movement;
+        
+        attackMain = playerInput.PlayerGame.Attack_MainHand;
+        attackOff = playerInput.PlayerGame.Attack_OffHand;
+
+        //triggers
+        attackMain.performed += mainHandAttack; // so basically, when player clicks left mouse button or right clicks
+        attackOff.performed += offHandAttack; 
+    }
+
+    private void OnDisable() // when this script is disabled.
+    {
+        playerInput.Disable();
+    }
+
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-            Debug.Log("Left mouse button clicked!");
-            mainHand.GetComponent<Animator>().SetTrigger("Swing");
-        }
-        if (Input.GetMouseButtonDown(1))
-        {
-            Debug.Log("Right mouse button clicked!");
-        }
+        moveDirection = move.ReadValue<Vector2>();
+
+        
     }
 
     
     void FixedUpdate()
-    {   
-        //note, this movement code uses legacy Input Management Systems (this project uses both old and new)
+    {
+        //note, this movement code uses new input system
 
         //makes the player face the mouse
-        Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector3 mousePos = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
         Vector2 direction = mousePos - transform.position;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(0, 0, angle);
 
         //player WASD movement
-        float x = Input.GetAxisRaw("Horizontal") * speed;
-        float y = Input.GetAxisRaw("Vertical") * speed;
-        rb.linearVelocity = new Vector2(x, y);
+        rb.linearVelocity = new Vector2(moveDirection.x * speed, moveDirection.y * speed);
+    }
+
+    void mainHandAttack(InputAction.CallbackContext ctx)
+    {
+
+        mainHand.GetComponent<Animator>().SetTrigger("Swing");
+    }
+
+    void offHandAttack(InputAction.CallbackContext ctx)
+    {
+        Debug.Log("Attack with spell!");
     }
 }
