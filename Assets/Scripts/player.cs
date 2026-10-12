@@ -7,6 +7,9 @@ public class player : MonoBehaviour
     public float speed = 10;
     public int health = 10;
 
+    public GameObject mainHand;
+    public GameObject offHand;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -16,7 +19,15 @@ public class player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetMouseButtonDown(0))
+        {
+            Debug.Log("Left mouse button clicked!");
+            mainHand.GetComponent<Animator>().SetTrigger("Swing");
+        }
+        if (Input.GetMouseButtonDown(1))
+        {
+            Debug.Log("Right mouse button clicked!");
+        }
     }
 
     
