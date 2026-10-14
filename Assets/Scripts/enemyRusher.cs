@@ -1,6 +1,7 @@
 using UnityEngine;
 
 // Rusher is fast and strong but stupid, it rotates and rushes towards player without concern for pathfinding
+// for rushers, make sure to freeze Y rotation in RigidBody or it can get stuck on walls
 
 public class enemyRusher : enemyBase
 {
