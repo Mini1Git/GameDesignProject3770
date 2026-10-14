@@ -10,6 +10,7 @@ public class player : MonoBehaviour
 
     public GameObject mainHand;
     public GameObject offHand;
+    public bool canAct = true;
     
 
     PlayerInput playerInput;
@@ -65,7 +66,7 @@ public class player : MonoBehaviour
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
         Vector2 direction = mousePos - transform.position;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.Euler(0, 0, angle);
+        if (canAct) transform.rotation = Quaternion.Euler(0, 0, angle);
 
         //player WASD movement
         rb.linearVelocity = new Vector2(moveDirection.x * speed, moveDirection.y * speed);
@@ -73,12 +74,13 @@ public class player : MonoBehaviour
 
     void mainHandAttack(InputAction.CallbackContext ctx)
     {
-
+        if (!canAct) return;
         mainHand.GetComponent<Animator>().SetTrigger("Swing");
     }
 
     void offHandAttack(InputAction.CallbackContext ctx)
     {
+        if (!canAct) return;
         Debug.Log("Attack with spell!");
     }
 }
