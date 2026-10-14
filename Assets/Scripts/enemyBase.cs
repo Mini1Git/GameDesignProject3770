@@ -8,7 +8,6 @@ public class enemyBase : MonoBehaviour
     public Rigidbody2D rb;
     public Collider2D detection; 
     public int health = 10;
-    public float speed = 5f;
     public float aggroRange = 10f;
     public float turnSpeed = 1f;
 
