@@ -3,9 +3,14 @@ using UnityEngine;
 public class enemyBase : MonoBehaviour
 {
     protected GameObject player;
+    protected bool aggroed = false;
+
     public Rigidbody2D rb;
+    public Collider2D detection; 
     public int health = 10;
     public float speed = 10;
+    public float aggroRange = 10;
+
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -18,6 +23,15 @@ public class enemyBase : MonoBehaviour
     void Update()
     {
         
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.tag == "Player")
+        {
+            aggroed = true;
+
+        }
     }
 
     void takeDmg(int dmg)

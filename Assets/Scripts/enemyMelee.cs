@@ -3,8 +3,6 @@ using UnityEngine;
 public class enemyMelee : enemyBase
 {
 
-    private bool aggroed = true;
-
     // Update is called once per frame
     void Update()
     {
@@ -21,6 +19,11 @@ public class enemyMelee : enemyBase
             transform.rotation = Quaternion.Euler(0, 0, angle);
 
             rb.linearVelocity = new Vector2(direction.x * speed, direction.y * speed);
+
+            if(Vector2.Distance(player.transform.position, transform.position) > aggroRange)
+            {
+                aggroed = false;
+            }
         }
     }
 }
