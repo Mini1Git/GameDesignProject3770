@@ -1239,6 +1239,48 @@ MonoBehaviour:
     RotationDamping: {x: 1, y: 1, z: 1}
     QuaternionDamping: 1
   FollowOffset: {x: 0, y: 0, z: -10}
+--- !u!1 &1168626626 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7229428138833805794, guid: 658df806634de3b419c50543713bf723, type: 3}
+  m_PrefabInstance: {fileID: 3229103967169484179}
+  m_PrefabAsset: {fileID: 0}
+--- !u!70 &1168626627
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1168626626}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0.54879767, y: 0.00093682436}
+  m_Size: {x: 1.9461489, y: 1.1087551}
+  m_Direction: 1
 --- !u!1 &1722978633
 GameObject:
   m_ObjectHideFlags: 0
@@ -19561,7 +19603,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7229428138833805794, guid: 658df806634de3b419c50543713bf723, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1168626627}
   m_SourcePrefab: {fileID: 100100000, guid: 658df806634de3b419c50543713bf723, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

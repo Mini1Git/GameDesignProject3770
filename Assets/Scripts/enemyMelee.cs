@@ -13,14 +13,20 @@ public class enemyMelee : enemyBase
     {
         if(aggroed)
         {
-            // makes the player face the mouse
+            // makes enemy face the player
             Vector2 direction = player.transform.position - transform.position;
             float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-            transform.rotation = Quaternion.Euler(0, 0, angle);
+            Quaternion targetRotation = Quaternion.Euler(0, 0, angle);
+            transform.rotation = Quaternion.RotateTowards(
+                transform.rotation,
+                targetRotation,
+                180f * Time.deltaTime
+            );
 
-            rb.linearVelocity = new Vector2(direction.x * speed, direction.y * speed);
+            // Move forward in the direction the enemy is facing
+            rb.linearVelocity = transform.right * speed;
 
-            if(Vector2.Distance(player.transform.position, transform.position) > aggroRange)
+            if (Vector2.Distance(player.transform.position, transform.position) > aggroRange)
             {
                 aggroed = false;
             }
