@@ -35,6 +35,36 @@
                     "interactions": "",
                     "initialStateCheck": false,
                     "priority": 0
+                },
+                {
+                    "name": "cycleQuickSlot",
+                    "type": "Value",
+                    "id": "4350e89d-2992-496e-ad73-b023a0559612",
+                    "expectedControlType": "Axis",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true,
+                    "priority": 0
+                },
+                {
+                    "name": "cycleSpell",
+                    "type": "Button",
+                    "id": "3054f1bd-baeb-4fe6-9b91-d9af952d202b",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false,
+                    "priority": 0
+                },
+                {
+                    "name": "toggleInventory",
+                    "type": "Button",
+                    "id": "18ab394a-9758-47f9-92f8-95deda5317e6",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false,
+                    "priority": 0
                 }
             ],
             "bindings": [
@@ -112,6 +142,39 @@
                     "processors": "",
                     "groups": "",
                     "action": "Attack_OffHand",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0de7e69d-3a14-456f-a74d-78b0b257e610",
+                    "path": "<Mouse>/scroll/y",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "cycleQuickSlot",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "69364b5f-94cb-4749-8c13-6195e7e3a249",
+                    "path": "<Keyboard>/c",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "cycleSpell",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f4e7a63d-3228-4516-b5ea-10b35ac8b7a7",
+                    "path": "<Keyboard>/tab",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "toggleInventory",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

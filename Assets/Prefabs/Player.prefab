@@ -28,7 +28,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: -0.8480481, w: 0.52991927}
   m_LocalPosition: {x: 0.067, y: -0.127, z: 0}
-  m_LocalScale: {x: 0.02, y: 0.02, z: 0.02}
+  m_LocalScale: {x: 0.41, y: 0.41, z: 0.41}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 7019540239036792266}
@@ -82,7 +82,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 3258686426180307137, guid: 60b92a9d2b48a7b4f9682533fd3e0e23, type: 3}
+  m_Sprite: {fileID: 3989830079212647543, guid: ec3531091636f8f43937329d763b0a30, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -128,6 +128,7 @@ GameObject:
   - component: {fileID: 900116494497677318}
   - component: {fileID: 8902339828357040930}
   - component: {fileID: 2400010435320392153}
+  - component: {fileID: 6039578650861342809}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -143,9 +144,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6529358638518001661}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 10, y: 10, z: 10}
+  m_LocalScale: {x: 5, y: 5, z: 5}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 610778597012566046}
@@ -199,7 +200,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_MaskInteraction: 0
   m_Sprite: {fileID: 1145757375119451480, guid: ea721d3aa13dee34184bf3d3d9a9a5fb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -229,6 +230,7 @@ MonoBehaviour:
   health: 10
   mainHand: {fileID: 5819282660042242469}
   offHand: {fileID: 9011240803437318363}
+  canAct: 1
 --- !u!50 &8902339828357040930
 Rigidbody2D:
   serializedVersion: 5
@@ -293,6 +295,43 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: -0.0030021311}
   m_Size: {x: 0.17, y: 0.17783299}
   m_Direction: 0
+--- !u!114 &6039578650861342809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6529358638518001661}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cb24db1545a472fb40f9731742f1039, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::inventory
+  inventorySlots:
+  - {fileID: 11400000, guid: bc032b9b661593c469900714cdca22a7, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  quickSlots:
+  - {fileID: 11400000, guid: f8845acfa5364d68aadda1edf2cbd76f, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  spellSlots:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  activeQuickSlot: 0
+  activeSpellSlot: 0
+  mainHandRenderer: {fileID: 2210874393341423021}
 --- !u!1 &9011240803437318363
 GameObject:
   m_ObjectHideFlags: 0
