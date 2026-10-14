@@ -1,9 +1,11 @@
 using UnityEngine;
 
-public class enemy : MonoBehaviour
+public class enemyBase : MonoBehaviour
 {
-    private GameObject player;
+    protected GameObject player;
+    public Rigidbody2D rb;
     public int health = 10;
+    public float speed = 10;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -16,5 +18,19 @@ public class enemy : MonoBehaviour
     void Update()
     {
         
+    }
+
+    void takeDmg(int dmg)
+    {
+        health -= dmg;
+        if(health < 0)
+        {
+            die();
+        }
+    }
+
+    void die()
+    {
+        Destroy(gameObject);
     }
 }
