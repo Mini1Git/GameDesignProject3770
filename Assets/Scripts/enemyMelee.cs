@@ -1,6 +1,7 @@
 using UnityEngine;
 
 // Melee is standard enemy role, moderate speed uses navmesh ai pathfinding towards player so it doesn't get stuck
+// Freeze X and Z positions or players can push enemies around 
 
 public class enemyMelee : enemyBase
 {
