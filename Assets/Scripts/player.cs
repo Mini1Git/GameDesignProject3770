@@ -7,11 +7,11 @@ public class player : MonoBehaviour
 {
     public Rigidbody2D rb;
     public float speed = 10;
-    public int health = 10;
+    public float health = 10;
     public float maxHealth = 10;
-    public int stamina = 10;
+    public float stamina = 10;
     public float maxStamina = 10;
-    public int mana = 10;
+    public float mana = 10;
     public float maxMana = 10;
 
     public GameObject mainHand;
