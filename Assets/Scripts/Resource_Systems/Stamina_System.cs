@@ -8,7 +8,7 @@ public class Stamina_System : MonoBehaviour
     public float Stamina // this is the property that modifies the actual value.
     {   //getter and setter.
         get { return Mathf.Clamp(stamina,0, player.maxStamina); } 
-        set { stamina = Mathf.Clamp(stamina, 0, player.maxStamina); }
+        set { stamina = Mathf.Clamp(value, 0, player.maxStamina); }
     }
     private player player;
     public void Awake()
@@ -21,16 +21,19 @@ public class Stamina_System : MonoBehaviour
         Stamina = player.stamina;
     }
     public void Update()
-    {
-        RegenerateStamina();
+    {   if (Stamina != player.maxStamina)
+        {
+            RegenerateStamina();
+        }
+        
     }
 
     public void RegenerateStamina()
     {
         Stamina += staminaRegenRate * Time.deltaTime;
     }
-    public void UpdateStamina(float stamina_value) { // use this function to increase or decrease stamina (use a negative number).
-        Stamina += stamina_value;
+    public void ConsumeStamina(float stamina_value) { // use this function to consume stamina with a value.
+        Stamina -= stamina_value;
     }
     
 }

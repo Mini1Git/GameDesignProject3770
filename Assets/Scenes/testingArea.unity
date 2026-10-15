@@ -20084,6 +20084,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Stamina_System
   stamina: 10
+  staminaRegenRate: 10
 --- !u!1001 &2060040614
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20092,6 +20093,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 900116494497677318, guid: 238e2aae55e3e5943b8907a23645ceb7, type: 3}
+      propertyPath: stamina_System
+      value: 
+      objectReference: {fileID: 2008876999}
     - target: {fileID: 6529358638518001661, guid: 238e2aae55e3e5943b8907a23645ceb7, type: 3}
       propertyPath: m_Name
       value: Player
@@ -20334,6 +20339,10 @@ PrefabInstance:
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 331584579}
+    - target: {fileID: 2006870620621341088, guid: 78c1ac2fd86835c4ca9559d704ea55a8, type: 3}
+      propertyPath: staminaSystem
+      value: 
+      objectReference: {fileID: 2008876999}
     - target: {fileID: 2207987515615135145, guid: 78c1ac2fd86835c4ca9559d704ea55a8, type: 3}
       propertyPath: m_Name
       value: playerHUD
@@ -20426,6 +20435,10 @@ PrefabInstance:
       propertyPath: staminaBar
       value: 
       objectReference: {fileID: 20016655}
+    - target: {fileID: 7150839737856605005, guid: 78c1ac2fd86835c4ca9559d704ea55a8, type: 3}
+      propertyPath: staminaSystem
+      value: 
+      objectReference: {fileID: 2008876999}
     - target: {fileID: 8734661498093644967, guid: 78c1ac2fd86835c4ca9559d704ea55a8, type: 3}
       propertyPath: healthBar
       value: 
@@ -20434,6 +20447,10 @@ PrefabInstance:
       propertyPath: staminaBar
       value: 
       objectReference: {fileID: 20016655}
+    - target: {fileID: 8734661498093644967, guid: 78c1ac2fd86835c4ca9559d704ea55a8, type: 3}
+      propertyPath: staminaSystem
+      value: 
+      objectReference: {fileID: 2008876999}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

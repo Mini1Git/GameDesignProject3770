@@ -13,7 +13,8 @@ public class resourceBarUI : MonoBehaviour
     private RectTransform manaBar;
     [SerializeField]
     private player playerScript;  //get the resources from player.cs script
-
+    public Stamina_System staminaSystem;
+    public Mana_System manaSystem;
     void Awake()
     {
         // if the slot is empty, find the player by its "Player" tag
@@ -23,17 +24,26 @@ public class resourceBarUI : MonoBehaviour
             if (p != null) playerScript = p.GetComponent<player>();
         }
     }
-
+    public void Start()
+    {
+        
+        setUpMaxBars();
+        
+    }
     void Update()
     {
-        if (playerScript == null) return;
 
-        SetMaxHealth(playerScript.maxHealth);
         SetHealth(playerScript.health);
+        SetStamina(staminaSystem.Stamina);
+        SetMana(manaSystem.Mana);
+    }
+    public void setUpMaxBars()
+    {
+        SetMaxHealth(playerScript.maxHealth);
+
         SetMaxStamina(playerScript.maxStamina);
-        SetStamina(playerScript.stamina);
+
         SetMaxMana(playerScript.maxMana);
-        SetMana(playerScript.mana);
     }
 
     public void SetMaxHealth(float maxHealth)
