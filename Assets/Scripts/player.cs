@@ -7,17 +7,19 @@ public class player : MonoBehaviour
 {
     public Rigidbody2D rb;
     public float speed = 10;
-    public int health = 10;
+    public float health = 10;
     public float maxHealth = 10;
-    public int stamina = 10;
+    public float stamina = 10;
     public float maxStamina = 10;
-    public int mana = 10;
+    public float mana = 10;
     public float maxMana = 10;
 
     public GameObject mainHand;
     public GameObject offHand;
     public bool canAct = true;
-    
+
+    public Stamina_System stamina_System;
+    public Mana_System mana_System;
 
     PlayerInput playerInput;
     InputAction move;
@@ -27,6 +29,7 @@ public class player : MonoBehaviour
 
     private void Awake()
     {
+        
         rb = GetComponent<Rigidbody2D>(); // get the rigidbody on the game Object.
         playerInput = new PlayerInput();
     }
@@ -80,13 +83,22 @@ public class player : MonoBehaviour
 
     void mainHandAttack(InputAction.CallbackContext ctx)
     {
-        if (!canAct) return;
+        if (!canAct || stamina_System.Stamina < 5) {
+            Debug.Log("OUT OF STAMINA!");
+            return; }
         mainHand.GetComponent<Animator>().SetTrigger("Swing");
+        stamina_System.ConsumeStamina(5);
     }
 
     void offHandAttack(InputAction.CallbackContext ctx)
     {
-        if (!canAct) return;
+        if (!canAct || mana_System.Mana < 5)
+        {
+            Debug.Log("OUT OF Mana!");
+            return;
+        }
+
         Debug.Log("Attack with spell!");
+        mana_System.ConsumeMana(5);
     }
 }

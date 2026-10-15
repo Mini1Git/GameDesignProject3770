@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 public class resourceBarUI : MonoBehaviour
 {
-    public float Health, Maxhealth, Stamina, MaxStamina, Mana, Maxmana, Width, Height;
+    public float health, maxHealth, Stamina, MaxStamina, mana, maxMana, width, height;
     [SerializeField]
     private RectTransform healthBar;
     [SerializeField]
@@ -13,7 +13,8 @@ public class resourceBarUI : MonoBehaviour
     private RectTransform manaBar;
     [SerializeField]
     private player playerScript;  //get the resources from player.cs script
-
+    public Stamina_System staminaSystem;
+    public Mana_System manaSystem;
     void Awake()
     {
         // if the slot is empty, find the player by its "Player" tag
@@ -23,45 +24,54 @@ public class resourceBarUI : MonoBehaviour
             if (p != null) playerScript = p.GetComponent<player>();
         }
     }
-
+    public void Start()
+    {
+        
+        setUpMaxBars();
+        
+    }
     void Update()
     {
-        if (playerScript == null) return;
 
-        SetMaxHealth(playerScript.maxHealth);
         SetHealth(playerScript.health);
+        SetStamina(staminaSystem.Stamina);
+        SetMana(manaSystem.Mana);
+    }
+    public void setUpMaxBars()
+    {
+        SetMaxHealth(playerScript.maxHealth);
+
         SetMaxStamina(playerScript.maxStamina);
-        SetStamina(playerScript.stamina);
+
         SetMaxMana(playerScript.maxMana);
-        SetMana(playerScript.mana);
     }
 
     public void SetMaxHealth(float maxHealth)
     {
-        Maxhealth = maxHealth;
+        this.maxHealth = maxHealth;
     }
 
     public void SetHealth(float health)
     {
-        Health = health;
-        float newWidth = Maxhealth > 0 ? (Health / Maxhealth) * Width : 0;
+        this.health = health;
+        float newWidth = this.maxHealth > 0 ? (health / maxHealth) * width : 0;
 
-        healthBar.sizeDelta = new Vector2(newWidth, Height);
+        healthBar.sizeDelta = new Vector2(newWidth, height);
     }
 
     public void SetMaxMana(float maxMana)
     {
-        Maxmana = maxMana;
+        this.maxMana = maxMana;
     }
 
     public void SetMana(float mana)
     {
-        Mana = mana;
-        float newWidth = Maxmana > 0 ? (Mana / Maxmana) * Width : 0;
+        this.mana = mana;
+        float newWidth = maxMana > 0 ? (this.mana / maxMana) * width : 0;
         
-        Debug.Log("Mana width: " + newWidth);
         
-        manaBar.sizeDelta = new Vector2(newWidth, Height);
+        
+        manaBar.sizeDelta = new Vector2(newWidth, height);
     }
 
     public void SetMaxStamina(float maxStamina)
@@ -72,8 +82,8 @@ public class resourceBarUI : MonoBehaviour
     public void SetStamina(float stamina)
     {
         Stamina = stamina;
-        float newWidth = MaxStamina > 0 ? (Stamina / MaxStamina) * Width : 0;
+        float newWidth = MaxStamina > 0 ? (Stamina / MaxStamina) * width : 0;
         
-        staminaBar.sizeDelta = new Vector2(newWidth, Height);
+        staminaBar.sizeDelta = new Vector2(newWidth, height);
     }
 }
