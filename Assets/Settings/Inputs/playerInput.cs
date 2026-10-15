@@ -121,6 +121,36 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""initialStateCheck"": false,
                     ""priority"": 0
+                },
+                {
+                    ""name"": ""cycleQuickSlot"",
+                    ""type"": ""Value"",
+                    ""id"": ""4350e89d-2992-496e-ad73-b023a0559612"",
+                    ""expectedControlType"": ""Axis"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true,
+                    ""priority"": 0
+                },
+                {
+                    ""name"": ""cycleSpell"",
+                    ""type"": ""Button"",
+                    ""id"": ""3054f1bd-baeb-4fe6-9b91-d9af952d202b"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false,
+                    ""priority"": 0
+                },
+                {
+                    ""name"": ""toggleInventory"",
+                    ""type"": ""Button"",
+                    ""id"": ""18ab394a-9758-47f9-92f8-95deda5317e6"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false,
+                    ""priority"": 0
                 }
             ],
             ""bindings"": [
@@ -200,6 +230,39 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""action"": ""Attack_OffHand"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""0de7e69d-3a14-456f-a74d-78b0b257e610"",
+                    ""path"": ""<Mouse>/scroll/y"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""cycleQuickSlot"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""69364b5f-94cb-4749-8c13-6195e7e3a249"",
+                    ""path"": ""<Keyboard>/c"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""cycleSpell"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f4e7a63d-3228-4516-b5ea-10b35ac8b7a7"",
+                    ""path"": ""<Keyboard>/tab"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""toggleInventory"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -211,6 +274,9 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         m_PlayerGame_Movement = m_PlayerGame.FindAction("Movement", throwIfNotFound: true);
         m_PlayerGame_Attack_MainHand = m_PlayerGame.FindAction("Attack_MainHand", throwIfNotFound: true);
         m_PlayerGame_Attack_OffHand = m_PlayerGame.FindAction("Attack_OffHand", throwIfNotFound: true);
+        m_PlayerGame_cycleQuickSlot = m_PlayerGame.FindAction("cycleQuickSlot", throwIfNotFound: true);
+        m_PlayerGame_cycleSpell = m_PlayerGame.FindAction("cycleSpell", throwIfNotFound: true);
+        m_PlayerGame_toggleInventory = m_PlayerGame.FindAction("toggleInventory", throwIfNotFound: true);
     }
 
     ~@PlayerInput()
@@ -294,6 +360,9 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
     private readonly InputAction m_PlayerGame_Movement;
     private readonly InputAction m_PlayerGame_Attack_MainHand;
     private readonly InputAction m_PlayerGame_Attack_OffHand;
+    private readonly InputAction m_PlayerGame_cycleQuickSlot;
+    private readonly InputAction m_PlayerGame_cycleSpell;
+    private readonly InputAction m_PlayerGame_toggleInventory;
     /// <summary>
     /// Provides access to input actions defined in input action map "PlayerGame".
     /// </summary>
@@ -317,6 +386,18 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "PlayerGame/Attack_OffHand".
         /// </summary>
         public InputAction @Attack_OffHand => m_Wrapper.m_PlayerGame_Attack_OffHand;
+        /// <summary>
+        /// Provides access to the underlying input action "PlayerGame/cycleQuickSlot".
+        /// </summary>
+        public InputAction @cycleQuickSlot => m_Wrapper.m_PlayerGame_cycleQuickSlot;
+        /// <summary>
+        /// Provides access to the underlying input action "PlayerGame/cycleSpell".
+        /// </summary>
+        public InputAction @cycleSpell => m_Wrapper.m_PlayerGame_cycleSpell;
+        /// <summary>
+        /// Provides access to the underlying input action "PlayerGame/toggleInventory".
+        /// </summary>
+        public InputAction @toggleInventory => m_Wrapper.m_PlayerGame_toggleInventory;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -352,6 +433,15 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @Attack_OffHand.started += instance.OnAttack_OffHand;
             @Attack_OffHand.performed += instance.OnAttack_OffHand;
             @Attack_OffHand.canceled += instance.OnAttack_OffHand;
+            @cycleQuickSlot.started += instance.OnCycleQuickSlot;
+            @cycleQuickSlot.performed += instance.OnCycleQuickSlot;
+            @cycleQuickSlot.canceled += instance.OnCycleQuickSlot;
+            @cycleSpell.started += instance.OnCycleSpell;
+            @cycleSpell.performed += instance.OnCycleSpell;
+            @cycleSpell.canceled += instance.OnCycleSpell;
+            @toggleInventory.started += instance.OnToggleInventory;
+            @toggleInventory.performed += instance.OnToggleInventory;
+            @toggleInventory.canceled += instance.OnToggleInventory;
         }
 
         /// <summary>
@@ -372,6 +462,15 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @Attack_OffHand.started -= instance.OnAttack_OffHand;
             @Attack_OffHand.performed -= instance.OnAttack_OffHand;
             @Attack_OffHand.canceled -= instance.OnAttack_OffHand;
+            @cycleQuickSlot.started -= instance.OnCycleQuickSlot;
+            @cycleQuickSlot.performed -= instance.OnCycleQuickSlot;
+            @cycleQuickSlot.canceled -= instance.OnCycleQuickSlot;
+            @cycleSpell.started -= instance.OnCycleSpell;
+            @cycleSpell.performed -= instance.OnCycleSpell;
+            @cycleSpell.canceled -= instance.OnCycleSpell;
+            @toggleInventory.started -= instance.OnToggleInventory;
+            @toggleInventory.performed -= instance.OnToggleInventory;
+            @toggleInventory.canceled -= instance.OnToggleInventory;
         }
 
         /// <summary>
@@ -433,5 +532,26 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnAttack_OffHand(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "cycleQuickSlot" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnCycleQuickSlot(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "cycleSpell" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnCycleSpell(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "toggleInventory" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnToggleInventory(InputAction.CallbackContext context);
     }
 }
