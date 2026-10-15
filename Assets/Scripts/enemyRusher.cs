@@ -7,6 +7,7 @@ public class enemyRusher : enemyBase
 {
 
     public float speed = 5f;
+    public Collider2D attackArea;
 
     // Update is called once per frame
     void Update()
