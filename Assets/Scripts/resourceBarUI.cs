@@ -1,20 +1,14 @@
 using UnityEngine;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine.UI;
+
 public class resourceBarUI : MonoBehaviour
 {
-    public float health, maxHealth, Stamina, MaxStamina, mana, maxMana, width, height;
-    [SerializeField]
-    private RectTransform healthBar;
-    [SerializeField]
-    private RectTransform staminaBar;
-    [SerializeField]
-    private RectTransform manaBar;
-    [SerializeField]
-    private player playerScript;  //get the resources from player.cs script
-    public Stamina_System staminaSystem;
-    public Mana_System manaSystem;
+    [SerializeField] private RectTransform healthBar;   // Health fill
+    [SerializeField] private RectTransform staminaBar;  // Stamina fill
+    [SerializeField] private RectTransform manaBar;     // Mana fill
+    [SerializeField] private player playerScript;       // optional, found by tag if empty
+
+    Vector2 healthFull, staminaFull, manaFull;          // full size of each fill
+
     void Awake()
     {
         // if the slot is empty, find the player by its "Player" tag
@@ -23,67 +17,26 @@ public class resourceBarUI : MonoBehaviour
             GameObject p = GameObject.FindWithTag("Player");
             if (p != null) playerScript = p.GetComponent<player>();
         }
+
+        // remember each fill's size at full (keep them at full size in the scene)
+        healthFull  = healthBar.sizeDelta;
+        staminaFull = staminaBar.sizeDelta;
+        manaFull    = manaBar.sizeDelta;
     }
-    public void Start()
-    {
-        
-        setUpMaxBars();
-        
-    }
+
     void Update()
     {
+        if (playerScript == null) return;
 
-        SetHealth(playerScript.health);
-        SetStamina(staminaSystem.Stamina);
-        SetMana(manaSystem.Mana);
-    }
-    public void setUpMaxBars()
-    {
-        SetMaxHealth(playerScript.maxHealth);
-
-        SetMaxStamina(playerScript.maxStamina);
-
-        SetMaxMana(playerScript.maxMana);
+        Fill(healthBar,  playerScript.health,                 playerScript.maxHealth,  healthFull);
+        Fill(staminaBar, playerScript.stamina_System.Stamina, playerScript.maxStamina, staminaFull);
+        Fill(manaBar,    playerScript.mana_System.Mana,       playerScript.maxMana,    manaFull);
     }
 
-    public void SetMaxHealth(float maxHealth)
+    // sets the fill's width to value/max of its full width (clamped between empty and full)
+    void Fill(RectTransform bar, float value, float max, Vector2 full)
     {
-        this.maxHealth = maxHealth;
-    }
-
-    public void SetHealth(float health)
-    {
-        this.health = health;
-        float newWidth = this.maxHealth > 0 ? (health / maxHealth) * width : 0;
-
-        healthBar.sizeDelta = new Vector2(newWidth, height);
-    }
-
-    public void SetMaxMana(float maxMana)
-    {
-        this.maxMana = maxMana;
-    }
-
-    public void SetMana(float mana)
-    {
-        this.mana = mana;
-        float newWidth = maxMana > 0 ? (this.mana / maxMana) * width : 0;
-        
-        
-        
-        manaBar.sizeDelta = new Vector2(newWidth, height);
-    }
-
-    public void SetMaxStamina(float maxStamina)
-    {
-        MaxStamina = maxStamina;
-    }
-
-    public void SetStamina(float stamina)
-    {
-        Stamina = stamina;
-        float newWidth = MaxStamina > 0 ? (Stamina / MaxStamina) * width : 0;
-        
-        staminaBar.sizeDelta = new Vector2(newWidth, height);
+        float ratio = max > 0 ? Mathf.Clamp01(value / max) : 0;
+        bar.sizeDelta = new Vector2(ratio * full.x, full.y);
     }
 }

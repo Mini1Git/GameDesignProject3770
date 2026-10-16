@@ -119,11 +119,27 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!224 &20016655 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 6382059269461064601, guid: 78c1ac2fd86835c4ca9559d704ea55a8, type: 3}
+--- !u!1 &10692735 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2207987515615135145, guid: 78c1ac2fd86835c4ca9559d704ea55a8, type: 3}
   m_PrefabInstance: {fileID: 96085752059410877}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &10692740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 10692735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4430fba8415ca914ca86d4ffd197cd6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::resourceBarUI
+  healthBar: {fileID: 196280116}
+  staminaBar: {fileID: 1075095797}
+  manaBar: {fileID: 2037070223}
+  playerScript: {fileID: 0}
 --- !u!1 &55364356
 GameObject:
   m_ObjectHideFlags: 0
@@ -1183,6 +1199,11 @@ MonoBehaviour:
   m_Area: 1
   m_IgnoreFromBuild: 0
   m_AffectedAgents: ffffffffi
+--- !u!224 &196280116 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 7591565261692542167, guid: 78c1ac2fd86835c4ca9559d704ea55a8, type: 3}
+  m_PrefabInstance: {fileID: 96085752059410877}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &206271692
 GameObject:
   m_ObjectHideFlags: 0
@@ -1357,32 +1378,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!224 &331584579 stripped
+--- !u!224 &1075095797 stripped
 RectTransform:
-  m_CorrespondingSourceObject: {fileID: 2136640884435506075, guid: 78c1ac2fd86835c4ca9559d704ea55a8, type: 3}
+  m_CorrespondingSourceObject: {fileID: 9199648934376728866, guid: 78c1ac2fd86835c4ca9559d704ea55a8, type: 3}
   m_PrefabInstance: {fileID: 96085752059410877}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &967875078 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6529358638518001661, guid: 238e2aae55e3e5943b8907a23645ceb7, type: 3}
-  m_PrefabInstance: {fileID: 2060040614}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &967875079
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 967875078}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1bdceeb1cbf2a24f9245b0f64935911, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::player_Resouce_UI
-  playerScript: {fileID: 0}
-  healthBar: {fileID: 0}
-  staminaBar: {fileID: 0}
-  manaBar: {fileID: 0}
 --- !u!1 &1227830308
 GameObject:
   m_ObjectHideFlags: 0
@@ -20204,11 +20204,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!224 &1879627118 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 6238407686368564531, guid: 78c1ac2fd86835c4ca9559d704ea55a8, type: 3}
-  m_PrefabInstance: {fileID: 96085752059410877}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2008876997
 GameObject:
   m_ObjectHideFlags: 0
@@ -20255,6 +20250,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Stamina_System
   stamina: 10
   staminaRegenRate: 10
+--- !u!224 &2037070223 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 1432102075849219464, guid: 78c1ac2fd86835c4ca9559d704ea55a8, type: 3}
+  m_PrefabInstance: {fileID: 96085752059410877}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2060040614
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20318,10 +20318,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6529358638518001661, guid: 238e2aae55e3e5943b8907a23645ceb7, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 967875079}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 238e2aae55e3e5943b8907a23645ceb7, type: 3}
 --- !u!1 &2097663845
 GameObject:
@@ -20504,11 +20501,11 @@ PrefabInstance:
     - target: {fileID: 2006870620621341088, guid: 78c1ac2fd86835c4ca9559d704ea55a8, type: 3}
       propertyPath: manaBar
       value: 
-      objectReference: {fileID: 1879627118}
+      objectReference: {fileID: 2037070223}
     - target: {fileID: 2006870620621341088, guid: 78c1ac2fd86835c4ca9559d704ea55a8, type: 3}
       propertyPath: healthBar
       value: 
-      objectReference: {fileID: 331584579}
+      objectReference: {fileID: 196280116}
     - target: {fileID: 2006870620621341088, guid: 78c1ac2fd86835c4ca9559d704ea55a8, type: 3}
       propertyPath: MaxStamina
       value: 12.14
@@ -20604,11 +20601,11 @@ PrefabInstance:
     - target: {fileID: 7150839737856605005, guid: 78c1ac2fd86835c4ca9559d704ea55a8, type: 3}
       propertyPath: manaBar
       value: 
-      objectReference: {fileID: 1879627118}
+      objectReference: {fileID: 2037070223}
     - target: {fileID: 7150839737856605005, guid: 78c1ac2fd86835c4ca9559d704ea55a8, type: 3}
       propertyPath: staminaBar
       value: 
-      objectReference: {fileID: 20016655}
+      objectReference: {fileID: 1075095797}
     - target: {fileID: 7150839737856605005, guid: 78c1ac2fd86835c4ca9559d704ea55a8, type: 3}
       propertyPath: staminaSystem
       value: 
@@ -20616,19 +20613,25 @@ PrefabInstance:
     - target: {fileID: 8734661498093644967, guid: 78c1ac2fd86835c4ca9559d704ea55a8, type: 3}
       propertyPath: healthBar
       value: 
-      objectReference: {fileID: 331584579}
+      objectReference: {fileID: 196280116}
     - target: {fileID: 8734661498093644967, guid: 78c1ac2fd86835c4ca9559d704ea55a8, type: 3}
       propertyPath: staminaBar
       value: 
-      objectReference: {fileID: 20016655}
+      objectReference: {fileID: 1075095797}
     - target: {fileID: 8734661498093644967, guid: 78c1ac2fd86835c4ca9559d704ea55a8, type: 3}
       propertyPath: staminaSystem
       value: 
       objectReference: {fileID: 2008876999}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7150839737856605005, guid: 78c1ac2fd86835c4ca9559d704ea55a8, type: 3}
+    - {fileID: 2006870620621341088, guid: 78c1ac2fd86835c4ca9559d704ea55a8, type: 3}
+    - {fileID: 8734661498093644967, guid: 78c1ac2fd86835c4ca9559d704ea55a8, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2207987515615135145, guid: 78c1ac2fd86835c4ca9559d704ea55a8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 10692740}
   m_SourcePrefab: {fileID: 100100000, guid: 78c1ac2fd86835c4ca9559d704ea55a8, type: 3}
 --- !u!1001 &3229103967169484179
 PrefabInstance:
