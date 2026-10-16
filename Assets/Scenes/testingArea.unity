@@ -20518,6 +20518,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: playerHUD
       objectReference: {fileID: 0}
+    - target: {fileID: 6238407686368564531, guid: 78c1ac2fd86835c4ca9559d704ea55a8, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6569045693278756169, guid: 78c1ac2fd86835c4ca9559d704ea55a8, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -20610,6 +20614,18 @@ PrefabInstance:
       propertyPath: staminaSystem
       value: 
       objectReference: {fileID: 2008876999}
+    - target: {fileID: 7591565261692542167, guid: 78c1ac2fd86835c4ca9559d704ea55a8, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 47
+      objectReference: {fileID: 0}
+    - target: {fileID: 7591565261692542167, guid: 78c1ac2fd86835c4ca9559d704ea55a8, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 2.95
+      objectReference: {fileID: 0}
+    - target: {fileID: 7591565261692542167, guid: 78c1ac2fd86835c4ca9559d704ea55a8, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.08
+      objectReference: {fileID: 0}
     - target: {fileID: 8734661498093644967, guid: 78c1ac2fd86835c4ca9559d704ea55a8, type: 3}
       propertyPath: healthBar
       value: 
