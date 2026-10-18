@@ -127,8 +127,16 @@ public class inventoryUI : MonoBehaviour
         playerInventory.moveItem(dragSource.group, dragSource.index, target.group, target.index);
     }
 
-    public void endDrag()
+    public void endDrag(Vector2 position)
     {
+        RectTransform panelRect = panel.GetComponent<RectTransform>();
+        bool outsidePanel = !RectTransformUtility.RectangleContainsScreenPoint(panelRect, position);
+
+        if (dragSource != null && outsidePanel)
+        {
+            playerInventory.dropItem(dragSource.group, dragSource.index);
+        }
+
         dragSource = null;
         dragIcon.gameObject.SetActive(false);
         refresh();
