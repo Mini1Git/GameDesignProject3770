@@ -369,6 +369,8 @@ MonoBehaviour:
   activeQuickSlot: 0
   activeSpellSlot: 0
   mainHandRenderer: {fileID: 2210874393341423021}
+  pickupPrefab: {fileID: 7877872195256472589, guid: d661d64656a34646b1ad5b279e18fb90, type: 3}
+  dropDistance: 0.6
 --- !u!1 &9011240803437318363
 GameObject:
   m_ObjectHideFlags: 0
