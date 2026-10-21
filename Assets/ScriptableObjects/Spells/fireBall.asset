@@ -10,8 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 367b7bb3b6ab98549a9410b19d9f8e1f, type: 3}
-  m_Name: Water f=speoll
+  m_Name: fireBall
   m_EditorClassIdentifier: Assembly-CSharp::spell_SO
-  spellName: water spell
-  spellElement: 5
-  manaCost: 100
+  spellName: Fireball spell
+  spellPrefab: {fileID: 8387602701576749524, guid: c4a13d4f0d830df4ba52fa8b681133c4, type: 3}
+  spellElement: 1
+  positionType: 0
+  manaCost: 5
