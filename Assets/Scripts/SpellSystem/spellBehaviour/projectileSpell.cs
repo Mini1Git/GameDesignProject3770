@@ -6,6 +6,6 @@ public class projectileSpell : MonoBehaviour
     
     void Update()
     {
-        transform.position += transform.right * speed * Time.deltaTime;
+        transform.position += transform.right * speed * Time.deltaTime; // moves the projectile where its looking.
     }
 }

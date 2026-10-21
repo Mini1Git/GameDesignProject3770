@@ -96,7 +96,7 @@ public class player : MonoBehaviour
 
     void offHandAttack(InputAction.CallbackContext ctx)
     {
-        if (!canAct || mana_System.Mana < 5)
+        if (!canAct || mana_System.Mana < activeSpell.manaCost)
         {
             Debug.Log("OUT OF Mana!");
             return;
