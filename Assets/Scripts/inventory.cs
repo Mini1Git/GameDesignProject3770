@@ -17,8 +17,6 @@ public class inventory : MonoBehaviour
     public int activeQuickSlot;
     public int activeSpellSlot;
     public SpriteRenderer mainHandRenderer;
-    public itemPickup pickupPrefab;
-    public float dropDistance = 0.6f;
 
     public event Action onChanged;
 
@@ -110,23 +108,6 @@ public class inventory : MonoBehaviour
         itemData moving = from[fromIndex];
         from[fromIndex] = to[toIndex];
         to[toIndex] = moving;
-
-        updateMainHand();
-        onChanged?.Invoke();
-    }
-
-    public void dropItem(slotGroup group, int index)
-    {
-        itemData[] slots = getSlots(group);
-        itemData item = slots[index];
-        if (item == null) return;
-
-        slots[index] = null;
-
-        Vector3 dropPosition = transform.position + transform.right * dropDistance;
-        itemPickup pickup = Instantiate(pickupPrefab, dropPosition, Quaternion.identity);
-        pickup.item = item;
-        pickup.pickupDelay = 1;
 
         updateMainHand();
         onChanged?.Invoke();

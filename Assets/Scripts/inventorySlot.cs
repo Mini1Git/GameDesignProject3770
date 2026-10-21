@@ -74,7 +74,7 @@ public class inventorySlot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        ui.endDrag(eventData.position);
+        ui.endDrag();
     }
 
     public void OnDrop(PointerEventData eventData)
