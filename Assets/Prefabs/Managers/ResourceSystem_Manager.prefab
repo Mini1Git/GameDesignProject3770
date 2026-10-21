@@ -61,4 +61,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Stamina_System
   stamina: 0
   staminaRegenRate: 3.5
-  staminaRegenDelay: 1.5

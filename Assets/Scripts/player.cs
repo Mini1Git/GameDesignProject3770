@@ -1,5 +1,7 @@
+using Mono.Cecil;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class player : MonoBehaviour
 {
@@ -18,8 +20,6 @@ public class player : MonoBehaviour
 
     public Stamina_System stamina_System;
     public Mana_System mana_System;
-    [SerializeField] private PlayerCombat combat;
-    private bool inputFocused = true;
 
     PlayerInput playerInput;
     InputAction move;
@@ -30,45 +30,35 @@ public class player : MonoBehaviour
     private void Awake()
     {
         
-        rb = GetComponent<Rigidbody2D>(); // get the rigidbody on the game object
-        if (combat == null) combat = GetComponent<PlayerCombat>();
+        rb = GetComponent<Rigidbody2D>(); // get the rigidbody on the game Object.
         playerInput = new PlayerInput();
-        move = playerInput.PlayerGame.Movement;
-        attackMain = playerInput.PlayerGame.Attack_MainHand;
-        attackOff = playerInput.PlayerGame.Attack_OffHand;
     }
 
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
+    {
+        
+    }
     private void OnEnable() // when this script is enabled.
     {
-        attackMain.started += mainHandPressed;
-        attackMain.canceled += mainHandReleased;
-        attackOff.performed += offHandAttack;
         playerInput.Enable();
+        move = playerInput.PlayerGame.Movement;
+        
+        attackMain = playerInput.PlayerGame.Attack_MainHand;
+        attackOff = playerInput.PlayerGame.Attack_OffHand;
+
+        //triggers
+        attackMain.performed += mainHandAttack; // so basically, when player clicks left mouse button or right clicks
+        attackOff.performed += offHandAttack; 
     }
 
     private void OnDisable() // when this script is disabled.
     {
-        // unsubscribe before disabling actions to avoid treating cancellation as release
-        attackMain.started -= mainHandPressed;
-        attackMain.canceled -= mainHandReleased;
-        attackOff.performed -= offHandAttack;
-        combat?.CancelCombat();
         playerInput.Disable();
     }
 
-    private void OnDestroy()
-    {
-        playerInput?.Dispose();
-    }
 
-    private void OnApplicationFocus(bool focused)
-    {
-        inputFocused = focused;
-        if (!focused) combat?.CancelCombat();
-    }
-
-
-    // read movement once per frame
+    // Update is called once per frame
     void Update()
     {
         moveDirection = move.ReadValue<Vector2>();
@@ -87,26 +77,22 @@ public class player : MonoBehaviour
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         if (canAct) transform.rotation = Quaternion.Euler(0, 0, angle);
 
-        // player wasd movement
+        //player WASD movement
         rb.linearVelocity = new Vector2(moveDirection.x * speed, moveDirection.y * speed);
     }
 
-    void mainHandPressed(InputAction.CallbackContext ctx)
+    void mainHandAttack(InputAction.CallbackContext ctx)
     {
-        if (inputFocused && Application.isFocused) combat?.OnAttackPressed();
-    }
-
-    void mainHandReleased(InputAction.CallbackContext ctx)
-    {
-        if (inputFocused && Application.isFocused && attackMain.enabled)
-            combat?.OnAttackReleased();
-        else
-            combat?.CancelCombat();
+        if (!canAct || stamina_System.Stamina < 5) {
+            Debug.Log("OUT OF STAMINA!");
+            return; }
+        mainHand.GetComponent<Animator>().SetTrigger("Swing");
+        stamina_System.ConsumeStamina(5);
     }
 
     void offHandAttack(InputAction.CallbackContext ctx)
     {
-        if (!canAct || mana_System == null || mana_System.Mana < 5)
+        if (!canAct || mana_System.Mana < 5)
         {
             Debug.Log("OUT OF Mana!");
             return;

@@ -75,7 +75,6 @@ public class inventoryUI : MonoBehaviour
         dragIcon.gameObject.SetActive(false);
         panel.SetActive(open);
         playerController.canAct = !open;
-        if (open) playerController.GetComponent<PlayerCombat>()?.CancelCombat();// cancel the attack when opening inventory
         refresh();
     }
 

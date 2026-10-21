@@ -34,18 +34,10 @@ public class enemyBase : MonoBehaviour
         }
     }
 
-    // return true only when the enemy can be damaged
-    public bool TryTakeDamage(int damage)
-    {
-        if (damage <= 0 || health <= 0 || !isActiveAndEnabled) return false;
-        takeDmg(damage);
-        return true;
-    }
-
     void takeDmg(int dmg)
     {
         health -= dmg;
-        if(health <= 0)
+        if(health < 0)
         {
             die();
         }

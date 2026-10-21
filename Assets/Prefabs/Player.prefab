@@ -129,8 +129,6 @@ GameObject:
   - component: {fileID: 8902339828357040930}
   - component: {fileID: 2400010435320392153}
   - component: {fileID: 6039578650861342809}
-  - component: {fileID: 817320001010101010}
-  - component: {fileID: 817320001010101011}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -233,41 +231,6 @@ MonoBehaviour:
   mainHand: {fileID: 5819282660042242469}
   offHand: {fileID: 9011240803437318363}
   canAct: 1
-  combat: {fileID: 817320001010101010}
---- !u!114 &817320001010101010
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6529358638518001661}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8268df617f5e5536caaedd5713e0d79f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerCombat
-  playerController: {fileID: 900116494497677318}
-  playerInventory: {fileID: 6039578650861342809}
-  attackExecutor: {fileID: 817320001010101011}
-  heavyThreshold: 0.2
---- !u!114 &817320001010101011
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6529358638518001661}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1163c1c7ff5a4c7b811c14477d4497c8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SwordAttackExecutor
-  attackOrigin: {fileID: 7019540239036792266}
-  slashMaterial: {fileID: 2100000, guid: 7d9d9cc5aa304771afc4d5f5ade78dbf, type: 2}
-  targetLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  sortingOrder: 20
 --- !u!50 &8902339828357040930
 Rigidbody2D:
   serializedVersion: 5
