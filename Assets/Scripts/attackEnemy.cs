@@ -6,7 +6,7 @@ public class attackEnemy : MonoBehaviour
 
     void FixedUpdate()
     {
-        Debug.Log(canAttack);
+        
         if (canAttack)
         {
             GetComponent<Animator>().SetTrigger("Swing");

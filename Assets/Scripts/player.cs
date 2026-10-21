@@ -5,7 +5,11 @@ using UnityEngine.UI;
 
 public class player : MonoBehaviour
 {
-    public Rigidbody2D rb;
+    
+    public SpellCasting caster;
+    public spell_SO activeSpell; // this is the scriptable object that has all of the data of the currrently active spell.
+    Rigidbody2D rb;
+    [Header("Player Settings")]
     public float speed = 10;
     public float health = 10;
     public float maxHealth = 10;
@@ -29,7 +33,7 @@ public class player : MonoBehaviour
 
     private void Awake()
     {
-        
+        caster = GetComponent<SpellCasting>();
         rb = GetComponent<Rigidbody2D>(); // get the rigidbody on the game Object.
         playerInput = new PlayerInput();
     }
@@ -92,13 +96,14 @@ public class player : MonoBehaviour
 
     void offHandAttack(InputAction.CallbackContext ctx)
     {
-        if (!canAct || mana_System.Mana < 5)
+        if (!canAct || mana_System.Mana < activeSpell.manaCost)
         {
             Debug.Log("OUT OF Mana!");
             return;
         }
 
         Debug.Log("Attack with spell!");
-        mana_System.ConsumeMana(5);
+        mana_System.ConsumeMana(activeSpell.manaCost);
+        caster.Cast(activeSpell);
     }
 }

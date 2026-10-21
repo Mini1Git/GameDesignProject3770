@@ -15,7 +15,7 @@ public class attackAreaEnemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(canAttack);
+        
     }
 
     public void OnTriggerEnter2D(Collider2D collision)
