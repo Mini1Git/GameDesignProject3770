@@ -34,15 +34,13 @@ public class enemyBase : MonoBehaviour
         }
     }
 
-    public bool takeDmg(int dmg)
+    void takeDmg(int dmg)
     {
-        if (dmg <= 0 || health <= 0 || !isActiveAndEnabled) return false;
         health -= dmg;
-        if(health <= 0)
+        if(health < 0)
         {
             die();
         }
-        return true;
     }
 
     void die()

@@ -129,7 +129,6 @@ GameObject:
   - component: {fileID: 8902339828357040930}
   - component: {fileID: 2400010435320392153}
   - component: {fileID: 6039578650861342809}
-  - component: {fileID: 817320001010101011}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -427,30 +426,3 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
   m_BlendShapeWeights: []
---- !u!114 &817320001010101011
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6529358638518001661}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1370b1eaf0a0468888f49559673fef3d, type: 3}
-  m_Name:
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerMeleeAttack
-  weaponAnimator: {fileID: 4797079066276784588}
-  chargedAttackThreshold: 0.2
-  fullChargeDuration: 1.2
-  normalDamage: 2
-  chargedBaseDamage: 4
-  fullChargeDamageMultiplier: 2
-  lightHitStaminaRestore: 2
-  chargedStaminaCost: 10
-  hitboxOffset: {x: 0, y: 0.25}
-  hitboxSize: {x: 0.25, y: 0.75}
-  enemyLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  hitStart: 0.1
-  hitEnd: 0.55

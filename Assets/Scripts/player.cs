@@ -1,6 +1,7 @@
+using Mono.Cecil;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.InputSystem.Controls;
+using UnityEngine.UI;
 
 public class player : MonoBehaviour
 {
@@ -29,16 +30,11 @@ public class player : MonoBehaviour
     InputAction attackMain;
     InputAction attackOff;
     Vector2 moveDirection = Vector2.zero;
-    PlayerMeleeAttack meleeAttack;
-    bool inputFocused;
-    bool inputPaused;
 
     private void Awake()
     {
         caster = GetComponent<SpellCasting>();
         rb = GetComponent<Rigidbody2D>(); // get the rigidbody on the game Object.
-        meleeAttack = GetComponent<PlayerMeleeAttack>();
-        inputFocused = Application.isFocused;
         playerInput = new PlayerInput();
     }
 
@@ -56,36 +52,13 @@ public class player : MonoBehaviour
         attackOff = playerInput.PlayerGame.Attack_OffHand;
 
         //triggers
-        attackMain.started += mainHandPressed;
-        attackMain.canceled += mainHandReleased;
+        attackMain.performed += mainHandAttack; // so basically, when player clicks left mouse button or right clicks
         attackOff.performed += offHandAttack; 
     }
 
     private void OnDisable() // when this script is disabled.
     {
-        // disabling an action also sends canceled, so stop listening before disabling it
-        meleeAttack?.CancelAttack();
-        attackMain.started -= mainHandPressed;
-        attackMain.canceled -= mainHandReleased;
-        attackOff.performed -= offHandAttack;
         playerInput.Disable();
-    }
-
-    private void OnDestroy()
-    {
-        playerInput?.Dispose();
-    }
-
-    private void OnApplicationFocus(bool focused)
-    {
-        inputFocused = focused;
-        if (!focused) meleeAttack?.CancelAttack();
-    }
-
-    private void OnApplicationPause(bool paused)
-    {
-        inputPaused = paused;
-        if (paused) meleeAttack?.CancelAttack();
     }
 
 
@@ -112,22 +85,13 @@ public class player : MonoBehaviour
         rb.linearVelocity = new Vector2(moveDirection.x * speed, moveDirection.y * speed);
     }
 
-    void mainHandPressed(InputAction.CallbackContext ctx)
+    void mainHandAttack(InputAction.CallbackContext ctx)
     {
-        if (inputFocused && Application.isFocused && !inputPaused && canAct)
-            meleeAttack?.BeginCharge(ctx.time);
-    }
-
-    void mainHandReleased(InputAction.CallbackContext ctx)
-    {
-        // only attack when the button is released, not when input is reset
-        bool released = ctx.control is ButtonControl button && !button.isPressed
-            && button.device.added && button.device.enabled;
-        if (isActiveAndEnabled && inputFocused && Application.isFocused && !inputPaused
-            && canAct && attackMain.enabled && released)
-            meleeAttack?.ReleaseCharge(ctx.time);
-        else
-            meleeAttack?.CancelAttack();
+        if (!canAct || stamina_System.Stamina < 5) {
+            Debug.Log("OUT OF STAMINA!");
+            return; }
+        mainHand.GetComponent<Animator>().SetTrigger("Swing");
+        stamina_System.ConsumeStamina(5);
     }
 
     void offHandAttack(InputAction.CallbackContext ctx)
