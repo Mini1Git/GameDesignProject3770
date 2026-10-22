@@ -75,6 +75,7 @@ public class inventoryUI : MonoBehaviour
         dragIcon.gameObject.SetActive(false);
         panel.SetActive(open);
         playerController.canAct = !open;
+        if (open) playerController.GetComponent<PlayerMeleeAttack>()?.CancelAttack();
         refresh();
     }
 
