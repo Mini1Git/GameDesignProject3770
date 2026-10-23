@@ -14,6 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::spell_SO
   spellName: Fireball spell
   spellPrefab: {fileID: 8387602701576749524, guid: c4a13d4f0d830df4ba52fa8b681133c4, type: 3}
+  spellImage: {fileID: 0}
+  spellDescription: Simple fireball as a test spell.
   spellElement: 1
   positionType: 0
   manaCost: 5

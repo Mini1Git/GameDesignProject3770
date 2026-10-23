@@ -1494,23 +1494,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1245049360 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6529358638518001661, guid: 238e2aae55e3e5943b8907a23645ceb7, type: 3}
-  m_PrefabInstance: {fileID: 2060040614}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1245049366
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1245049360}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ee313e8013bb9c4ba26b9d1e73831a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SpellCasting
 --- !u!1001 &1447687695
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20282,10 +20265,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 900116494497677318, guid: 238e2aae55e3e5943b8907a23645ceb7, type: 3}
-      propertyPath: activeSpell
-      value: 
-      objectReference: {fileID: 11400000, guid: 298a91eac23d3bc4bac7bceb8bd080ed, type: 2}
-    - target: {fileID: 900116494497677318, guid: 238e2aae55e3e5943b8907a23645ceb7, type: 3}
       propertyPath: mana_System
       value: 
       objectReference: {fileID: 2045382988}
@@ -20295,10 +20274,6 @@ PrefabInstance:
       objectReference: {fileID: 2045382987}
     - target: {fileID: 6529358638518001661, guid: 238e2aae55e3e5943b8907a23645ceb7, type: 3}
       propertyPath: m_Name
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 6529358638518001661, guid: 238e2aae55e3e5943b8907a23645ceb7, type: 3}
-      propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 7019540239036792266, guid: 238e2aae55e3e5943b8907a23645ceb7, type: 3}
@@ -20344,10 +20319,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6529358638518001661, guid: 238e2aae55e3e5943b8907a23645ceb7, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1245049366}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 238e2aae55e3e5943b8907a23645ceb7, type: 3}
 --- !u!1 &2097663845
 GameObject:
