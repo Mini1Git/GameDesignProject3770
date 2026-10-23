@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 610778597012566046}
   - component: {fileID: 2210874393341423021}
   - component: {fileID: 4797079066276784588}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: rightHand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -130,7 +130,8 @@ GameObject:
   - component: {fileID: 2400010435320392153}
   - component: {fileID: 6039578650861342809}
   - component: {fileID: 817320001010101011}
-  m_Layer: 0
+  - component: {fileID: 4346334570686903772}
+  m_Layer: 3
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -226,12 +227,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2678180868c5928499ddf0197de62b4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::player
-  rb: {fileID: 8902339828357040930}
+  caster: {fileID: 0}
+  activeSpell: {fileID: 11400000, guid: 298a91eac23d3bc4bac7bceb8bd080ed, type: 2}
   speed: 10
   health: 10
+  maxHealth: 10
+  stamina: 10
+  maxStamina: 10
+  mana: 10
+  maxMana: 10
   mainHand: {fileID: 5819282660042242469}
   offHand: {fileID: 9011240803437318363}
   canAct: 1
+  stamina_System: {fileID: 0}
+  mana_System: {fileID: 0}
 --- !u!50 &8902339828357040930
 Rigidbody2D:
   serializedVersion: 5
@@ -335,6 +344,45 @@ MonoBehaviour:
   mainHandRenderer: {fileID: 2210874393341423021}
   pickupPrefab: {fileID: 7877872195256472589, guid: d661d64656a34646b1ad5b279e18fb90, type: 3}
   dropDistance: 0.6
+--- !u!114 &817320001010101011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6529358638518001661}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1370b1eaf0a0468888f49559673fef3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerMeleeAttack
+  weaponAnimator: {fileID: 4797079066276784588}
+  chargedAttackThreshold: 0.2
+  fullChargeDuration: 1.2
+  normalDamage: 2
+  chargedBaseDamage: 4
+  fullChargeDamageMultiplier: 2
+  lightHitStaminaRestore: 2
+  chargedStaminaCost: 10
+  hitboxOffset: {x: 0, y: 0.25}
+  hitboxSize: {x: 0.25, y: 0.75}
+  enemyLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  hitStart: 0.1
+  hitEnd: 0.55
+--- !u!114 &4346334570686903772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6529358638518001661}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ee313e8013bb9c4ba26b9d1e73831a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SpellCasting
 --- !u!1 &9011240803437318363
 GameObject:
   m_ObjectHideFlags: 0
@@ -345,7 +393,7 @@ GameObject:
   m_Component:
   - component: {fileID: 264852548763958492}
   - component: {fileID: 7579870151029177227}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: leftHand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -427,30 +475,3 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
   m_BlendShapeWeights: []
---- !u!114 &817320001010101011
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6529358638518001661}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1370b1eaf0a0468888f49559673fef3d, type: 3}
-  m_Name:
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerMeleeAttack
-  weaponAnimator: {fileID: 4797079066276784588}
-  chargedAttackThreshold: 0.2
-  fullChargeDuration: 1.2
-  normalDamage: 2
-  chargedBaseDamage: 4
-  fullChargeDamageMultiplier: 2
-  lightHitStaminaRestore: 2
-  chargedStaminaCost: 10
-  hitboxOffset: {x: 0, y: 0.25}
-  hitboxSize: {x: 0.25, y: 0.75}
-  enemyLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  hitStart: 0.1
-  hitEnd: 0.55

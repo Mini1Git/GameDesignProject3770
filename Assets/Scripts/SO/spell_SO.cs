@@ -1,10 +1,11 @@
 using UnityEngine;
-
+using UnityEngine.UI;
 
 public enum ElementType
 {
     Frost,Fire, Wind,Dark,Poison,Water,Nature, Summon
 }
+
 
 public enum PositionType
 {
@@ -16,6 +17,10 @@ public class spell_SO : ScriptableObject
 {
     public string spellName;
     public GameObject spellPrefab;
+    public Image spellImage;
+    [TextArea(2,10)]
+    public string spellDescription;
+    
     public ElementType spellElement;
     public PositionType positionType;
     public float manaCost;
