@@ -2,14 +2,21 @@ using UnityEngine;
 
 public class attackEnemy : MonoBehaviour
 {
-    public bool canAttack = false;
+    public int damage = 1;
+    private Animator animator;
 
-    void FixedUpdate()
+    void Start()
     {
-        
-        if (canAttack)
+        animator = GetComponent<Animator>();
+    }
+
+
+    public void doAttack()
+    {
+        //if not already attacking, attack
+        if (animator.GetCurrentAnimatorStateInfo(0).IsName("Idle") && !animator.IsInTransition(0))
         {
-            GetComponent<Animator>().SetTrigger("Swing");
+            animator.SetTrigger("Swing");
         }
     }
 
@@ -17,7 +24,7 @@ public class attackEnemy : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            Debug.Log("Hit player");
+            collision.GetComponent<player>().takeDmg(damage);
         }
     }
 }

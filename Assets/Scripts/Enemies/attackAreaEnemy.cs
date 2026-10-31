@@ -3,8 +3,8 @@ using UnityEngine;
 public class attackAreaEnemy : MonoBehaviour
 {
     private bool canAttack = false;
-    public GameObject attackObject;
     private attackEnemy attack;
+    public GameObject attackObject;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -15,7 +15,10 @@ public class attackAreaEnemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (canAttack)
+        {
+            attack.doAttack();
+        }
     }
 
     public void OnTriggerEnter2D(Collider2D collision)
@@ -23,7 +26,7 @@ public class attackAreaEnemy : MonoBehaviour
         Debug.Log("Something entered");
         if (collision.gameObject.tag == "Player")
         {
-            attack.canAttack = true;
+            canAttack = true;
         }
     }
 
@@ -31,7 +34,7 @@ public class attackAreaEnemy : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-           attack.canAttack = false;
+            canAttack = false;
         }
     }
 }

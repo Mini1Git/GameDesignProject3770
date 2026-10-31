@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Controls;
+using UnityEngine.SceneManagement;
 
 public class player : MonoBehaviour
 {
@@ -141,5 +142,30 @@ public class player : MonoBehaviour
         Debug.Log("Attack with spell!");
         mana_System.ConsumeMana(activeSpell.manaCost);
         caster.Cast(activeSpell);
+    }
+
+    public void takeDmg(int dmg)
+    {
+        health -= dmg;
+        if(health <= 0)
+        {
+            die();
+        }
+    }
+
+    public void heal(int value)
+    {
+        health += value;
+        if(health >= maxHealth)
+        {
+            health = maxHealth;
+        }
+    }
+
+    void die()
+    {
+        //dying resets the scene
+        //we can implement saving and loading player data later
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
