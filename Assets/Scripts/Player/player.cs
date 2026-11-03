@@ -116,7 +116,7 @@ public class player : MonoBehaviour
     void mainHandPressed(InputAction.CallbackContext ctx)
     {
         if (inputFocused && Application.isFocused && !inputPaused && canAct)
-            meleeAttack?.BeginCharge(ctx.time);
+            meleeAttack?.BeginCharge();
     }
 
     void mainHandReleased(InputAction.CallbackContext ctx)
@@ -126,7 +126,7 @@ public class player : MonoBehaviour
             && button.device.added && button.device.enabled;
         if (isActiveAndEnabled && inputFocused && Application.isFocused && !inputPaused
             && canAct && attackMain.enabled && released)
-            meleeAttack?.ReleaseCharge(ctx.time);
+            meleeAttack?.ReleaseCharge();
         else
             meleeAttack?.CancelAttack();
     }

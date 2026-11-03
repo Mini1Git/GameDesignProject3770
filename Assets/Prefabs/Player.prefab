@@ -359,6 +359,10 @@ MonoBehaviour:
   weaponAnimator: {fileID: 4797079066276784588}
   chargedAttackThreshold: 0.2
   fullChargeDuration: 1.2
+  chargeRaiseDuration: 0.1
+  chargedMinStamina: 2
+  chargeFullPulseScale: 1.2
+  chargeFullPulseDuration: 0.15
   normalDamage: 2
   chargedBaseDamage: 4
   fullChargeDamageMultiplier: 2
@@ -371,6 +375,8 @@ MonoBehaviour:
     m_Bits: 4294967295
   hitStart: 0.1
   hitEnd: 0.55
+  chargedHitStart: 0.4
+  chargedHitEnd: 0.62
 --- !u!114 &4346334570686903772
 MonoBehaviour:
   m_ObjectHideFlags: 0

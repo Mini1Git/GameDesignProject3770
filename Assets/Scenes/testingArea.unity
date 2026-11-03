@@ -20264,6 +20264,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 817320001010101011, guid: 238e2aae55e3e5943b8907a23645ceb7, type: 3}
+      propertyPath: chargePoseTime
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 817320001010101011, guid: 238e2aae55e3e5943b8907a23645ceb7, type: 3}
+      propertyPath: lightSwingSpeed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 817320001010101011, guid: 238e2aae55e3e5943b8907a23645ceb7, type: 3}
+      propertyPath: chargedStaminaCost
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 817320001010101011, guid: 238e2aae55e3e5943b8907a23645ceb7, type: 3}
+      propertyPath: fullChargeDuration
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 817320001010101011, guid: 238e2aae55e3e5943b8907a23645ceb7, type: 3}
+      propertyPath: chargeRaiseDuration
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 817320001010101011, guid: 238e2aae55e3e5943b8907a23645ceb7, type: 3}
+      propertyPath: chargeFullPulseDuration
+      value: 0.05
+      objectReference: {fileID: 0}
     - target: {fileID: 900116494497677318, guid: 238e2aae55e3e5943b8907a23645ceb7, type: 3}
       propertyPath: mana_System
       value: 
