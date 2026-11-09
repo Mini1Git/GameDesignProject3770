@@ -34,6 +34,9 @@ public class player : MonoBehaviour
     bool inputFocused;
     bool inputPaused;
 
+
+    
+
     private void Awake()
     {
         caster = GetComponent<SpellCasting>();
@@ -46,7 +49,7 @@ public class player : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        LevelingSystem.Instance.currentLevel += 1;
     }
     private void OnEnable() // when this script is enabled.
     {
