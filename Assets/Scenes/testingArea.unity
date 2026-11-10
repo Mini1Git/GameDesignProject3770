@@ -1383,6 +1383,80 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 9199648934376728866, guid: 78c1ac2fd86835c4ca9559d704ea55a8, type: 3}
   m_PrefabInstance: {fileID: 96085752059410877}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1189345414
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1189345415}
+  - component: {fileID: 1189345417}
+  - component: {fileID: 1189345416}
+  m_Layer: 0
+  m_Name: progressionManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1189345415
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1189345414}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5.10235, y: -1.10336, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1189345416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1189345414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58fac184e60e831498c27cffd47d7808, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SkillSystem
+  skillPoints: 0
+  skills:
+  - key: {fileID: 11400000, guid: 9e85e0c071a01b748ab24baa5b86b377, type: 2}
+    value: 0
+--- !u!114 &1189345417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1189345414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30c7e86373360c64f816bded4138f873, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LevelingSystem
+  currentLevel: 1
+  currentXP: 0
+  xpToNextLVL: 1
+  statPoints: 0
+  playerStats:
+  - key: 0
+    value: 1
+  - key: 1
+    value: 1
+  - key: 3
+    value: 1
+  - key: 2
+    value: 9
 --- !u!1 &1227830308
 GameObject:
   m_ObjectHideFlags: 0
@@ -20731,3 +20805,4 @@ SceneRoots:
   - {fileID: 1501695958}
   - {fileID: 1242873028}
   - {fileID: 2045382986}
+  - {fileID: 1189345415}
