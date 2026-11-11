@@ -151,6 +151,16 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""initialStateCheck"": false,
                     ""priority"": 0
+                },
+                {
+                    ""name"": ""Dash"",
+                    ""type"": ""Button"",
+                    ""id"": ""1efa5941-3d59-4c64-a211-a7ec31fe884e"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false,
+                    ""priority"": 0
                 }
             ],
             ""bindings"": [
@@ -263,6 +273,17 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""action"": ""toggleInventory"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""13e3d493-a27e-4a1e-bf42-a113ff7b09e0"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Dash"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -277,6 +298,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         m_PlayerGame_cycleQuickSlot = m_PlayerGame.FindAction("cycleQuickSlot", throwIfNotFound: true);
         m_PlayerGame_cycleSpell = m_PlayerGame.FindAction("cycleSpell", throwIfNotFound: true);
         m_PlayerGame_toggleInventory = m_PlayerGame.FindAction("toggleInventory", throwIfNotFound: true);
+        m_PlayerGame_Dash = m_PlayerGame.FindAction("Dash", throwIfNotFound: true);
     }
 
     ~@PlayerInput()
@@ -363,6 +385,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
     private readonly InputAction m_PlayerGame_cycleQuickSlot;
     private readonly InputAction m_PlayerGame_cycleSpell;
     private readonly InputAction m_PlayerGame_toggleInventory;
+    private readonly InputAction m_PlayerGame_Dash;
     /// <summary>
     /// Provides access to input actions defined in input action map "PlayerGame".
     /// </summary>
@@ -398,6 +421,10 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "PlayerGame/toggleInventory".
         /// </summary>
         public InputAction @toggleInventory => m_Wrapper.m_PlayerGame_toggleInventory;
+        /// <summary>
+        /// Provides access to the underlying input action "PlayerGame/Dash".
+        /// </summary>
+        public InputAction @Dash => m_Wrapper.m_PlayerGame_Dash;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -442,6 +469,9 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @toggleInventory.started += instance.OnToggleInventory;
             @toggleInventory.performed += instance.OnToggleInventory;
             @toggleInventory.canceled += instance.OnToggleInventory;
+            @Dash.started += instance.OnDash;
+            @Dash.performed += instance.OnDash;
+            @Dash.canceled += instance.OnDash;
         }
 
         /// <summary>
@@ -471,6 +501,9 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @toggleInventory.started -= instance.OnToggleInventory;
             @toggleInventory.performed -= instance.OnToggleInventory;
             @toggleInventory.canceled -= instance.OnToggleInventory;
+            @Dash.started -= instance.OnDash;
+            @Dash.performed -= instance.OnDash;
+            @Dash.canceled -= instance.OnDash;
         }
 
         /// <summary>
@@ -553,5 +586,12 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnToggleInventory(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Dash" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnDash(InputAction.CallbackContext context);
     }
 }

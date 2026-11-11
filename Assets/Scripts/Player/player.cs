@@ -1,3 +1,5 @@
+using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Controls;
@@ -29,10 +31,14 @@ public class player : MonoBehaviour
     InputAction move;
     InputAction attackMain;
     InputAction attackOff;
+    InputAction dash;
     Vector2 moveDirection = Vector2.zero;
     PlayerMeleeAttack meleeAttack;
     bool inputFocused;
     bool inputPaused;
+
+
+    
 
     private void Awake()
     {
@@ -48,6 +54,7 @@ public class player : MonoBehaviour
     {
         
     }
+    
     private void OnEnable() // when this script is enabled.
     {
         playerInput.Enable();
@@ -60,6 +67,9 @@ public class player : MonoBehaviour
         attackMain.started += mainHandPressed;
         attackMain.canceled += mainHandReleased;
         attackOff.performed += offHandAttack; 
+
+        //skills
+        dash = playerInput.PlayerGame.Dash;
     }
 
     private void OnDisable() // when this script is disabled.
@@ -94,8 +104,8 @@ public class player : MonoBehaviour
     void Update()
     {
         moveDirection = move.ReadValue<Vector2>();
+        checkSkills();
 
-        
     }
 
     
@@ -167,5 +177,27 @@ public class player : MonoBehaviour
         //dying resets the scene
         //we can implement saving and loading player data later
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void checkSkills() // this function checks if the player has skills unlocked (hard coded), and if they do, can later implement the skills.
+    {
+        foreach (KeyValuePair<skill_SO, bool> skill in SkillSystem.Instance.skills)
+        {
+            if (skill.Value == true)
+            { // check if the player currently has it unlocked.
+
+                if (skill.Key.name.ToLower() == "dash")
+                {
+
+                    //assign dashing button to Dash function.
+                    dash.performed += Dash;
+                }
+            }
+
+        }
+    }
+    public void Dash(InputAction.CallbackContext ctx)
+    {
+        Debug.Log("*Player Dashes*");
     }
 }
