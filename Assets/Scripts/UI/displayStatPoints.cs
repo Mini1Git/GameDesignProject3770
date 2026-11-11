@@ -25,11 +25,12 @@ public class displayStatPoints : MonoBehaviour
         statPointsText.text = $"Available Stat Points: {LevelingSystem.Instance.availableStatPoints}";
         foreach (GameObject stat in stats)
         {
-            if (Enum.TryParse(typeof(Stats), stat.name, out var enumStat))
+            if (Enum.TryParse(typeof(Stats), stat.name, out var enumStat)) // so since the gameobject names are strings, but also match, we can parse it to match 
+                                                                            //the stat enum.
             {
                 // so now we get the enum result, enumStat
                 stat.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = $"{enumStat}: {LevelingSystem.Instance.playerStats[(Stats)enumStat]}";
-                Debug.Log("UPDATEd STATS");
+                
             }
 
         }
