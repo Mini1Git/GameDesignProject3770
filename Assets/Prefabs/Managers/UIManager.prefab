@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 164694808954142525}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -266.6, y: -173.5, z: 0}
+  m_LocalPosition: {x: -241.3, y: -173.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -50,7 +50,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::displayStatPoints
   statPointsText: {fileID: 6292578390897928756}
-  importantDesignReminder: "DO NOT CHANGE THE ORDERING OF THE INTERNAL STAT UI, the stat's internal order must be strictly in this order: \n1. Button \n2. Text"
+  importantDesignReminder: "DO NOT CHANGE THE ORDERING OF THE INTERNAL STAT UI, the stat's internal order must be strictly in this order: \n1. Button \n2. Text\nAlso, the names of the gameobjects themselves must match the stat enums."
 --- !u!1 &548798189096875339
 GameObject:
   m_ObjectHideFlags: 0
@@ -1356,7 +1356,7 @@ GameObject:
   - component: {fileID: 3601827511266769171}
   - component: {fileID: 6085527747374089627}
   m_Layer: 0
-  m_Name: Text (TMP)
+  m_Name: titleStat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1378,7 +1378,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 240.5, y: 97.8}
+  m_AnchoredPosition: {x: 282.8, y: 97.8}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3601827511266769171
@@ -1824,7 +1824,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 196.8667, y: 0}
+  m_AnchoredPosition: {x: 223.3, y: 0}
   m_SizeDelta: {x: 186.9334, y: 241.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3921832007478273778
@@ -2044,7 +2044,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 208.7, y: 52.6}
+  m_AnchoredPosition: {x: 241.3, y: 52.6}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8408511025738233388
@@ -2225,7 +2225,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.CanvasScaler
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
