@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Enemy
   - ResourceSystem
+  - skillUI
   layers:
   - Default
   - TransparentFX

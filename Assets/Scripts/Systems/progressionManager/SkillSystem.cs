@@ -1,6 +1,7 @@
+using JetBrains.Annotations;
 using System.Collections.Generic;
 using UnityEngine;
-
+using System.Linq;
 public class SkillSystem : MonoBehaviour
 {
     public static SkillSystem Instance;
@@ -31,9 +32,9 @@ public class SkillSystem : MonoBehaviour
     }
     private void Start()
     {
-        foreach (KeyValuePair<skill_SO, bool> skillCheck in skills) {
-            skillUnlock(skillCheck.Key);
-        }
+        
+        skills = skills.ToDictionary(skill => skill.Key, skill => skillUnlock(skill.Key)); // this updates all skills, and checks reqs using LINQ lib.
+        
     }
     public bool skillUnlock(skill_SO skill)
     {

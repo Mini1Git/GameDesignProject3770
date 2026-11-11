@@ -1,13 +1,15 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public enum Stats
 {
     Strength,
     Vitality,
     Agility,
-    Magic
+    Magic, 
+    Endurance
 }
 
 public class LevelingSystem : MonoBehaviour
@@ -18,10 +20,16 @@ public class LevelingSystem : MonoBehaviour
     public int currentLevel = 1; // this is the current level of the player
     public int currentXP;
     public int xpToNextLVL;
-    
+
+    // player inputs here
+    InputAction openLevelMenuInput;
+    PlayerInput playerInput;
+    bool openLeveling = false;
+
     [Header("Stat points")]
-    public int statPoints = 0;
+    public int availableStatPoints = 0;
     [Header("Player Stats")]
+    //this dictionary stores the stats that a player can upgrade, and it's corresponding level.
     [SerializeField]
     [DictionaryDisplay(keyLabel = "Stat", valueLabel = "Level")]
     public Dictionary<Stats, int> playerStats = new Dictionary<Stats, int>() {
@@ -29,8 +37,10 @@ public class LevelingSystem : MonoBehaviour
         {Stats.Magic, 1 },
         {Stats.Agility, 1 },
         {Stats.Vitality, 1 },
+        {Stats.Endurance, 1 }
     };
 
+    GameObject skillMenu;
     public int getPlayerStat(Stats stat) { // this method is a getter for the current player's stats.
         playerStats.TryGetValue(stat, out var value);
         return value;
@@ -51,17 +61,86 @@ public class LevelingSystem : MonoBehaviour
 
         // Optional: Keep this object alive when switching scenes
         DontDestroyOnLoad(gameObject);
+
+
+        //playerInput initialization, always need to do this.
+        playerInput = new PlayerInput();
     }
     private void Start()
     {
         
         gainXP(320000); //lvl 99
+        skillMenu = GameObject.FindGameObjectWithTag("skillUI"); // this gets and initially sets the skilmenu to inactive.
+        skillMenu.SetActive(false);
+
+    }
+    private void OnEnable()
+    {
+        playerInput.Enable();
+        openLevelMenuInput = playerInput.PlayerGame.toggleInventory; // ik it says toggleInventory but still same. "tab"
+        
+        openLevelMenuInput.performed += toggleLevelSystem; 
+    }
+    public void toggleLevelSystem(InputAction.CallbackContext ctx)
+    {
+        skillMenu.SetActive(!openLeveling);
+        openLeveling = !openLeveling; // flips each time u tab, in sync with inventory.
     }
 
+    private void OnDisable()
+    {
+        playerInput.Disable();
+    }
     public void levelUp()
     {
         currentLevel++;
         SkillSystem.Instance.skillPoints++;
+    }
+
+    public void increaseVitality()
+    {
+        if (availableStatPoints == 0)
+        {
+            return;
+        }
+        playerStats[Stats.Vitality] += 1;
+        availableStatPoints--;
+    }
+    public void increaseEndurance()
+    {
+        if (availableStatPoints == 0)
+        {
+            return;
+        }
+        playerStats[Stats.Endurance] += 1;
+        availableStatPoints--;
+    }
+    public void increaseStrength()
+    {
+        if (availableStatPoints == 0)
+        {
+            return;
+        }
+        playerStats[Stats.Strength] += 1;
+        availableStatPoints--;
+    }
+    public void increaseAgility()
+    {
+        if (availableStatPoints == 0)
+        {
+            return;
+        }
+        playerStats[Stats.Agility] += 1;
+        availableStatPoints--;
+    }
+    public void increaseMagic()
+    {
+        if (availableStatPoints == 0)
+        {
+            return;
+        }
+        playerStats[Stats.Magic] += 1;
+        availableStatPoints--;
     }
 
     public void gainXP(int xpGained)
