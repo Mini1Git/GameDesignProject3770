@@ -1,7 +1,7 @@
 using JetBrains.Annotations;
 using System.Collections.Generic;
 using UnityEngine;
-using System.Linq;
+
 public class SkillSystem : MonoBehaviour
 {
     public static SkillSystem Instance;
@@ -23,8 +23,7 @@ public class SkillSystem : MonoBehaviour
         // Set the active instance to this object
         Instance = this;
 
-        // Optional: Keep this object alive when switching scenes
-        DontDestroyOnLoad(gameObject);
+       
     }
 
     public void gainSkillPoint() {
@@ -33,19 +32,21 @@ public class SkillSystem : MonoBehaviour
     private void Start()
     {
         
-        skills = skills.ToDictionary(skill => skill.Key, skill => skillUnlock(skill.Key)); // this updates all skills, and checks reqs using LINQ lib.
+        
         
     }
-    public bool skillUnlock(skill_SO skill)
+    public bool skillUnlock(skill_SO skill)// this function basically is a skill req check, it goes through all the skills, and check if the current player
+                                            // stats are higher than the stat reqs, if ALL the stat reqs for the skill is smaller or equal to player stats,
+                                            // then unlock the skill.
     {
         foreach (KeyValuePair<Stats, int> requiredStat in skill.requiredStats)
         {
             if (LevelingSystem.Instance.getPlayerStat(requiredStat.Key) >= requiredStat.Value)
             {
-                Debug.Log("MET THE REQS FOR: " + requiredStat.Key);
+                //Debug.Log("MET THE REQS FOR: " + requiredStat.Key);
             }
             else {
-                Debug.Log("DID NOT MEET THE REQS FOR: " + requiredStat.Key);
+                //Debug.Log("DID NOT MEET THE REQS FOR: " + requiredStat.Key);
                 return false;
             }
         }

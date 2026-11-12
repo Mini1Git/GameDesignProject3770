@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Controls;
 using UnityEngine.SceneManagement;
-
+using System.Linq;
 public class player : MonoBehaviour
 {
     
@@ -181,6 +181,7 @@ public class player : MonoBehaviour
 
     public void checkSkills() // this function checks if the player has skills unlocked (hard coded), and if they do, can later implement the skills.
     {
+        SkillSystem.Instance.skills = SkillSystem.Instance.skills.ToDictionary(skill => skill.Key, skill => SkillSystem.Instance.skillUnlock(skill.Key)); // this updates all skills, and checks reqs using LINQ lib.
         foreach (KeyValuePair<skill_SO, bool> skill in SkillSystem.Instance.skills)
         {
             if (skill.Value == true)

@@ -7,7 +7,7 @@ public class Explode_on_Hit_Behaviour : SpellBehaviour
         if (collision.collider.GetComponent<enemyBase>())
         {
             Debug.Log("HIT " + collision.collider.gameObject.name);
-            Destroy(gameObject);
+            
         }
         
     }
