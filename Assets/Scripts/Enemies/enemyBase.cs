@@ -11,7 +11,7 @@ public class enemyBase : MonoBehaviour
     public float aggroRange = 10f;
     public float turnSpeed = 1f;
 
-
+    public int xpDrop = 0;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -47,6 +47,7 @@ public class enemyBase : MonoBehaviour
 
     void die()
     {
+        LevelingSystem.Instance.gainXP(xpDrop);
         Destroy(gameObject);
     }
 }
