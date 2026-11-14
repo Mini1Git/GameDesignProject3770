@@ -19678,26 +19678,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 817320001010101011, guid: 238e2aae55e3e5943b8907a23645ceb7, type: 3}
-      propertyPath: chargePoseTime
-      value: 0.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 817320001010101011, guid: 238e2aae55e3e5943b8907a23645ceb7, type: 3}
-      propertyPath: lightSwingSpeed
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 817320001010101011, guid: 238e2aae55e3e5943b8907a23645ceb7, type: 3}
-      propertyPath: chargedStaminaCost
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 817320001010101011, guid: 238e2aae55e3e5943b8907a23645ceb7, type: 3}
-      propertyPath: fullChargeDuration
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 817320001010101011, guid: 238e2aae55e3e5943b8907a23645ceb7, type: 3}
-      propertyPath: chargeRaiseDuration
-      value: 0.05
-      objectReference: {fileID: 0}
+    - target: {fileID: 6039578650861342809, guid: 238e2aae55e3e5943b8907a23645ceb7, type: 3}
+      propertyPath: quickSlots.Array.data[1]
+      value:
+      objectReference: {fileID: 11400000, guid: 3e052841c75b42c8822986737e4fb507, type: 2}
+    - target: {fileID: 6039578650861342809, guid: 238e2aae55e3e5943b8907a23645ceb7, type: 3}
+      propertyPath: quickSlots.Array.data[2]
+      value:
+      objectReference: {fileID: 11400000, guid: 97cabc7b6925494b8e544ce4c23a60b9, type: 2}
     - target: {fileID: 817320001010101011, guid: 238e2aae55e3e5943b8907a23645ceb7, type: 3}
       propertyPath: chargeFullPulseDuration
       value: 0.05

@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7d403a1257b4c968e5b27d6b5064f31, type: 3}
+  m_Name: Branch
+  m_EditorClassIdentifier: Assembly-CSharp::weaponData
+  itemName: Branch
+  type: 0
+  icon: {fileID: -4053381014600266116, guid: 52ecf71ab8c065449beec714903bce61, type: 3}
+  baseDamage: 2
+  attackSpeed: 2
+  staminaCost: 3
+  chargedDamageMultiplier: 1
+  fullChargeDamageMultiplier: 2
+  lightHitStaminaRestore: 2
+  chargedMinStamina: 2
+  chargedAttackThreshold: 0.2
+  fullChargeDuration: 0.4
+  chargeRaiseDuration: 0.05
+  chargePoseTime: 0.4
+  attackShape: 2
+  meleeSwingAnimation: {fileID: 7400000, guid: e0375d990ac3453fa02e95c9824da3f5, type: 2}
+  chargedSwingAnimation: {fileID: 7400000, guid: 2c9565ed24c841b8b7e10920a9b3de75, type: 2}
+  meleeHitboxOffset: {x: 0, y: 0.26}
+  meleeHitboxSize: {x: 0.12, y: 0.62}
+  areaRadius: 0.65
+  hitStart: 0.42
+  hitEnd: 0.6
+  chargedHitStart: 0.42
+  chargedHitEnd: 0.6
+  chargedHitWindows:
+  - {x: 0.4, y: 0.46}
+  - {x: 0.5, y: 0.56}
+  statScaling:
+  - stat: 2
+    coefficient: 0.25
