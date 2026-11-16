@@ -24,18 +24,19 @@ public class enemyMelee : enemyBase
 
     void FixedUpdate()
     {
-        // makes enemy face where its going
-        Vector2 direction = navAgent.velocity;
-        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        Quaternion targetRotation = Quaternion.Euler(0, 0, angle);
-        transform.rotation = Quaternion.RotateTowards(
-            transform.rotation,
-            targetRotation,
-            180f * Time.deltaTime * turnSpeed
-        );
 
         if (aggroed)
         {
+            // makes enemy face where its going
+            Vector2 direction = navAgent.velocity;
+            float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+            Quaternion targetRotation = Quaternion.Euler(0, 0, angle);
+            transform.rotation = Quaternion.RotateTowards(
+                transform.rotation,
+                targetRotation,
+                180f * Time.deltaTime * turnSpeed
+            );
+
             navAgent.destination = player.transform.position;
 
             if (Vector2.Distance(player.transform.position, transform.position) > aggroRange)
