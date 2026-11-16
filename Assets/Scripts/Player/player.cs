@@ -104,7 +104,7 @@ public class player : MonoBehaviour
     void Update()
     {
         moveDirection = move.ReadValue<Vector2>();
-        checkSkills();
+        
 
     }
 
@@ -179,10 +179,10 @@ public class player : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
-    public void checkSkills() // this function checks if the player has skills unlocked (hard coded), and if they do, can later implement the skills.
+    public void useSkills() // this function checks if the player has skills unlocked (hard coded), and if they do, can later implement the skills.
     {
-        SkillSystem.Instance.skills = SkillSystem.Instance.skills.ToDictionary(skill => skill.Key, skill => SkillSystem.Instance.skillUnlock(skill.Key)); // this updates all skills, and checks reqs using LINQ lib.
-        foreach (KeyValuePair<skill_SO, bool> skill in SkillSystem.Instance.skills)
+        // the dictionary is responsible to see what skills are available to the player.
+        foreach (KeyValuePair<skill_SO, bool> skill in SkillSystem.Instance.skillsDictionary)
         {
             if (skill.Value == true)
             { // check if the player currently has it unlocked.

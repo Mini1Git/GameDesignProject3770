@@ -70,7 +70,7 @@ public class LevelingSystem : MonoBehaviour
     {
         
         //gainXP(320000); //lvl 99
-        skillMenu = GameObject.FindGameObjectWithTag("skillUI"); // this gets and initially sets the skilmenu to inactive.
+        skillMenu = GameObject.FindGameObjectWithTag("skillUI"); // this gets and initially sets the skillmenu to inactive.
         skillMenu.SetActive(false);
 
     }
