@@ -1,9 +1,9 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class skillButton_Settings : MonoBehaviour
 {
     public Color normalColour;
-    public Color selectedColour;
     public Color unlockColour;
     public Color pressedColour;
     public Color highlightedColour;

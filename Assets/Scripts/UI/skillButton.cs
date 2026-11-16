@@ -1,3 +1,4 @@
+using NUnit.Framework.Constraints;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
@@ -18,11 +19,22 @@ public class skillButton : MonoBehaviour
     [ContextMenu("Preview Unlocked Colours")]
     public void applyColoursInEditor() // this modifies the colours when changing in inspector. But please use skillButton_Settings when changing since all buttons should look the same.
     {
+
+        
+
         if (thisButton == null)
             thisButton = GetComponent<Button>();
 
+
+
         if (buttonColours == null)
             buttonColours = GetComponentInParent<skillButton_Settings>();
+
+        Navigation nav = thisButton.navigation; // so that you can't focus select.
+
+        nav.mode = Navigation.Mode.None;
+
+        thisButton.navigation = nav;
 
         if (thisButton != null && buttonColours != null)
         {
@@ -47,7 +59,7 @@ public class skillButton : MonoBehaviour
             {
                 cb.normalColor = buttonColours.normalColour;
             }
-            cb.selectedColor = buttonColours.selectedColour;
+            
             cb.pressedColor = buttonColours.pressedColour;
             cb.highlightedColor = buttonColours.highlightedColour;
             thisButton.colors = cb;
