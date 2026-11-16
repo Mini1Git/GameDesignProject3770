@@ -27,7 +27,26 @@ public class skillButton : MonoBehaviour
         if (thisButton != null && buttonColours != null)
         {
             ColorBlock cb = thisButton.colors;
-            cb.normalColor = buttonColours.normalColour;
+            // Only check the dictionary if the game is running and SkillSystem exists
+            if (Application.isPlaying && SkillSystem.Instance != null && SkillSystem.Instance.skillsDictionary != null && associatedSkill != null)
+            {
+                if (SkillSystem.Instance.skillsDictionary.ContainsKey(associatedSkill))
+                {
+                    if (SkillSystem.Instance.skillsDictionary[associatedSkill])
+                    {
+                        cb.normalColor = buttonColours.unlockColour;
+                    }
+                    else
+                    {
+                        cb.normalColor = buttonColours.normalColour;
+                    }
+                }
+                
+            }
+            else
+            {
+                cb.normalColor = buttonColours.normalColour;
+            }
             cb.selectedColor = buttonColours.selectedColour;
             cb.pressedColor = buttonColours.pressedColour;
             cb.highlightedColor = buttonColours.highlightedColour;
@@ -49,7 +68,7 @@ public class skillButton : MonoBehaviour
             return;
         }
 
-        applyColoursInEditor();
+        
         
 
         bool skillUnlocked = SkillSystem.Instance.skillUnlock(associatedSkill);
@@ -63,9 +82,10 @@ public class skillButton : MonoBehaviour
         {
             SkillSystem.Instance.skillsDictionary[associatedSkill] = skillUnlocked;
         }
-        
-        
-        // this will either add or update to the dictionary.
+
+
+        // update colour 
+        applyColoursInEditor();
 
     }
 }

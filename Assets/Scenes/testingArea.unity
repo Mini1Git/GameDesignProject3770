@@ -1173,6 +1173,42 @@ MonoBehaviour:
   m_Area: 1
   m_IgnoreFromBuild: 0
   m_AffectedAgents: ffffffffi
+--- !u!1 &162576952 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6207689651840313911, guid: 0ea1838fdf31281448fc1e29329fb492, type: 3}
+  m_PrefabInstance: {fileID: 1917231906}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &162576954
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 162576952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc30a2bb36e205946944e5fcbf558407, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::skillButton
+  associatedSkill: {fileID: 0}
+--- !u!1 &257314971 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7362340445893322412, guid: 0ea1838fdf31281448fc1e29329fb492, type: 3}
+  m_PrefabInstance: {fileID: 1917231906}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &257314973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 257314971}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc30a2bb36e205946944e5fcbf558407, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::skillButton
+  associatedSkill: {fileID: 0}
 --- !u!1 &570438751 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1306686650234416308, guid: 0ea1838fdf31281448fc1e29329fb492, type: 3}
@@ -1289,6 +1325,28 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1376994667 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 819992530869592997, guid: 0ea1838fdf31281448fc1e29329fb492, type: 3}
+  m_PrefabInstance: {fileID: 1917231906}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1376994669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1376994667}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f2dce2b15ca1a9459ed0b1abfa6f1e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::skillButton_Settings
+  normalColour: {r: 1, g: 0.17823142, b: 0, a: 1}
+  selectedColour: {r: 0, g: 0, b: 0, a: 1}
+  unlockColour: {r: 0.07890731, g: 1, b: 0, a: 1}
+  pressedColour: {r: 0, g: 0, b: 0, a: 1}
+  highlightedColour: {r: 0, g: 0, b: 0, a: 1}
 --- !u!1 &1501695955
 GameObject:
   m_ObjectHideFlags: 0
@@ -19420,7 +19478,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 235934251940992910, guid: 0ea1838fdf31281448fc1e29329fb492, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.00000022226594
+      value: 0.00032049263
       objectReference: {fileID: 0}
     - target: {fileID: 376785307785874456, guid: 0ea1838fdf31281448fc1e29329fb492, type: 3}
       propertyPath: m_AnchorMax.y
@@ -19469,6 +19527,10 @@ PrefabInstance:
     - target: {fileID: 554401283887876064, guid: 0ea1838fdf31281448fc1e29329fb492, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 819992530869592997, guid: 0ea1838fdf31281448fc1e29329fb492, type: 3}
+      propertyPath: m_Name
+      value: skill_settings
       objectReference: {fileID: 0}
     - target: {fileID: 1046643520147639957, guid: 0ea1838fdf31281448fc1e29329fb492, type: 3}
       propertyPath: m_LocalPosition.x
@@ -19975,6 +20037,70 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6978383603103714013, guid: 0ea1838fdf31281448fc1e29329fb492, type: 3}
+      propertyPath: m_Colors.m_NormalColor.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6978383603103714013, guid: 0ea1838fdf31281448fc1e29329fb492, type: 3}
+      propertyPath: m_Colors.m_NormalColor.b
+      value: 0.0664047
+      objectReference: {fileID: 0}
+    - target: {fileID: 6978383603103714013, guid: 0ea1838fdf31281448fc1e29329fb492, type: 3}
+      propertyPath: m_Colors.m_NormalColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6978383603103714013, guid: 0ea1838fdf31281448fc1e29329fb492, type: 3}
+      propertyPath: m_Colors.m_NormalColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6978383603103714013, guid: 0ea1838fdf31281448fc1e29329fb492, type: 3}
+      propertyPath: m_Colors.m_PressedColor.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6978383603103714013, guid: 0ea1838fdf31281448fc1e29329fb492, type: 3}
+      propertyPath: m_Colors.m_PressedColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6978383603103714013, guid: 0ea1838fdf31281448fc1e29329fb492, type: 3}
+      propertyPath: m_Colors.m_PressedColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6978383603103714013, guid: 0ea1838fdf31281448fc1e29329fb492, type: 3}
+      propertyPath: m_Colors.m_PressedColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6978383603103714013, guid: 0ea1838fdf31281448fc1e29329fb492, type: 3}
+      propertyPath: m_Colors.m_SelectedColor.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6978383603103714013, guid: 0ea1838fdf31281448fc1e29329fb492, type: 3}
+      propertyPath: m_Colors.m_SelectedColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6978383603103714013, guid: 0ea1838fdf31281448fc1e29329fb492, type: 3}
+      propertyPath: m_Colors.m_SelectedColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6978383603103714013, guid: 0ea1838fdf31281448fc1e29329fb492, type: 3}
+      propertyPath: m_Colors.m_SelectedColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6978383603103714013, guid: 0ea1838fdf31281448fc1e29329fb492, type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6978383603103714013, guid: 0ea1838fdf31281448fc1e29329fb492, type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6978383603103714013, guid: 0ea1838fdf31281448fc1e29329fb492, type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6978383603103714013, guid: 0ea1838fdf31281448fc1e29329fb492, type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6978383603103714013, guid: 0ea1838fdf31281448fc1e29329fb492, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 0
       objectReference: {fileID: 0}
@@ -20154,12 +20280,21 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 819992530869592997, guid: 0ea1838fdf31281448fc1e29329fb492, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1376994669}
     - targetCorrespondingSourceObject: {fileID: 2356434379419524603, guid: 0ea1838fdf31281448fc1e29329fb492, type: 3}
       insertIndex: -1
       addedObject: {fileID: 787748962}
     - targetCorrespondingSourceObject: {fileID: 1306686650234416308, guid: 0ea1838fdf31281448fc1e29329fb492, type: 3}
       insertIndex: -1
       addedObject: {fileID: 570438756}
+    - targetCorrespondingSourceObject: {fileID: 7362340445893322412, guid: 0ea1838fdf31281448fc1e29329fb492, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 257314973}
+    - targetCorrespondingSourceObject: {fileID: 6207689651840313911, guid: 0ea1838fdf31281448fc1e29329fb492, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 162576954}
   m_SourcePrefab: {fileID: 100100000, guid: 0ea1838fdf31281448fc1e29329fb492, type: 3}
 --- !u!1001 &3229103967169484179
 PrefabInstance:
