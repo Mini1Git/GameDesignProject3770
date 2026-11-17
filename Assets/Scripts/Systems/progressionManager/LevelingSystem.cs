@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+
 public enum Stats
 {
     Strength,
@@ -41,7 +42,7 @@ public class LevelingSystem : MonoBehaviour
     };
 
     GameObject skillMenu;
-    public int getPlayerStat(Stats stat) { // this method is a getter for the current player's stats.
+    public int getPlayerStat(Stats stat) { // this method is a getter for the current player's specific stat.
         playerStats.TryGetValue(stat, out var value);
         return value;
     }
@@ -59,8 +60,7 @@ public class LevelingSystem : MonoBehaviour
         // Set the active instance to this object
         Instance = this;
 
-        // Optional: Keep this object alive when switching scenes
-        DontDestroyOnLoad(gameObject);
+        
 
 
         //playerInput initialization, always need to do this.
@@ -69,8 +69,8 @@ public class LevelingSystem : MonoBehaviour
     private void Start()
     {
         
-        gainXP(320000); //lvl 99
-        skillMenu = GameObject.FindGameObjectWithTag("skillUI"); // this gets and initially sets the skilmenu to inactive.
+        //gainXP(320000); //lvl 99
+        skillMenu = GameObject.FindGameObjectWithTag("skillUI"); // this gets and initially sets the skillmenu to inactive.
         skillMenu.SetActive(false);
 
     }
@@ -94,7 +94,7 @@ public class LevelingSystem : MonoBehaviour
     public void levelUp()
     {
         currentLevel++;
-        SkillSystem.Instance.skillPoints++;
+        SkillSystem.Instance.availableSkillPoints++;
     }
 
     public void increaseVitality()

@@ -2,9 +2,11 @@ using UnityEngine;
 
 public class Stamina_System : MonoBehaviour
 {
+    public static Stamina_System Instance;
     //stamina
     [SerializeField] private float stamina; // this is the actual value
     public float staminaRegenRate = 3.5f;
+    public bool staminaUnlock;
     public float Stamina // this is the property that modifies the actual value.
     {   //getter and setter.
         get { return Mathf.Clamp(stamina,0, player.maxStamina); } 
@@ -13,6 +15,16 @@ public class Stamina_System : MonoBehaviour
     private player player;
     public void Awake()
     {
+        // Check if an instance already exists
+        if (Instance != null && Instance != this)
+        {
+            // Destroy this duplicate object immediately to enforce a single instance
+            Destroy(gameObject);
+            return;
+        }
+
+        // Set the active instance to this object
+        Instance = this;
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<player>(); // this gets the player gameobject by tag.
     }
 
@@ -21,7 +33,7 @@ public class Stamina_System : MonoBehaviour
         Stamina = player.stamina;
     }
     public void Update()
-    {   if (Stamina != player.maxStamina)
+    {   if (Stamina != player.maxStamina && staminaUnlock)
         {
             RegenerateStamina();
         }

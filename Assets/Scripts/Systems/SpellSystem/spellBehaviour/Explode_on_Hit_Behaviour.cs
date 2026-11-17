@@ -8,6 +8,7 @@ public class Explode_on_Hit_Behaviour : SpellBehaviour
         {
             Debug.Log("HIT " + collision.collider.gameObject.name);
             Destroy(gameObject);
+            
         }
         
     }

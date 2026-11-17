@@ -116,7 +116,7 @@ public class PlayerMeleeAttack : MonoBehaviour
             CancelAttack();
             return;
         }
-        attackStamina = owner.stamina_System;
+        attackStamina = Stamina_System.Instance;
         if (attackStamina == null || !attackStamina.isActiveAndEnabled)
         {
             CancelAttack();
@@ -182,7 +182,7 @@ public class PlayerMeleeAttack : MonoBehaviour
         float previousHeldTime = heldTime;
         heldTime += deltaTime;
         if (heldTime < attackWeapon.chargedAttackThreshold) return;
-        Stamina_System stamina = owner.stamina_System;
+        Stamina_System stamina = Stamina_System.Instance;
         if (stamina == null || !stamina.isActiveAndEnabled) return;
         if (!chargeStarted)
         {

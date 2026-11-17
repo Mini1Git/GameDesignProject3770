@@ -4,15 +4,19 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Controls;
 using UnityEngine.SceneManagement;
-
+using System.Linq;
 public class player : MonoBehaviour
 {
     
     public SpellCasting caster;
     public spell_SO activeSpell; // this is the scriptable object that has all of the data of the currrently active spell.
     Rigidbody2D rb;
+    float originalSpeed;
     [Header("Player Settings")]
     public float speed = 10;
+    public bool isSprinting;
+    public float sprintMultiplier;
+    public float sprintStaminaCost;
     public float health = 10;
     public float maxHealth = 10;
     public float stamina = 10;
@@ -23,15 +27,16 @@ public class player : MonoBehaviour
     public GameObject mainHand;
     public GameObject offHand;
     public bool canAct = true;
-
-    public Stamina_System stamina_System;
-    public Mana_System mana_System;
+    public bool isDashing = false;
+    public int dashSpeed;
+    public int dashStaminaCost = 2;
 
     PlayerInput playerInput;
     InputAction move;
     InputAction attackMain;
     InputAction attackOff;
     InputAction dash;
+    InputAction sprint;
     Vector2 moveDirection = Vector2.zero;
     PlayerMeleeAttack meleeAttack;
     bool inputFocused;
@@ -42,6 +47,7 @@ public class player : MonoBehaviour
 
     private void Awake()
     {
+        originalSpeed = speed;
         caster = GetComponent<SpellCasting>();
         rb = GetComponent<Rigidbody2D>(); // get the rigidbody on the game Object.
         meleeAttack = GetComponent<PlayerMeleeAttack>();
@@ -70,10 +76,16 @@ public class player : MonoBehaviour
 
         //skills
         dash = playerInput.PlayerGame.Dash;
+        sprint = playerInput.PlayerGame.Sprint;
+
     }
 
     private void OnDisable() // when this script is disabled.
     {
+        //skills
+        dash.performed -= Dash;
+        sprint.started -= heldSprint;
+        sprint.canceled -= releaseSprint;
         // disabling an action also sends canceled, so stop listening before disabling it
         meleeAttack?.CancelAttack();
         attackMain.started -= mainHandPressed;
@@ -104,7 +116,20 @@ public class player : MonoBehaviour
     void Update()
     {
         moveDirection = move.ReadValue<Vector2>();
-        checkSkills();
+
+        //sprinting logic 
+        if (isSprinting && 0 < Stamina_System.Instance.Stamina)
+        {
+            Stamina_System.Instance.ConsumeStamina(sprintStaminaCost * Time.deltaTime);
+
+            speed = originalSpeed * sprintMultiplier;
+        }
+        else
+        {
+            isSprinting = false;
+            speed = originalSpeed;
+        }
+
 
     }
 
@@ -118,6 +143,15 @@ public class player : MonoBehaviour
         Vector2 direction = mousePos - transform.position;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         if (canAct) transform.rotation = Quaternion.Euler(0, 0, angle);
+
+        if (isDashing)
+        {
+            Stamina_System.Instance.ConsumeStamina(dashStaminaCost);
+            rb.linearVelocity = new Vector2(moveDirection.x * speed * dashSpeed, moveDirection.y * speed * dashSpeed);
+            isDashing = false;
+            return; // this will prevent wasd movement from overwriting.
+        }
+
 
         //player WASD movement
         rb.linearVelocity = new Vector2(moveDirection.x * speed, moveDirection.y * speed);
@@ -143,14 +177,14 @@ public class player : MonoBehaviour
 
     void offHandAttack(InputAction.CallbackContext ctx)
     {
-        if (!canAct || mana_System.Mana < activeSpell.manaCost)
+        if (!canAct || Mana_System.Instance.Mana < activeSpell.manaCost)
         {
             Debug.Log("OUT OF Mana!");
             return;
         }
 
         Debug.Log("Attack with spell!");
-        mana_System.ConsumeMana(activeSpell.manaCost);
+        Mana_System.Instance.ConsumeMana(activeSpell.manaCost);
         caster.Cast(activeSpell);
     }
 
@@ -179,25 +213,55 @@ public class player : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
-    public void checkSkills() // this function checks if the player has skills unlocked (hard coded), and if they do, can later implement the skills.
+    public void activateSkills() // this function checks if the player has skills unlocked (hard coded), and if they do, can later implement the skills.
     {
-        foreach (KeyValuePair<skill_SO, bool> skill in SkillSystem.Instance.skills)
+        // the dictionary is responsible to see what skills are available to the player.
+        foreach (KeyValuePair<skill_SO, bool> skill in SkillSystem.Instance.skillsDictionary)
         {
             if (skill.Value == true)
             { // check if the player currently has it unlocked.
-
-                if (skill.Key.name.ToLower() == "dash")
+                string skillName = skill.Key.name.ToLower();
+                switch (skillName) // using switch case here for easier management
                 {
-
-                    //assign dashing button to Dash function.
-                    dash.performed += Dash;
+                    case "dash":
+                        Debug.Log("DASHING ABILITY");
+                        //assign dashing button to Dash function.
+                        dash.performed += Dash;
+                        break;
+                    case "staminaregen":
+                        Stamina_System.Instance.staminaUnlock = true;
+                        break;
+                    case "manaregen":
+                        Mana_System.Instance.manaUnlock = true;
+                        break;
+                    case "sprint":
+                        sprint.started += heldSprint;
+                        sprint.canceled += releaseSprint;
+                        break;
                 }
+                
             }
 
         }
     }
     public void Dash(InputAction.CallbackContext ctx)
     {
-        Debug.Log("*Player Dashes*");
+        if (dashStaminaCost <= Stamina_System.Instance.Stamina)
+        {
+            isDashing = true;
+        }
+       
+    }
+
+    public void heldSprint(InputAction.CallbackContext ctx)
+    {
+        if (ctx.started)
+            isSprinting = true;
+    }
+
+    public void releaseSprint(InputAction.CallbackContext ctx)
+    {
+        isSprinting = false;
+        speed = originalSpeed;
     }
 }
