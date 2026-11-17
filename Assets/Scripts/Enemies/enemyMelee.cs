@@ -6,7 +6,6 @@ public class enemyMelee : enemyBase
 {
 
     private UnityEngine.AI.NavMeshAgent navAgent;
-    public Collider2D attackArea;
 
     void Awake()
     {
