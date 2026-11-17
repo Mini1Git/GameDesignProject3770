@@ -10,8 +10,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c020bcaaeba51ea4884cc7a1ec4de0fd, type: 3}
-  m_Name: parry
+  m_Name: staminaRegen
   m_EditorClassIdentifier: Assembly-CSharp::skill_SO
-  requiredStats:
-  - key: 0
-    value: 2
+  requiredStats: []

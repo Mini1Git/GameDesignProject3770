@@ -29,8 +29,8 @@ public class resourceBarUI : MonoBehaviour
         if (playerScript == null) return;
 
         Fill(healthBar,  playerScript.health,                 playerScript.maxHealth,  healthFull);
-        Fill(staminaBar, playerScript.stamina_System.Stamina, playerScript.maxStamina, staminaFull);
-        Fill(manaBar,    playerScript.mana_System.Mana,       playerScript.maxMana,    manaFull);
+        Fill(staminaBar, Stamina_System.Instance.Stamina, playerScript.maxStamina, staminaFull);
+        Fill(manaBar,    Mana_System.Instance.Mana,       playerScript.maxMana,    manaFull);
     }
 
     // sets the fill's width to value/max of its full width (clamped between empty and full)
