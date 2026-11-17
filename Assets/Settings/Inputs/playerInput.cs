@@ -161,6 +161,16 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""initialStateCheck"": false,
                     ""priority"": 0
+                },
+                {
+                    ""name"": ""Sprint"",
+                    ""type"": ""Button"",
+                    ""id"": ""b0ab5e04-816f-4f1c-b304-ffc12dbc11e6"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false,
+                    ""priority"": 0
                 }
             ],
             ""bindings"": [
@@ -284,6 +294,17 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""action"": ""Dash"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""2d76373f-fbf1-4d0a-8125-133ab884bd73"",
+                    ""path"": ""<Keyboard>/shift"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Sprint"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -299,6 +320,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         m_PlayerGame_cycleSpell = m_PlayerGame.FindAction("cycleSpell", throwIfNotFound: true);
         m_PlayerGame_toggleInventory = m_PlayerGame.FindAction("toggleInventory", throwIfNotFound: true);
         m_PlayerGame_Dash = m_PlayerGame.FindAction("Dash", throwIfNotFound: true);
+        m_PlayerGame_Sprint = m_PlayerGame.FindAction("Sprint", throwIfNotFound: true);
     }
 
     ~@PlayerInput()
@@ -386,6 +408,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
     private readonly InputAction m_PlayerGame_cycleSpell;
     private readonly InputAction m_PlayerGame_toggleInventory;
     private readonly InputAction m_PlayerGame_Dash;
+    private readonly InputAction m_PlayerGame_Sprint;
     /// <summary>
     /// Provides access to input actions defined in input action map "PlayerGame".
     /// </summary>
@@ -425,6 +448,10 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "PlayerGame/Dash".
         /// </summary>
         public InputAction @Dash => m_Wrapper.m_PlayerGame_Dash;
+        /// <summary>
+        /// Provides access to the underlying input action "PlayerGame/Sprint".
+        /// </summary>
+        public InputAction @Sprint => m_Wrapper.m_PlayerGame_Sprint;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -472,6 +499,9 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @Dash.started += instance.OnDash;
             @Dash.performed += instance.OnDash;
             @Dash.canceled += instance.OnDash;
+            @Sprint.started += instance.OnSprint;
+            @Sprint.performed += instance.OnSprint;
+            @Sprint.canceled += instance.OnSprint;
         }
 
         /// <summary>
@@ -504,6 +534,9 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @Dash.started -= instance.OnDash;
             @Dash.performed -= instance.OnDash;
             @Dash.canceled -= instance.OnDash;
+            @Sprint.started -= instance.OnSprint;
+            @Sprint.performed -= instance.OnSprint;
+            @Sprint.canceled -= instance.OnSprint;
         }
 
         /// <summary>
@@ -593,5 +626,12 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnDash(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Sprint" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnSprint(InputAction.CallbackContext context);
     }
 }

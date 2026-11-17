@@ -68,6 +68,7 @@ public class skillButton : MonoBehaviour
 
     public void skillCheck()
     {
+
         if (associatedSkill == null)
         {
             Debug.LogWarning($"The skill prefab has not been added to {gameObject.name}!");
@@ -84,11 +85,16 @@ public class skillButton : MonoBehaviour
         
 
         bool skillUnlocked = SkillSystem.Instance.skillUnlock(associatedSkill);
+        player player = GameObject.FindGameObjectWithTag("Player").GetComponent<player>();
+
         if (skillUnlocked)
         {
             
+            
             Debug.Log("UNLOCKED SKILL: " + associatedSkill);
             SkillSystem.Instance.skillsDictionary[associatedSkill] = skillUnlocked;
+
+
         }
         else
         {
@@ -96,8 +102,12 @@ public class skillButton : MonoBehaviour
         }
 
 
-        // update colour 
+        // update ui/colour and activate skills 
         applyColoursInEditor();
+        displaySkillPoints.Instance.updateSkillUI();
+        player.activateSkills();
+
+
 
     }
 }

@@ -128,7 +128,7 @@ public class PlayerMeleeAttack : MonoBehaviour
             CancelAttack();
             return;
         }
-        attackStamina = owner.stamina_System;
+        attackStamina = Stamina_System.Instance;
         if (attackStamina == null || !attackStamina.isActiveAndEnabled)
         {
             CancelAttack();
@@ -186,13 +186,13 @@ public class PlayerMeleeAttack : MonoBehaviour
     {
         heldTime += Time.deltaTime;
         if (heldTime < chargedAttackThreshold) return;
-        Stamina_System stamina = owner.stamina_System;
-        if (stamina == null || !stamina.isActiveAndEnabled) return;
+        
+        if (Stamina_System.Instance == null || !Stamina_System.Instance.isActiveAndEnabled) return;
         if (!chargeStarted)
         {
-            if (stamina.Stamina < chargedMinStamina) return;
+            if (Stamina_System.Instance.Stamina < chargedMinStamina) return;
             chargeStarted = true;
-            heldStamina = stamina.Stamina;
+            heldStamina = Stamina_System.Instance.Stamina;
             raiseStartedAt = heldTime;
             // freeze the swing clip so the sword stays in its raised pose
             weaponAnimator.speed = 0f;
@@ -201,13 +201,13 @@ public class PlayerMeleeAttack : MonoBehaviour
         weaponAnimator.Play(SwingState, 0, raise * ChargePoseTime);
 
         // stamina stop regenerate while a charge is held, so take back anything gained since last frame
-        float available = Mathf.Min(stamina.Stamina, heldStamina);
-        float regained = stamina.Stamina - available;
+        float available = Mathf.Min(Stamina_System.Instance.Stamina, heldStamina);
+        float regained = Stamina_System.Instance.Stamina - available;
         float gain = Mathf.Min(Time.deltaTime
             / Mathf.Max(0.01f, fullChargeDuration - chargedAttackThreshold), 1f - chargeProgress);
         float want = gain * ChargedCost;
         float take = Mathf.Min(want, available);
-        stamina.ConsumeStamina(regained + take);
+        Stamina_System.Instance.ConsumeStamina(regained + take);
         heldStamina = available - take;
         chargeProgress += ChargedCost > 0f ? take / ChargedCost : gain;
 
