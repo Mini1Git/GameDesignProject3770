@@ -337,7 +337,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   spellSlots:
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 298a91eac23d3bc4bac7bceb8bd080ed, type: 2}
   - {fileID: 0}
   - {fileID: 0}
   activeQuickSlot: 0

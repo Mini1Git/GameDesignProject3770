@@ -13,7 +13,7 @@ public enum PositionType
 }
 
 [CreateAssetMenu(fileName = "spell_SO", menuName = "Scriptable Objects/spell_SO")]
-public class spell_SO : ScriptableObject
+public class spell_SO : itemData
 {
     public string spellName;
     public GameObject spellPrefab;
@@ -24,7 +24,10 @@ public class spell_SO : ScriptableObject
     public ElementType spellElement;
     public PositionType positionType;
     public float manaCost;
-    
 
-    
+    // spells always count as spell items so they only go in spell slots
+    private void OnValidate()
+    {
+        type = itemType.spell;
+    }
 }

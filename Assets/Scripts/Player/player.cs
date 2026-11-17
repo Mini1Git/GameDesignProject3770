@@ -177,6 +177,8 @@ public class player : MonoBehaviour
 
     void offHandAttack(InputAction.CallbackContext ctx)
     {
+        if (activeSpell == null) return; // no spell in the active spell slot
+
         if (!canAct || Mana_System.Instance.Mana < activeSpell.manaCost)
         {
             Debug.Log("OUT OF Mana!");

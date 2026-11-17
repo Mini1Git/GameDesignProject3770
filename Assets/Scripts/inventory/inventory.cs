@@ -25,10 +25,12 @@ public class inventory : MonoBehaviour
     PlayerInput playerInput;
     InputAction cycleQuickSlot;
     InputAction cycleSpell;
+    player playerScript;
 
     private void Awake()
     {
         playerInput = new PlayerInput();
+        playerScript = GetComponent<player>();
     }
 
     private void OnEnable()
@@ -51,6 +53,7 @@ public class inventory : MonoBehaviour
     void Start()
     {
         updateMainHand();
+        updateActiveSpell();
     }
 
     public itemData[] getSlots(slotGroup group)
@@ -88,6 +91,21 @@ public class inventory : MonoBehaviour
 
     public bool addItem(itemData item)
     {
+        // spells go in a free spell slot first so you can cast them right away
+        if (item != null && item.type == itemType.spell)
+        {
+            for (int i = 0; i < spellSlots.Length; i++)
+            {
+                if (spellSlots[i] == null)
+                {
+                    spellSlots[i] = item;
+                    updateActiveSpell();
+                    onChanged?.Invoke();
+                    return true;
+                }
+            }
+        }
+
         for (int i = 0; i < inventorySlots.Length; i++)
         {
             if (inventorySlots[i] == null)
@@ -112,6 +130,7 @@ public class inventory : MonoBehaviour
         to[toIndex] = moving;
 
         updateMainHand();
+        updateActiveSpell();
         onChanged?.Invoke();
     }
 
@@ -129,6 +148,7 @@ public class inventory : MonoBehaviour
         pickup.pickupDelay = 1;
 
         updateMainHand();
+        updateActiveSpell();
         onChanged?.Invoke();
     }
 
@@ -142,6 +162,7 @@ public class inventory : MonoBehaviour
     public void cycleSpellSlots(int direction)
     {
         activeSpellSlot = nextFilledSlot(spellSlots, activeSpellSlot, direction);
+        updateActiveSpell();
         onChanged?.Invoke();
     }
 
@@ -172,5 +193,17 @@ public class inventory : MonoBehaviour
         itemData item = getActiveQuickItem();
         mainHandRenderer.enabled = item != null;
         if (item != null) mainHandRenderer.sprite = item.icon;
+    }
+
+    void updateActiveSpell()
+    {
+        // if the active spell slot is empty, jump to one that has a spell
+        if (spellSlots[activeSpellSlot] == null)
+        {
+            activeSpellSlot = nextFilledSlot(spellSlots, activeSpellSlot, 1);
+        }
+
+        // this is the spell the player casts with right click
+        playerScript.activeSpell = spellSlots[activeSpellSlot] as spell_SO;
     }
 }
