@@ -14374,6 +14374,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1283187159}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1594733877 stripped
+BoxCollider2D:
+  m_CorrespondingSourceObject: {fileID: 3050118206259353242, guid: 1041aef9856929c428c180381ad47ef7, type: 3}
+  m_PrefabInstance: {fileID: 3229103967169484179}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1722978633
 GameObject:
   m_ObjectHideFlags: 0
@@ -32394,6 +32399,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1410639073385638716, guid: 1041aef9856929c428c180381ad47ef7, type: 3}
+      propertyPath: attackArea
+      value: 
+      objectReference: {fileID: 1594733877}
     - target: {fileID: 5520574070948903555, guid: 1041aef9856929c428c180381ad47ef7, type: 3}
       propertyPath: m_Speed
       value: 0.5
