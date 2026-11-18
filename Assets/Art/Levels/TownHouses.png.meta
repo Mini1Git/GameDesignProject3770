@@ -1,0 +1,1653 @@
+fileFormatVersion: 2
+guid: 27600b5c942a08743b95aaab57f66afb
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6746020430094524812
+    second: TownHouses_0
+  - first:
+      213: 5133808275447545815
+    second: TownHouses_1
+  - first:
+      213: -64491430514095750
+    second: TownHouses_2
+  - first:
+      213: -3553977357381050567
+    second: TownHouses_3
+  - first:
+      213: -8483299038834541974
+    second: TownHouses_4
+  - first:
+      213: 48585900418708224
+    second: TownHouses_5
+  - first:
+      213: 3188709069619663377
+    second: TownHouses_6
+  - first:
+      213: 7589834924177837274
+    second: TownHouses_7
+  - first:
+      213: 7453537189513063621
+    second: TownHouses_8
+  - first:
+      213: -3411764114171029688
+    second: TownHouses_9
+  - first:
+      213: 5789555218161927697
+    second: TownHouses_10
+  - first:
+      213: -1273328931678119950
+    second: TownHouses_11
+  - first:
+      213: 1942636666943842638
+    second: TownHouses_12
+  - first:
+      213: 7478346290962307229
+    second: TownHouses_13
+  - first:
+      213: 1092740271387604367
+    second: TownHouses_14
+  - first:
+      213: 8640300734274497305
+    second: TownHouses_15
+  - first:
+      213: -2071329526837607401
+    second: TownHouses_16
+  - first:
+      213: 2160124657632262398
+    second: TownHouses_17
+  - first:
+      213: -2583848940247127887
+    second: TownHouses_18
+  - first:
+      213: -2402316785812728304
+    second: TownHouses_19
+  - first:
+      213: -4672376876826078048
+    second: TownHouses_20
+  - first:
+      213: -462197032327423465
+    second: TownHouses_21
+  - first:
+      213: 128699130675810835
+    second: TownHouses_22
+  - first:
+      213: 5923275151785947970
+    second: TownHouses_23
+  - first:
+      213: 5460251762682260128
+    second: TownHouses_24
+  - first:
+      213: 513682719675987149
+    second: TownHouses_25
+  - first:
+      213: -5586950145181063742
+    second: TownHouses_26
+  - first:
+      213: -7266584755406426898
+    second: TownHouses_27
+  - first:
+      213: -7512424645687980897
+    second: TownHouses_28
+  - first:
+      213: -4710744610997403509
+    second: TownHouses_29
+  - first:
+      213: -5001325309651153452
+    second: TownHouses_30
+  - first:
+      213: 2245666952468562889
+    second: TownHouses_31
+  - first:
+      213: 1870103756737366966
+    second: TownHouses_32
+  - first:
+      213: 7097110580870804803
+    second: TownHouses_33
+  - first:
+      213: 283573587888623085
+    second: TownHouses_34
+  - first:
+      213: 3611783063075752423
+    second: TownHouses_35
+  - first:
+      213: 1177884217379230193
+    second: TownHouses_36
+  - first:
+      213: 4432297967667186033
+    second: TownHouses_37
+  - first:
+      213: -5864769997644194782
+    second: TownHouses_38
+  - first:
+      213: -3268568308276107092
+    second: TownHouses_39
+  - first:
+      213: -159843633124140945
+    second: TownHouses_40
+  - first:
+      213: 7010385014767401356
+    second: TownHouses_41
+  - first:
+      213: -3349815765718240260
+    second: TownHouses_42
+  - first:
+      213: 4269114573768442137
+    second: TownHouses_43
+  - first:
+      213: -2448858938003193680
+    second: TownHouses_44
+  - first:
+      213: 1529008155734192410
+    second: TownHouses_45
+  - first:
+      213: -1694974417408642027
+    second: TownHouses_46
+  - first:
+      213: 5076182091466574848
+    second: TownHouses_47
+  - first:
+      213: 2951931541905342626
+    second: TownHouses_48
+  - first:
+      213: 5913422663946620733
+    second: TownHouses_49
+  - first:
+      213: -3908632207972245851
+    second: TownHouses_50
+  - first:
+      213: 1497043650287802474
+    second: TownHouses_51
+  - first:
+      213: -1674826323525722293
+    second: TownHouses_52
+  - first:
+      213: 834300861878485218
+    second: TownHouses_53
+  - first:
+      213: 1634806443654173702
+    second: TownHouses_54
+  - first:
+      213: -7041388138460052833
+    second: TownHouses_55
+  - first:
+      213: 963480273889894816
+    second: TownHouses_56
+  - first:
+      213: -4650485532758965247
+    second: TownHouses_57
+  - first:
+      213: 7499145589613720761
+    second: TownHouses_58
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: TownHouses_0
+      rect:
+        serializedVersion: 2
+        x: 898
+        y: 2503
+        width: 163
+        height: 249
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c81ef47d6ddae9d50800000000000000
+      internalID: 6746020430094524812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownHouses_1
+      rect:
+        serializedVersion: 2
+        x: 2027
+        y: 2375
+        width: 146
+        height: 149
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7dff20b2d63fe3740800000000000000
+      internalID: 5133808275447545815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownHouses_2
+      rect:
+        serializedVersion: 2
+        x: 812
+        y: 2229
+        width: 158
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a798629b261ea1ff0800000000000000
+      internalID: -64491430514095750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownHouses_3
+      rect:
+        serializedVersion: 2
+        x: 1055
+        y: 2125
+        width: 230
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93f55895c6cbdaec0800000000000000
+      internalID: -3553977357381050567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownHouses_4
+      rect:
+        serializedVersion: 2
+        x: 837
+        y: 2022
+        width: 155
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6abada7874454a80800000000000000
+      internalID: -8483299038834541974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownHouses_5
+      rect:
+        serializedVersion: 2
+        x: 1571
+        y: 1827
+        width: 177
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 003bc877e9c9ca000800000000000000
+      internalID: 48585900418708224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownHouses_6
+      rect:
+        serializedVersion: 2
+        x: 1864
+        y: 2024
+        width: 165
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1121fba1102904c20800000000000000
+      internalID: 3188709069619663377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownHouses_7
+      rect:
+        serializedVersion: 2
+        x: 2367
+        y: 1943
+        width: 168
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: adc497f96a2845960800000000000000
+      internalID: 7589834924177837274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownHouses_8
+      rect:
+        serializedVersion: 2
+        x: 2498
+        y: 1754
+        width: 300
+        height: 298
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5cce6155598407760800000000000000
+      internalID: 7453537189513063621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownHouses_9
+      rect:
+        serializedVersion: 2
+        x: 827
+        y: 1623
+        width: 192
+        height: 238
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 847196d4d9af6a0d0800000000000000
+      internalID: -3411764114171029688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownHouses_10
+      rect:
+        serializedVersion: 2
+        x: 1431
+        y: 1845
+        width: 111
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1160d0aebc1a85050800000000000000
+      internalID: 5789555218161927697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownHouses_11
+      rect:
+        serializedVersion: 2
+        x: 1759
+        y: 1814
+        width: 105
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f71911451a345ee0800000000000000
+      internalID: -1273328931678119950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownHouses_12
+      rect:
+        serializedVersion: 2
+        x: 1111
+        y: 1694
+        width: 194
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4926dc81c1a5fa10800000000000000
+      internalID: 1942636666943842638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownHouses_13
+      rect:
+        serializedVersion: 2
+        x: 1326
+        y: 1650
+        width: 93
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d981b24645c68c760800000000000000
+      internalID: 7478346290962307229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownHouses_14
+      rect:
+        serializedVersion: 2
+        x: 1420
+        y: 1555
+        width: 159
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8572dbbc713a2f00800000000000000
+      internalID: 1092740271387604367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownHouses_15
+      rect:
+        serializedVersion: 2
+        x: 1631
+        y: 1635
+        width: 190
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91b6af25db388e770800000000000000
+      internalID: 8640300734274497305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownHouses_16
+      rect:
+        serializedVersion: 2
+        x: 2072
+        y: 1670
+        width: 142
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 714011c05c82143e0800000000000000
+      internalID: -2071329526837607401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownHouses_17
+      rect:
+        serializedVersion: 2
+        x: 2416
+        y: 1673
+        width: 85
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef8bbb86eed4afd10800000000000000
+      internalID: 2160124657632262398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownHouses_18
+      rect:
+        serializedVersion: 2
+        x: 2770
+        y: 1575
+        width: 156
+        height: 179
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b8ec432413542cd0800000000000000
+      internalID: -2583848940247127887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownHouses_19
+      rect:
+        serializedVersion: 2
+        x: 925
+        y: 1537
+        width: 116
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0169caf7c9149aed0800000000000000
+      internalID: -2402316785812728304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownHouses_20
+      rect:
+        serializedVersion: 2
+        x: 1111
+        y: 1499
+        width: 110
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a458006cf1682fb0800000000000000
+      internalID: -4672376876826078048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownHouses_21
+      rect:
+        serializedVersion: 2
+        x: 1259
+        y: 1331
+        width: 278
+        height: 213
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71a52e77f32f599f0800000000000000
+      internalID: -462197032327423465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownHouses_22
+      rect:
+        serializedVersion: 2
+        x: 1733
+        y: 1522
+        width: 158
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31255de6d2b39c100800000000000000
+      internalID: 128699130675810835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownHouses_23
+      rect:
+        serializedVersion: 2
+        x: 2420
+        y: 1542
+        width: 143
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24379112e53b33250800000000000000
+      internalID: 5923275151785947970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownHouses_24
+      rect:
+        serializedVersion: 2
+        x: 2597
+        y: 1307
+        width: 271
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0aa60ea6c06b6cb40800000000000000
+      internalID: 5460251762682260128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownHouses_25
+      rect:
+        serializedVersion: 2
+        x: 904
+        y: 1399
+        width: 158
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc43b8146b7f02700800000000000000
+      internalID: 513682719675987149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownHouses_26
+      rect:
+        serializedVersion: 2
+        x: 1638
+        y: 1342
+        width: 122
+        height: 147
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c56aa2a17a2772b0800000000000000
+      internalID: -5586950145181063742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownHouses_27
+      rect:
+        serializedVersion: 2
+        x: 1785
+        y: 1320
+        width: 166
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eec2bbb3aa7e72b90800000000000000
+      internalID: -7266584755406426898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownHouses_28
+      rect:
+        serializedVersion: 2
+        x: 2031
+        y: 1310
+        width: 146
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9cc0e756918eb790800000000000000
+      internalID: -7512424645687980897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownHouses_29
+      rect:
+        serializedVersion: 2
+        x: 2221
+        y: 1348
+        width: 79
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b800ae12cb210aeb0800000000000000
+      internalID: -4710744610997403509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownHouses_30
+      rect:
+        serializedVersion: 2
+        x: 879
+        y: 1216
+        width: 207
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4dd82180129b79ab0800000000000000
+      internalID: -5001325309651153452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownHouses_31
+      rect:
+        serializedVersion: 2
+        x: 1143
+        y: 1307
+        width: 24
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c309b9f1363a2f10800000000000000
+      internalID: 2245666952468562889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownHouses_32
+      rect:
+        serializedVersion: 2
+        x: 2244
+        y: 1178
+        width: 290
+        height: 187
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6bb44716571f3f910800000000000000
+      internalID: 1870103756737366966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownHouses_33
+      rect:
+        serializedVersion: 2
+        x: 1169
+        y: 1167
+        width: 152
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3457870a8700e7260800000000000000
+      internalID: 7097110580870804803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownHouses_34
+      rect:
+        serializedVersion: 2
+        x: 1738
+        y: 1071
+        width: 114
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dedc8cdfca47fe300800000000000000
+      internalID: 283573587888623085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownHouses_35
+      rect:
+        serializedVersion: 2
+        x: 1876
+        y: 1061
+        width: 100
+        height: 153
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e907605f81af1230800000000000000
+      internalID: 3611783063075752423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownHouses_36
+      rect:
+        serializedVersion: 2
+        x: 2317
+        y: 1010
+        width: 173
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f19d6b747fa85010800000000000000
+      internalID: 1177884217379230193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownHouses_37
+      rect:
+        serializedVersion: 2
+        x: 929
+        y: 1052
+        width: 153
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1790d7da48fa28d30800000000000000
+      internalID: 4432297967667186033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownHouses_38
+      rect:
+        serializedVersion: 2
+        x: 1171
+        y: 1034
+        width: 207
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22c9c0192c62c9ea0800000000000000
+      internalID: -5864769997644194782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownHouses_39
+      rect:
+        serializedVersion: 2
+        x: 2009
+        y: 937
+        width: 190
+        height: 229
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca86a15f076b3a2d0800000000000000
+      internalID: -3268568308276107092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownHouses_40
+      rect:
+        serializedVersion: 2
+        x: 979
+        y: 866
+        width: 100
+        height: 153
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f681704001f18cdf0800000000000000
+      internalID: -159843633124140945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownHouses_41
+      rect:
+        serializedVersion: 2
+        x: 1167
+        y: 842
+        width: 153
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c89beef3704e94160800000000000000
+      internalID: 7010385014767401356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownHouses_42
+      rect:
+        serializedVersion: 2
+        x: 1172
+        y: 942
+        width: 108
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf37c552f401381d0800000000000000
+      internalID: -3349815765718240260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownHouses_43
+      rect:
+        serializedVersion: 2
+        x: 1490
+        y: 850
+        width: 230
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91149ea0611fe3b30800000000000000
+      internalID: 4269114573768442137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownHouses_44
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 861
+        width: 103
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b0874f35c7e30ed0800000000000000
+      internalID: -2448858938003193680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownHouses_45
+      rect:
+        serializedVersion: 2
+        x: 1894
+        y: 886
+        width: 126
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a11363d01d0283510800000000000000
+      internalID: 1529008155734192410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownHouses_46
+      rect:
+        serializedVersion: 2
+        x: 2348
+        y: 866
+        width: 167
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 514bbfa6fbd3a78e0800000000000000
+      internalID: -1694974417408642027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownHouses_47
+      rect:
+        serializedVersion: 2
+        x: 1165
+        y: 577
+        width: 154
+        height: 229
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00c8019a7b8327640800000000000000
+      internalID: 5076182091466574848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownHouses_48
+      rect:
+        serializedVersion: 2
+        x: 1449
+        y: 788
+        width: 37
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a00a8ce81e57f820800000000000000
+      internalID: 2951931541905342626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownHouses_49
+      rect:
+        serializedVersion: 2
+        x: 1867
+        y: 445
+        width: 178
+        height: 388
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3f484b0592b01250800000000000000
+      internalID: 5913422663946620733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownHouses_50
+      rect:
+        serializedVersion: 2
+        x: 1343
+        y: 674
+        width: 108
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5aed92637bfb1c9c0800000000000000
+      internalID: -3908632207972245851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownHouses_51
+      rect:
+        serializedVersion: 2
+        x: 1451
+        y: 579
+        width: 309
+        height: 193
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6898aca44196c410800000000000000
+      internalID: 1497043650287802474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownHouses_52
+      rect:
+        serializedVersion: 2
+        x: 893
+        y: 381
+        width: 199
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4f96c51552d1c8e0800000000000000
+      internalID: -1674826323525722293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownHouses_53
+      rect:
+        serializedVersion: 2
+        x: 1595
+        y: 291
+        width: 192
+        height: 238
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e0c11ca638049b00800000000000000
+      internalID: 834300861878485218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownHouses_54
+      rect:
+        serializedVersion: 2
+        x: 2133
+        y: 494
+        width: 167
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 604d6868ccfffa610800000000000000
+      internalID: 1634806443654173702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownHouses_55
+      rect:
+        serializedVersion: 2
+        x: 2403
+        y: 506
+        width: 155
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9280718bc6f74e90800000000000000
+      internalID: -7041388138460052833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownHouses_56
+      rect:
+        serializedVersion: 2
+        x: 913
+        y: 181
+        width: 158
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a1ad415438fe5d00800000000000000
+      internalID: 963480273889894816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownHouses_57
+      rect:
+        serializedVersion: 2
+        x: 1169
+        y: 243
+        width: 183
+        height: 186
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1040fca1c08267fb0800000000000000
+      internalID: -4650485532758965247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TownHouses_58
+      rect:
+        serializedVersion: 2
+        x: 2688
+        y: 312
+        width: 127
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b4fcdb7e21521860800000000000000
+      internalID: 7499145589613720761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      TownHouses_0: 6746020430094524812
+      TownHouses_1: 5133808275447545815
+      TownHouses_10: 5789555218161927697
+      TownHouses_11: -1273328931678119950
+      TownHouses_12: 1942636666943842638
+      TownHouses_13: 7478346290962307229
+      TownHouses_14: 1092740271387604367
+      TownHouses_15: 8640300734274497305
+      TownHouses_16: -2071329526837607401
+      TownHouses_17: 2160124657632262398
+      TownHouses_18: -2583848940247127887
+      TownHouses_19: -2402316785812728304
+      TownHouses_2: -64491430514095750
+      TownHouses_20: -4672376876826078048
+      TownHouses_21: -462197032327423465
+      TownHouses_22: 128699130675810835
+      TownHouses_23: 5923275151785947970
+      TownHouses_24: 5460251762682260128
+      TownHouses_25: 513682719675987149
+      TownHouses_26: -5586950145181063742
+      TownHouses_27: -7266584755406426898
+      TownHouses_28: -7512424645687980897
+      TownHouses_29: -4710744610997403509
+      TownHouses_3: -3553977357381050567
+      TownHouses_30: -5001325309651153452
+      TownHouses_31: 2245666952468562889
+      TownHouses_32: 1870103756737366966
+      TownHouses_33: 7097110580870804803
+      TownHouses_34: 283573587888623085
+      TownHouses_35: 3611783063075752423
+      TownHouses_36: 1177884217379230193
+      TownHouses_37: 4432297967667186033
+      TownHouses_38: -5864769997644194782
+      TownHouses_39: -3268568308276107092
+      TownHouses_4: -8483299038834541974
+      TownHouses_40: -159843633124140945
+      TownHouses_41: 7010385014767401356
+      TownHouses_42: -3349815765718240260
+      TownHouses_43: 4269114573768442137
+      TownHouses_44: -2448858938003193680
+      TownHouses_45: 1529008155734192410
+      TownHouses_46: -1694974417408642027
+      TownHouses_47: 5076182091466574848
+      TownHouses_48: 2951931541905342626
+      TownHouses_49: 5913422663946620733
+      TownHouses_5: 48585900418708224
+      TownHouses_50: -3908632207972245851
+      TownHouses_51: 1497043650287802474
+      TownHouses_52: -1674826323525722293
+      TownHouses_53: 834300861878485218
+      TownHouses_54: 1634806443654173702
+      TownHouses_55: -7041388138460052833
+      TownHouses_56: 963480273889894816
+      TownHouses_57: -4650485532758965247
+      TownHouses_58: 7499145589613720761
+      TownHouses_6: 3188709069619663377
+      TownHouses_7: 7589834924177837274
+      TownHouses_8: 7453537189513063621
+      TownHouses_9: -3411764114171029688
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
