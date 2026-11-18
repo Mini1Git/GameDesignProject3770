@@ -7,6 +7,7 @@ public class Mana_System : MonoBehaviour
     //mana
     [SerializeField] private float mana; // this is the actual value
     public float manaRegenRate = 3.5f;
+    public float manaRegenMult = 2f;
     public float Mana // this is the property that modifies the actual value.
     {   //getter and setter.
         get { return Mathf.Clamp(mana, 0, player.maxMana); }
@@ -36,14 +37,18 @@ public class Mana_System : MonoBehaviour
     {
         if (Mana != player.maxMana && manaUnlock)
         {
-            RegenerateMana();
+            RegenerateMana(manaRegenMult); // faster rate
+        }
+        else if (Mana != player.maxMana)
+        {
+            RegenerateMana(1f); // regen at normal rate
         }
 
     }
 
-    public void RegenerateMana()
+    public void RegenerateMana(float mult)
     {
-        Mana += manaRegenRate * Time.deltaTime;
+        Mana += manaRegenRate * Time.deltaTime * mult;
     }
     public void ConsumeMana(float mana_value)
     { // use this function to consume mana with a value.

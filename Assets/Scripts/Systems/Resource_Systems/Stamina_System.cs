@@ -6,6 +6,7 @@ public class Stamina_System : MonoBehaviour
     //stamina
     [SerializeField] private float stamina; // this is the actual value
     public float staminaRegenRate = 3.5f;
+    public float staminaRegenMult = 2f;
     public bool staminaUnlock;
     public float Stamina // this is the property that modifies the actual value.
     {   //getter and setter.
@@ -35,14 +36,18 @@ public class Stamina_System : MonoBehaviour
     public void Update()
     {   if (Stamina != player.maxStamina && staminaUnlock)
         {
-            RegenerateStamina();
+            RegenerateStamina(staminaRegenMult);
+        }
+        else if (Stamina != player.maxStamina)
+        {
+            RegenerateStamina(1f); // regen at normal rate.
         }
         
     }
 
-    public void RegenerateStamina()
+    public void RegenerateStamina(float mult)
     {
-        Stamina += staminaRegenRate * Time.deltaTime;
+        Stamina += staminaRegenRate * Time.deltaTime * mult;
     }
     public void ConsumeStamina(float stamina_value) { // use this function to consume stamina with a value.
         Stamina -= stamina_value;

@@ -94,6 +94,7 @@ public class LevelingSystem : MonoBehaviour
     public void levelUp()
     {
         currentLevel++;
+        displayLevel.Instance.updateLevelUI();
         SkillSystem.Instance.availableSkillPoints++;
     }
 
