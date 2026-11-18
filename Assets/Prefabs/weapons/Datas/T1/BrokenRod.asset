@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7d403a1257b4c968e5b27d6b5064f31, type: 3}
+  m_Name: BrokenRod
+  m_EditorClassIdentifier: Assembly-CSharp::weaponData
+  itemName: BrokenRod
+  type: 0
+  icon: {fileID: 8641278873815764228, guid: 85daacd4843b927429539739ac689528, type: 3}
+  baseDamage: 3
+  attackSpeedPercent: 135
+  staminaCost: 5
+  chargedDamagePercent: 100
+  fullChargeDamageMultiplier: 2
+  lightHitStaminaRestore: 2
+  chargedMinStamina: 2
+  chargeThresholdCentiseconds: 20
+  fullChargeCentiseconds: 60
+  chargeRaiseCentiseconds: 5
+  chargePosePercent: 40
+  attackShape: 2
+  meleeSwingAnimation: {fileID: 7400000, guid: e0375d990ac3453fa02e95c9824da3f5, type: 2}
+  chargedSwingAnimation: {fileID: 7400000, guid: 2c9565ed24c841b8b7e10920a9b3de75, type: 2}
+  hitboxOffsetXCentimeters: 0
+  hitboxOffsetYCentimeters: 29
+  hitboxWidthCentimeters: 6
+  hitboxHeightCentimeters: 71
+  areaRadiusCentimeters: 65
+  hitStartPercent: 42
+  hitEndPercent: 60
+  chargedHitStartPercent: 42
+  chargedHitEndPercent: 60
+  chargedHitWindows:
+  - {startPercent: 40, endPercent: 46}
+  - {startPercent: 50, endPercent: 56}
+  statScaling:
+  - stat: 2
+    damagePerEightStatPoints: 3

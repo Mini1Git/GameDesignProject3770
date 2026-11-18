@@ -9,9 +9,34 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b07f05e276a48018e8ebc16faae7918, type: 3}
+  m_Script: {fileID: 11500000, guid: a7d403a1257b4c968e5b27d6b5064f31, type: 3}
   m_Name: KatanaSword
-  m_EditorClassIdentifier: Assembly-CSharp::itemData
+  m_EditorClassIdentifier: Assembly-CSharp::weaponData
   itemName: Katana
   type: 0
   icon: {fileID: -6476156858341896051, guid: db30da933374bc147a1537150c7d055b, type: 3}
+  baseDamage: 2
+  attackSpeedPercent: 230
+  staminaCost: 3
+  chargedDamagePercent: 200
+  fullChargeDamageMultiplier: 2
+  lightHitStaminaRestore: 2
+  chargedMinStamina: 2
+  chargeThresholdCentiseconds: 20
+  fullChargeCentiseconds: 50
+  chargeRaiseCentiseconds: 5
+  chargePosePercent: 40
+  attackShape: 0
+  meleeSwingAnimation: {fileID: 0}
+  hitboxOffsetXCentimeters: 1
+  hitboxOffsetYCentimeters: 33
+  hitboxWidthCentimeters: 10
+  hitboxHeightCentimeters: 60
+  areaRadiusCentimeters: 65
+  hitStartPercent: 10
+  hitEndPercent: 55
+  chargedHitStartPercent: 40
+  chargedHitEndPercent: 62
+  statScaling:
+  - stat: 2
+    damagePerEightStatPoints: 2
