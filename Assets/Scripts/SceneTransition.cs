@@ -23,6 +23,7 @@ public class SceneTransition : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             Debug.Log("Go to next scene: " + nextScene);
+            SceneManager.LoadScene(nextScene);
         }
     }
 }
