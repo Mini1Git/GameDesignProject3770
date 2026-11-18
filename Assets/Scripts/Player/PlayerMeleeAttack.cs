@@ -256,11 +256,11 @@ public class PlayerMeleeAttack : MonoBehaviour
         AnimatorStateInfo state = weaponAnimator.GetCurrentAnimatorStateInfo(0);
         // A very slow frame can advance all the way to Idle. Still resolve the crossed window.
         float progress = state.fullPathHash == SwingState ? state.normalizedTime : 1f;
-        Vector2[] windows = attackWeapon.chargedHitWindows;
+        ChargedHitWindow[] windows = attackWeapon.chargedHitWindows;
         if (!normalAttack && windows != null && windows.Length > 0)
         {
             for (int i = 0; i < windows.Length; i++)
-                ProcessHitWindow(i, progress, windows[i].x, windows[i].y);
+                ProcessHitWindow(i, progress, windows[i].startPercent / 100f, windows[i].endPercent / 100f);
         }
         else
             ProcessHitWindow(0, progress,

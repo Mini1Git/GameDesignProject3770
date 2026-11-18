@@ -12,7 +12,14 @@ public enum AttackShape
 public struct WeaponStatScaling
 {
     public Stats stat;
-    [Min(0f)] public float coefficient;
+    [Min(0)] public int damagePerEightStatPoints;
+}
+
+[Serializable]
+public struct ChargedHitWindow
+{
+    [Range(0, 100)] public int startPercent;
+    [Range(0, 100)] public int endPercent;
 }
 
 [CreateAssetMenu(fileName = "newWeapon", menuName = "Inventory/Weapon")]
@@ -21,21 +28,27 @@ public class weaponData : itemData
     [Header("Damage and Speed")]
     [Min(1)] public int baseDamage = 2;
     [Tooltip("Animation playback multiplier for both light and charged attacks.")]
-    [Min(0.1f)] public float attackSpeed = 2f;
+    [SerializeField, Min(10)] private int attackSpeedPercent = 200;
+    public float attackSpeed => attackSpeedPercent / 100f;
     public WeaponStatScaling[] statScaling = Array.Empty<WeaponStatScaling>();
 
     [Header("Charge and Stamina")]
     [Tooltip("Total stamina spent reaching full charge. Light attacks remain free.")]
-    [Min(0f)] public float staminaCost = 4f;
-    [Min(0f)] public float lightHitStaminaRestore = 2f;
-    [Min(0f)] public float chargedMinStamina = 2f;
-    [Min(1f)] public float chargedDamageMultiplier = 2f;
-    [Min(1f)] public float fullChargeDamageMultiplier = 2f;
-    [Min(0.01f)] public float chargedAttackThreshold = 0.2f;
+    [Min(0)] public int staminaCost = 4;
+    [Min(0)] public int lightHitStaminaRestore = 2;
+    [Min(0)] public int chargedMinStamina = 2;
+    [SerializeField, Min(100)] private int chargedDamagePercent = 200;
+    public float chargedDamageMultiplier => chargedDamagePercent / 100f;
+    [Min(1)] public int fullChargeDamageMultiplier = 2;
+    [SerializeField, Min(1)] private int chargeThresholdCentiseconds = 20;
+    public float chargedAttackThreshold => chargeThresholdCentiseconds / 100f;
     [Tooltip("Time from button press to full charge.")]
-    [Min(0.01f)] public float fullChargeDuration = 0.5f;
-    [Min(0.01f)] public float chargeRaiseDuration = 0.05f;
-    [Range(0f, 1f)] public float chargePoseTime = 0.4f;
+    [SerializeField, Min(1)] private int fullChargeCentiseconds = 50;
+    public float fullChargeDuration => fullChargeCentiseconds / 100f;
+    [SerializeField, Min(1)] private int chargeRaiseCentiseconds = 5;
+    public float chargeRaiseDuration => chargeRaiseCentiseconds / 100f;
+    [SerializeField, Range(0, 100)] private int chargePosePercent = 40;
+    public float chargePoseTime => chargePosePercent / 100f;
 
     [Header("Animation and Hit Shape")]
     [Tooltip("Arc and thrust follow the animated weapon's box. Circle hits around its offset.")]
@@ -44,15 +57,24 @@ public class weaponData : itemData
     public AnimationClip meleeSwingAnimation;
     [Tooltip("Optional heavy-attack animation. Leave empty to reuse the light attack.")]
     public AnimationClip chargedSwingAnimation;
-    public Vector2 meleeHitboxOffset = new Vector2(0f, 0.25f);
-    public Vector2 meleeHitboxSize = new Vector2(0.25f, 0.75f);
-    [Min(0.01f)] public float areaRadius = 0.5f;
-    [Range(0f, 1f)] public float hitStart = 0.1f;
-    [Range(0f, 1f)] public float hitEnd = 0.55f;
-    [Range(0f, 1f)] public float chargedHitStart = 0.4f;
-    [Range(0f, 1f)] public float chargedHitEnd = 0.62f;
+    [SerializeField] private int hitboxOffsetXCentimeters;
+    [SerializeField] private int hitboxOffsetYCentimeters = 25;
+    [SerializeField, Min(1)] private int hitboxWidthCentimeters = 25;
+    [SerializeField, Min(1)] private int hitboxHeightCentimeters = 75;
+    public Vector2 meleeHitboxOffset => new Vector2(hitboxOffsetXCentimeters, hitboxOffsetYCentimeters) / 100f;
+    public Vector2 meleeHitboxSize => new Vector2(hitboxWidthCentimeters, hitboxHeightCentimeters) / 100f;
+    [SerializeField, Min(1)] private int areaRadiusCentimeters = 50;
+    public float areaRadius => areaRadiusCentimeters / 100f;
+    [SerializeField, Range(0, 100)] private int hitStartPercent = 10;
+    public float hitStart => hitStartPercent / 100f;
+    [SerializeField, Range(0, 100)] private int hitEndPercent = 55;
+    public float hitEnd => hitEndPercent / 100f;
+    [SerializeField, Range(0, 100)] private int chargedHitStartPercent = 40;
+    public float chargedHitStart => chargedHitStartPercent / 100f;
+    [SerializeField, Range(0, 100)] private int chargedHitEndPercent = 62;
+    public float chargedHitEnd => chargedHitEndPercent / 100f;
     [Tooltip("Optional ordered heavy-attack hit windows (start, end). Each window can hit a target once. Empty uses the single charged window above.")]
-    public Vector2[] chargedHitWindows = Array.Empty<Vector2>();
+    public ChargedHitWindow[] chargedHitWindows = Array.Empty<ChargedHitWindow>();
 
     public float GetDamage(LevelingSystem stats)
     {
@@ -61,7 +83,7 @@ public class weaponData : itemData
         {
             foreach (WeaponStatScaling scaling in statScaling)
                 damage += Mathf.Max(0, stats.getPlayerStat(scaling.stat))
-                    * Mathf.Max(0f, scaling.coefficient);
+                    * (Mathf.Max(0, scaling.damagePerEightStatPoints) / 8f);
         }
         return damage;
     }
@@ -74,23 +96,21 @@ public class weaponData : itemData
     private void OnValidate()
     {
         type = itemType.weapon;
-        fullChargeDuration = Mathf.Max(chargedAttackThreshold + 0.01f, fullChargeDuration);
-        hitEnd = Mathf.Max(hitStart, hitEnd);
-        chargedHitEnd = Mathf.Max(chargedHitStart, chargedHitEnd);
-        chargePoseTime = Mathf.Min(chargePoseTime, chargedHitStart);
+        fullChargeCentiseconds = Mathf.Max(chargeThresholdCentiseconds + 1, fullChargeCentiseconds);
+        hitEndPercent = Mathf.Max(hitStartPercent, hitEndPercent);
+        chargedHitEndPercent = Mathf.Max(chargedHitStartPercent, chargedHitEndPercent);
+        chargePosePercent = Mathf.Min(chargePosePercent, chargedHitStartPercent);
         if (chargedHitWindows != null && chargedHitWindows.Length > 0)
         {
-            float previousEnd = 0f;
+            int previousEnd = 0;
             for (int i = 0; i < chargedHitWindows.Length; i++)
             {
-                float start = Mathf.Clamp(chargedHitWindows[i].x, previousEnd, 1f);
-                float end = Mathf.Clamp(chargedHitWindows[i].y, start, 1f);
-                chargedHitWindows[i] = new Vector2(start, end);
-                previousEnd = end;
+                ref ChargedHitWindow window = ref chargedHitWindows[i];
+                window.startPercent = Mathf.Clamp(window.startPercent, previousEnd, 100);
+                window.endPercent = Mathf.Clamp(window.endPercent, window.startPercent, 100);
+                previousEnd = window.endPercent;
             }
-            chargePoseTime = Mathf.Min(chargePoseTime, chargedHitWindows[0].x);
+            chargePosePercent = Mathf.Min(chargePosePercent, chargedHitWindows[0].startPercent);
         }
-        meleeHitboxSize = new Vector2(Mathf.Max(0.01f, meleeHitboxSize.x),
-            Mathf.Max(0.01f, meleeHitboxSize.y));
     }
 }

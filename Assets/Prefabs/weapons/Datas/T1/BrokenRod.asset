@@ -10,35 +10,37 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a7d403a1257b4c968e5b27d6b5064f31, type: 3}
-  m_Name: Branch
+  m_Name: BrokenRod
   m_EditorClassIdentifier: Assembly-CSharp::weaponData
-  itemName: Branch
+  itemName: BrokenRod
   type: 0
-  icon: {fileID: -4053381014600266116, guid: 52ecf71ab8c065449beec714903bce61, type: 3}
-  baseDamage: 2
-  attackSpeed: 2
-  staminaCost: 3
-  chargedDamageMultiplier: 1
+  icon: {fileID: 8641278873815764228, guid: 85daacd4843b927429539739ac689528, type: 3}
+  baseDamage: 3
+  attackSpeedPercent: 135
+  staminaCost: 5
+  chargedDamagePercent: 100
   fullChargeDamageMultiplier: 2
   lightHitStaminaRestore: 2
   chargedMinStamina: 2
-  chargedAttackThreshold: 0.2
-  fullChargeDuration: 0.4
-  chargeRaiseDuration: 0.05
-  chargePoseTime: 0.4
+  chargeThresholdCentiseconds: 20
+  fullChargeCentiseconds: 60
+  chargeRaiseCentiseconds: 5
+  chargePosePercent: 40
   attackShape: 2
   meleeSwingAnimation: {fileID: 7400000, guid: e0375d990ac3453fa02e95c9824da3f5, type: 2}
   chargedSwingAnimation: {fileID: 7400000, guid: 2c9565ed24c841b8b7e10920a9b3de75, type: 2}
-  meleeHitboxOffset: {x: 0, y: 0.26}
-  meleeHitboxSize: {x: 0.12, y: 0.62}
-  areaRadius: 0.65
-  hitStart: 0.42
-  hitEnd: 0.6
-  chargedHitStart: 0.42
-  chargedHitEnd: 0.6
+  hitboxOffsetXCentimeters: 0
+  hitboxOffsetYCentimeters: 29
+  hitboxWidthCentimeters: 6
+  hitboxHeightCentimeters: 71
+  areaRadiusCentimeters: 65
+  hitStartPercent: 42
+  hitEndPercent: 60
+  chargedHitStartPercent: 42
+  chargedHitEndPercent: 60
   chargedHitWindows:
-  - {x: 0.4, y: 0.46}
-  - {x: 0.5, y: 0.56}
+  - {startPercent: 40, endPercent: 46}
+  - {startPercent: 50, endPercent: 56}
   statScaling:
   - stat: 2
-    coefficient: 0.25
+    damagePerEightStatPoints: 3

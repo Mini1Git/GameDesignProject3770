@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7d403a1257b4c968e5b27d6b5064f31, type: 3}
+  m_Name: ChoppingAxe
+  m_EditorClassIdentifier: Assembly-CSharp::weaponData
+  itemName: Chopping Axe
+  type: 0
+  icon: {fileID: 347981250348287413, guid: 52c8971e908094a4a9bb0127666bbeb6, type: 3}
+  baseDamage: 6
+  attackSpeedPercent: 100
+  staminaCost: 6
+  chargedDamagePercent: 200
+  fullChargeDamageMultiplier: 2
+  lightHitStaminaRestore: 2
+  chargedMinStamina: 2
+  chargeThresholdCentiseconds: 20
+  fullChargeCentiseconds: 100
+  chargeRaiseCentiseconds: 5
+  chargePosePercent: 40
+  attackShape: 0
+  meleeSwingAnimation: {fileID: 0}
+  hitboxOffsetXCentimeters: 10
+  hitboxOffsetYCentimeters: 33
+  hitboxWidthCentimeters: 29
+  hitboxHeightCentimeters: 81
+  areaRadiusCentimeters: 65
+  hitStartPercent: 10
+  hitEndPercent: 55
+  chargedHitStartPercent: 40
+  chargedHitEndPercent: 62
+  statScaling:
+  - stat: 0
+    damagePerEightStatPoints: 6

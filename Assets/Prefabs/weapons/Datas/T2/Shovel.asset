@@ -10,31 +10,33 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a7d403a1257b4c968e5b27d6b5064f31, type: 3}
-  m_Name: Log
+  m_Name: Shovel
   m_EditorClassIdentifier: Assembly-CSharp::weaponData
-  itemName: Log
+  itemName: Shovel
   type: 0
-  icon: {fileID: 2368875588930414890, guid: c997eefa620f1be4f8a233bc83746482, type: 3}
+  icon: {fileID: 57591053551863209, guid: e9314339f3e153f4a8ac4626a829013e, type: 3}
   baseDamage: 4
-  attackSpeed: 1
-  staminaCost: 6
-  chargedDamageMultiplier: 2
+  attackSpeedPercent: 150
+  staminaCost: 5
+  chargedDamagePercent: 200
   fullChargeDamageMultiplier: 2
   lightHitStaminaRestore: 2
   chargedMinStamina: 2
-  chargedAttackThreshold: 0.2
-  fullChargeDuration: 1
-  chargeRaiseDuration: 0.05
-  chargePoseTime: 0.4
+  chargeThresholdCentiseconds: 20
+  fullChargeCentiseconds: 65
+  chargeRaiseCentiseconds: 5
+  chargePosePercent: 40
   attackShape: 1
   meleeSwingAnimation: {fileID: 7400000, guid: 878c684ef3fc4bbeb761689e043afc1b, type: 2}
-  meleeHitboxOffset: {x: 0, y: 0.14}
-  meleeHitboxSize: {x: 0.25, y: 0.75}
-  areaRadius: 0.65
-  hitStart: 0.5
-  hitEnd: 0.6
-  chargedHitStart: 0.5
-  chargedHitEnd: 0.6
+  hitboxOffsetXCentimeters: 0
+  hitboxOffsetYCentimeters: 57
+  hitboxWidthCentimeters: 25
+  hitboxHeightCentimeters: 75
+  areaRadiusCentimeters: 16
+  hitStartPercent: 50
+  hitEndPercent: 60
+  chargedHitStartPercent: 50
+  chargedHitEndPercent: 60
   statScaling:
   - stat: 0
-    coefficient: 0.5
+    damagePerEightStatPoints: 4

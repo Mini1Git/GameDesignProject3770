@@ -16,25 +16,27 @@ MonoBehaviour:
   type: 0
   icon: {fileID: -6476156858341896051, guid: db30da933374bc147a1537150c7d055b, type: 3}
   baseDamage: 2
-  attackSpeed: 2.3
+  attackSpeedPercent: 230
   staminaCost: 3
-  chargedDamageMultiplier: 2
+  chargedDamagePercent: 200
   fullChargeDamageMultiplier: 2
   lightHitStaminaRestore: 2
   chargedMinStamina: 2
-  chargedAttackThreshold: 0.2
-  fullChargeDuration: 0.5
-  chargeRaiseDuration: 0.05
-  chargePoseTime: 0.4
+  chargeThresholdCentiseconds: 20
+  fullChargeCentiseconds: 50
+  chargeRaiseCentiseconds: 5
+  chargePosePercent: 40
   attackShape: 0
   meleeSwingAnimation: {fileID: 0}
-  meleeHitboxOffset: {x: 0, y: 0.25}
-  meleeHitboxSize: {x: 0.25, y: 0.75}
-  areaRadius: 0.65
-  hitStart: 0.1
-  hitEnd: 0.55
-  chargedHitStart: 0.4
-  chargedHitEnd: 0.62
+  hitboxOffsetXCentimeters: 1
+  hitboxOffsetYCentimeters: 33
+  hitboxWidthCentimeters: 10
+  hitboxHeightCentimeters: 60
+  areaRadiusCentimeters: 65
+  hitStartPercent: 10
+  hitEndPercent: 55
+  chargedHitStartPercent: 40
+  chargedHitEndPercent: 62
   statScaling:
   - stat: 2
-    coefficient: 0.25
+    damagePerEightStatPoints: 2
