@@ -1,19 +1,26 @@
 using NUnit.Framework.Constraints;
+using System.Collections.Generic;
 using System.Linq;
+using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class skillButton : MonoBehaviour
 {
+    public skill_SO associatedSkill;
     private skillButton_Settings buttonColours;
     private Button thisButton;
-    public skill_SO associatedSkill;
+
+    private TextMeshProUGUI skillReqText;
 
     public void Start()
     {
         thisButton = GetComponent<Button>();
         thisButton.onClick.AddListener(skillCheck);
         buttonColours = GetComponentInParent<skillButton_Settings>();
+        skillReqText = GameObject.FindGameObjectWithTag("displayReqs").GetComponent<TextMeshProUGUI>();
+        skillReqText.text = null;
     }
 
     [ContextMenu("Preview Unlocked Colours")]
@@ -78,6 +85,7 @@ public class skillButton : MonoBehaviour
         {
             // cannot get skill
             Debug.Log("Not enough skill points");
+            skillReqText.text = $"You lack skill points!";
             return;
         }
 
@@ -89,16 +97,22 @@ public class skillButton : MonoBehaviour
 
         if (skillUnlocked)
         {
-            
-            
-            Debug.Log("UNLOCKED SKILL: " + associatedSkill);
+
+            skillReqText.text = $"You unlocked: {associatedSkill.skillName}";
+            Debug.Log("UNLOCKED SKILL: " + associatedSkill.name);
             SkillSystem.Instance.skillsDictionary[associatedSkill] = skillUnlocked;
 
 
         }
         else
-        {
+        {// not unlocked and need reqs
+
             SkillSystem.Instance.skillsDictionary[associatedSkill] = skillUnlocked;
+            skillReqText.text = $"Check if you meet the required stats: \n";
+            foreach (KeyValuePair<Stats, int> requiredStat in associatedSkill.requiredStats)
+            {
+                skillReqText.text += $"{requiredStat.Key.ToString()}: {requiredStat.Value.ToString()} ";
+            }
         }
 
 

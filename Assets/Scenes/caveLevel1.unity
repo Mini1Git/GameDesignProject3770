@@ -32845,10 +32845,6 @@ PrefabInstance:
       propertyPath: m_Speed
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 5992820223309154074, guid: 1041aef9856929c428c180381ad47ef7, type: 3}
-      propertyPath: cooldown
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 6945790904635095305, guid: 1041aef9856929c428c180381ad47ef7, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -32975,6 +32971,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: enemyRanger
       objectReference: {fileID: 0}
+    - target: {fileID: 8211090211942030252, guid: 2bdc6ccea39f96d4ab5b3bf2017a5f67, type: 3}
+      propertyPath: xpDrop
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -32990,7 +32990,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 235934251940992910, guid: 0ea1838fdf31281448fc1e29329fb492, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.0006113236
+      value: 0.00013275877
       objectReference: {fileID: 0}
     - target: {fileID: 376785307785874456, guid: 0ea1838fdf31281448fc1e29329fb492, type: 3}
       propertyPath: m_AnchorMax.y
@@ -33248,6 +33248,22 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2535123533669326152, guid: 0ea1838fdf31281448fc1e29329fb492, type: 3}
+      propertyPath: m_text
+      value: 'You are missing: Agility 1'
+      objectReference: {fileID: 0}
+    - target: {fileID: 2535123533669326152, guid: 0ea1838fdf31281448fc1e29329fb492, type: 3}
+      propertyPath: m_fontSize
+      value: 16.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2535123533669326152, guid: 0ea1838fdf31281448fc1e29329fb492, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 16.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2535123533669326152, guid: 0ea1838fdf31281448fc1e29329fb492, type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3199635529001515255, guid: 0ea1838fdf31281448fc1e29329fb492, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -33751,6 +33767,10 @@ PrefabInstance:
     - target: {fileID: 6825157361130541224, guid: 0ea1838fdf31281448fc1e29329fb492, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6940418782123033968, guid: 0ea1838fdf31281448fc1e29329fb492, type: 3}
+      propertyPath: m_Name
+      value: levelDisplayText
       objectReference: {fileID: 0}
     - target: {fileID: 6975256518902783110, guid: 0ea1838fdf31281448fc1e29329fb492, type: 3}
       propertyPath: m_AnchorMax.y

@@ -42,8 +42,8 @@ public class player : MonoBehaviour
     bool inputFocused;
     bool inputPaused;
 
-
-    
+    public bool regenHealth = false;
+    public float healthRegenAmount = 1;
 
     private void Awake()
     {
@@ -130,7 +130,10 @@ public class player : MonoBehaviour
             speed = originalSpeed;
         }
 
-
+        if (regenHealth)
+        {
+            heal(healthRegenAmount * Time.deltaTime);
+        }
     }
 
     
@@ -155,6 +158,22 @@ public class player : MonoBehaviour
 
         //player WASD movement
         rb.linearVelocity = new Vector2(moveDirection.x * speed, moveDirection.y * speed);
+    }
+
+
+    public void updatePlayerStats()
+    {
+        Debug.Log("UPDATE PLAYER STATS");
+        maxHealth = LevelingSystem.Instance.getPlayerStat(Stats.Vitality) + 1;
+        maxMana = LevelingSystem.Instance.getPlayerStat(Stats.Magic) + 1;
+        maxStamina = LevelingSystem.Instance.getPlayerStat(Stats.Endurance) + 1;
+        originalSpeed = LevelingSystem.Instance.getPlayerStat(Stats.Agility) + 1;
+
+        // Damage scaling has already been implemented within weaponData.cs
+        //clamp the current 
+        health = Mathf.Min(health, maxHealth);
+        mana = Mathf.Min(mana, maxMana);
+        stamina = Mathf.Min(stamina, maxStamina);
     }
 
     void mainHandPressed(InputAction.CallbackContext ctx)
@@ -199,7 +218,7 @@ public class player : MonoBehaviour
         }
     }
 
-    public void heal(int value)
+    public void heal(float value)
     {
         health += value;
         if(health >= maxHealth)
@@ -239,6 +258,11 @@ public class player : MonoBehaviour
                     case "sprint":
                         sprint.started += heldSprint;
                         sprint.canceled += releaseSprint;
+                        break;
+                    case "hpregen":
+                        
+                        regenHealth = true;
+                        
                         break;
                 }
                 
