@@ -17,6 +17,7 @@ public class LevelingSystem : MonoBehaviour
 {
     
     public static LevelingSystem Instance;
+    
     [Header("Level settings")]
     public int currentLevel = 1; // this is the current level of the player
     public int currentXP;
@@ -60,8 +61,6 @@ public class LevelingSystem : MonoBehaviour
         // Set the active instance to this object
         Instance = this;
 
-        
-
 
         //playerInput initialization, always need to do this.
         playerInput = new PlayerInput();
@@ -94,8 +93,17 @@ public class LevelingSystem : MonoBehaviour
     public void levelUp()
     {
         currentLevel++;
-        displayLevel.Instance.updateLevelUI();
         SkillSystem.Instance.availableSkillPoints++;
+        availableStatPoints++;
+
+
+        //update UI
+        displayLevel.Instance.updateLevelUI();
+        displayStatPoints.Instance.updateStatUI();
+
+        
+
+        
     }
 
     public void increaseVitality()
