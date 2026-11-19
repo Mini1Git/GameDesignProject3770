@@ -314,7 +314,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 5.06, y: 10.09}
+  m_Size: {x: 0.82, y: 1.89}
   m_EdgeRadius: 0
 --- !u!114 &5992820223309154074
 MonoBehaviour:
@@ -566,7 +566,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.1
-  m_Speed: 2
+  m_Speed: 0.2
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 0
