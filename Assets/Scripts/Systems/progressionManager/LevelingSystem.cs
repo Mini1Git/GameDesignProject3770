@@ -17,6 +17,8 @@ public class LevelingSystem : MonoBehaviour
 {
     
     public static LevelingSystem Instance;
+    public player player;
+    
     [Header("Level settings")]
     public int currentLevel = 1; // this is the current level of the player
     public int currentXP;
@@ -59,9 +61,7 @@ public class LevelingSystem : MonoBehaviour
 
         // Set the active instance to this object
         Instance = this;
-
-        
-
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<player>();
 
         //playerInput initialization, always need to do this.
         playerInput = new PlayerInput();
@@ -83,8 +83,14 @@ public class LevelingSystem : MonoBehaviour
     }
     public void toggleLevelSystem(InputAction.CallbackContext ctx)
     {
+        
         skillMenu.SetActive(!openLeveling);
         openLeveling = !openLeveling; // flips each time u tab, in sync with inventory.
+        if (openLeveling)
+        {
+            displaySkillPoints.Instance.updateSkillUI(); 
+            displayStatPoints.Instance.updateStatUI();
+        }
     }
 
     private void OnDisable()
@@ -95,6 +101,16 @@ public class LevelingSystem : MonoBehaviour
     {
         currentLevel++;
         SkillSystem.Instance.availableSkillPoints++;
+        availableStatPoints++;
+
+
+        //update UI
+        displayLevel.Instance.updateLevelUI();
+        
+
+        
+
+        
     }
 
     public void increaseVitality()
