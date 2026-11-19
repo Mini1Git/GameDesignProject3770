@@ -184,7 +184,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.00024986806}
+  m_AnchoredPosition: {x: 0, y: 0.00020246569}
   m_SizeDelta: {x: 0, y: 249}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &6042035381498408551
@@ -746,7 +746,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Skill Reqs:'
+  m_text: 'You are missing: Agility 1'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -773,10 +773,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 40.7
-  m_fontSizeBase: 36
+  m_fontSize: 16.7
+  m_fontSizeBase: 16.7
   m_fontWeight: 400
-  m_enableAutoSizing: 1
+  m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -1030,7 +1030,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 5692394787866825610}
   m_Direction: 2
   m_Value: 0
-  m_Size: 0.9999999
+  m_Size: 0.9999892
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -1817,7 +1817,7 @@ GameObject:
   - component: {fileID: 1172830958398301175}
   - component: {fileID: 6000579596628792407}
   m_Layer: 5
-  m_Name: levelDisplay
+  m_Name: levelDisplayText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3055,6 +3055,10 @@ PrefabInstance:
     - target: {fileID: 900116494497677318, guid: 238e2aae55e3e5943b8907a23645ceb7, type: 3}
       propertyPath: sprintMultiplier
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 900116494497677318, guid: 238e2aae55e3e5943b8907a23645ceb7, type: 3}
+      propertyPath: healthRegenAmount
+      value: 0.067
       objectReference: {fileID: 0}
     - target: {fileID: 900116494497677318, guid: 238e2aae55e3e5943b8907a23645ceb7, type: 3}
       propertyPath: sprintStaminaCost
