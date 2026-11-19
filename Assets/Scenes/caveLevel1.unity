@@ -32972,8 +32972,12 @@ PrefabInstance:
       value: enemyRanger
       objectReference: {fileID: 0}
     - target: {fileID: 8211090211942030252, guid: 2bdc6ccea39f96d4ab5b3bf2017a5f67, type: 3}
+      propertyPath: health
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8211090211942030252, guid: 2bdc6ccea39f96d4ab5b3bf2017a5f67, type: 3}
       propertyPath: xpDrop
-      value: 10
+      value: 101
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -32990,7 +32994,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 235934251940992910, guid: 0ea1838fdf31281448fc1e29329fb492, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.00013275877
+      value: 0.00009136549
       objectReference: {fileID: 0}
     - target: {fileID: 376785307785874456, guid: 0ea1838fdf31281448fc1e29329fb492, type: 3}
       propertyPath: m_AnchorMax.y

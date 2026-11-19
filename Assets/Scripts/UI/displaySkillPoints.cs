@@ -19,10 +19,7 @@ public class displaySkillPoints : MonoBehaviour
         Instance = this;
         skillpointText = GetComponent<TextMeshProUGUI>();
     }
-    public void Start()
-    {
-        updateSkillUI();
-    }
+    
 
     public void updateSkillUI()
     {
