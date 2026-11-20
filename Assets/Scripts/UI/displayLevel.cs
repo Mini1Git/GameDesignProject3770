@@ -25,6 +25,7 @@ public class displayLevel : MonoBehaviour
     private void Start()
     {
         levelDisplayText = gameObject.GetComponentInChildren<TextMeshProUGUI>();
+        updateLevelUI(); // show the loaded level instead of the default one
     }
 
     public void updateLevelUI()
