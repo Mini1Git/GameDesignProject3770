@@ -1,0 +1,135 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &7928596187044335082
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1410639073385638716, guid: 823ad3afa9f9c0a46a291105c56cefac, type: 3}
+      propertyPath: health
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 1410639073385638716, guid: 823ad3afa9f9c0a46a291105c56cefac, type: 3}
+      propertyPath: xpDrop
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2978115783539038303, guid: 823ad3afa9f9c0a46a291105c56cefac, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 6034146156410854520, guid: 8a7bd5082884bc1438ba3c0bbde1675f, type: 3}
+    - target: {fileID: 3050118206259353242, guid: 823ad3afa9f9c0a46a291105c56cefac, type: 3}
+      propertyPath: m_Size.y
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3186417865736267240, guid: 823ad3afa9f9c0a46a291105c56cefac, type: 3}
+      propertyPath: m_Size.x
+      value: 0.36
+      objectReference: {fileID: 0}
+    - target: {fileID: 3186417865736267240, guid: 823ad3afa9f9c0a46a291105c56cefac, type: 3}
+      propertyPath: m_Size.y
+      value: 0.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 3186417865736267240, guid: 823ad3afa9f9c0a46a291105c56cefac, type: 3}
+      propertyPath: m_Offset.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3186417865736267240, guid: 823ad3afa9f9c0a46a291105c56cefac, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 3186417865736267240, guid: 823ad3afa9f9c0a46a291105c56cefac, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3186417865736267240, guid: 823ad3afa9f9c0a46a291105c56cefac, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3186417865736267240, guid: 823ad3afa9f9c0a46a291105c56cefac, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.55
+      objectReference: {fileID: 0}
+    - target: {fileID: 3186417865736267240, guid: 823ad3afa9f9c0a46a291105c56cefac, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.49
+      objectReference: {fileID: 0}
+    - target: {fileID: 4834842163431593366, guid: 823ad3afa9f9c0a46a291105c56cefac, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.205
+      objectReference: {fileID: 0}
+    - target: {fileID: 4834842163431593366, guid: 823ad3afa9f9c0a46a291105c56cefac, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.18
+      objectReference: {fileID: 0}
+    - target: {fileID: 7023891184486359731, guid: 823ad3afa9f9c0a46a291105c56cefac, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.45
+      objectReference: {fileID: 0}
+    - target: {fileID: 7229428138833805794, guid: 823ad3afa9f9c0a46a291105c56cefac, type: 3}
+      propertyPath: m_Name
+      value: A Guy
+      objectReference: {fileID: 0}
+    - target: {fileID: 7989636967002261640, guid: 823ad3afa9f9c0a46a291105c56cefac, type: 3}
+      propertyPath: m_Size.x
+      value: 0.29
+      objectReference: {fileID: 0}
+    - target: {fileID: 7989636967002261640, guid: 823ad3afa9f9c0a46a291105c56cefac, type: 3}
+      propertyPath: m_Size.y
+      value: 0.81
+      objectReference: {fileID: 0}
+    - target: {fileID: 7989636967002261640, guid: 823ad3afa9f9c0a46a291105c56cefac, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7989636967002261640, guid: 823ad3afa9f9c0a46a291105c56cefac, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.33
+      objectReference: {fileID: 0}
+    - target: {fileID: 7989636967002261640, guid: 823ad3afa9f9c0a46a291105c56cefac, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.x
+      value: 0.18
+      objectReference: {fileID: 0}
+    - target: {fileID: 7989636967002261640, guid: 823ad3afa9f9c0a46a291105c56cefac, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7989636967002261640, guid: 823ad3afa9f9c0a46a291105c56cefac, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.82
+      objectReference: {fileID: 0}
+    - target: {fileID: 8952277074525040392, guid: 823ad3afa9f9c0a46a291105c56cefac, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8952277074525040392, guid: 823ad3afa9f9c0a46a291105c56cefac, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8952277074525040392, guid: 823ad3afa9f9c0a46a291105c56cefac, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8952277074525040392, guid: 823ad3afa9f9c0a46a291105c56cefac, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8952277074525040392, guid: 823ad3afa9f9c0a46a291105c56cefac, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9203790941541904127, guid: 823ad3afa9f9c0a46a291105c56cefac, type: 3}
+      propertyPath: m_FlipX
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9203790941541904127, guid: 823ad3afa9f9c0a46a291105c56cefac, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 347981250348287413, guid: 52c8971e908094a4a9bb0127666bbeb6, type: 3}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 823ad3afa9f9c0a46a291105c56cefac, type: 3}
