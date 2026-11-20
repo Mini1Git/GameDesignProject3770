@@ -1,0 +1,178 @@
+* [33mae1aaab[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m Update Player.prefab
+*   [33m179765e[m fix merge conflict
+[32m|[m[33m\[m  
+[32m|[m * [33mb39eb9e[m[33m ([m[1;31morigin/ui-skills-stats[m[33m)[m finished adding skills, stat functionality, ui updates.
+* [33m|[m [33mc8b37b0[m Improved enemy attacking + added new option for attak cooldowns foe enemies
+[33m|[m[33m/[m  
+* [33m8ed232c[m fixed skills not showing up at cave level.
+[33m|[m * [33ma841364[m[33m ([m[1;31morigin/enemies-new-jeffrey[m[33m)[m 3 enemies added
+[33m|[m[33m/[m  
+* [33mf2852fd[m Added weapon pickups for level 2
+* [33m83c03b1[m Implement scene transitions
+* [33mb21511b[m Setup level 2 town
+*   [33mb23c1c8[m Merge pull request #77 from Mini1Git/caveLevel-27
+[35m|[m[36m\[m  
+[35m|[m * [33md969810[m[33m ([m[1;31morigin/caveLevel-27[m[33m, [m[1;32mcaveLevel-27[m[33m)[m Added weapon pick ups to cave level
+[35m|[m * [33m7206a3d[m Added weapon pick ups to cave level
+* [36m|[m [33m82a9204[m Update sprite import settings for weapons
+[36m|[m[36m/[m  
+*   [33m93112dd[m Merge pull request #66 from Mini1Git/weaponpatterns
+[1;31m|[m[1;32m\[m  
+[1;31m|[m * [33maace38f[m fit melee system into rewritten stamina system & adding T1 and T2 weapons
+[1;31m|[m *   [33m0feb88f[m Merge origin/main into weaponpatterns and adapt melee stamina access
+[1;31m|[m [1;33m|[m[1;34m\[m  
+[1;31m|[m * [1;34m|[m [33m4c68b3d[m[33m ([m[1;31morigin/weaponpatterns[m[33m)[m fix plunger sprite size
+[1;31m|[m * [1;34m|[m [33m6e1a8d6[m add few weapon sprites
+[1;31m|[m * [1;34m|[m [33m981b9f7[m add new weapon patterns
+* [1;34m|[m [1;34m|[m   [33m55a4a11[m Merge pull request #75 from Mini1Git/spell-inventory
+[1;34m|[m[1;36m\[m [1;34m\[m [1;34m\[m  
+[1;34m|[m [1;36m|[m[1;34m_[m[1;34m|[m[1;34m/[m  
+[1;34m|[m[1;34m/[m[1;36m|[m [1;34m|[m   
+[1;34m|[m * [1;34m|[m [33ma71f84d[m[33m ([m[1;31morigin/spell-inventory[m[33m)[m Connected spells to the inventory and pickups, C switches the active spell
+[1;34m|[m[1;34m/[m [1;34m/[m  
+* [1;34m|[m   [33md0077c4[m Merge pull request #74 from Mini1Git/caveLevel-27
+[31m|[m[32m\[m [1;34m\[m  
+[31m|[m * [1;34m|[m [33mabc8970[m Minor enemy attack changes
+[31m|[m[31m/[m [1;34m/[m  
+* [1;34m|[m   [33mba47479[m Merge pull request #71 from Mini1Git/npc-22-61
+[33m|[m[34m\[m [1;34m\[m  
+[33m|[m * [1;34m|[m [33mf1eab2a[m Added NPC dialogue system #22 and fixed a bug with player rigidbody #61
+* [34m|[m [1;34m|[m   [33m7d04835[m Merge pull request #73 from Mini1Git/adding-skills-72
+[35m|[m[36m\[m [34m\[m [1;34m\[m  
+[35m|[m * [34m|[m [1;34m|[m [33me50b5cc[m[33m ([m[1;31morigin/adding-skills-72[m[33m)[m added skills
+[35m|[m[35m/[m [34m/[m [1;34m/[m  
+* [34m|[m [1;34m|[m [33m3d57db9[m updated selectedColour settings
+* [34m|[m [1;34m|[m   [33md3e35a8[m Merge pull request #69 from Mini1Git/Skill-System-18
+[1;31m|[m[1;32m\[m [34m\[m [1;34m\[m  
+[1;31m|[m * [34m|[m [1;34m|[m [33m81aaf6e[m[33m ([m[1;31morigin/Skill-System-18[m[33m)[m fixed minor bug
+[1;31m|[m * [34m|[m [1;34m|[m [33m7970c27[m finished UI, fixed logic bug in skill system
+[1;31m|[m * [34m|[m [1;34m|[m [33mdb10f93[m added barebones ui for skills
+* [1;32m|[m [34m|[m [1;34m|[m   [33mbd6d4a4[m Fixed merge conflict by discarding my changes
+[1;32m|[m[1;34m\[m [1;32m\[m [34m\[m [1;34m\[m  
+[1;32m|[m [1;34m|[m[1;32m/[m [34m/[m [1;34m/[m  
+[1;32m|[m[1;32m/[m[1;34m|[m [34m|[m [1;34m|[m   
+[1;32m|[m * [34m|[m [1;34m|[m   [33mf8909e6[m Merge pull request #70 from Mini1Git/cavelevel-27
+[1;32m|[m [34m|[m[1;36m\[m [34m\[m [1;34m\[m  
+[1;32m|[m [34m|[m [1;36m|[m[34m/[m [1;34m/[m  
+[1;32m|[m [34m|[m[34m/[m[1;36m|[m [1;34m|[m   
+[1;32m|[m [34m|[m * [1;34m|[m [33mb29cce4[m Created ranger prefab
+[1;32m|[m [34m|[m[34m/[m [1;34m/[m  
+[1;32m|[m * [1;34m/[m [33m78c864b[m Implemented ranger enemy, with enemy projectiles that shoot rocks at you.
+[1;32m|[m [1;34m|[m[1;34m/[m  
+* [1;34m/[m [33m50326e1[m added more comments and can now unlock skills
+[1;34m|[m[1;34m/[m  
+* [33mf584f63[m fix canvas bug for stats
+* [33m5ecb8d3[m updated stats menu canvas render
+*   [33mba08dce[m Merge pull request #65 from Mini1Git/caveLevel-27
+[31m|[m[32m\[m  
+[31m|[m * [33m09d8283[m saved work
+* [32m|[m [33m9cf73fb[m Merge pull request #64 from Mini1Git/caveLevel-27
+[33m|[m[32m\[m[32m|[m 
+[33m|[m * [33mcafce6a[m Created a player prefab that is drag and drop containing all ui, resource managers and camera.
+[33m|[m *   [33m011c0e0[m Merge remote-tracking branch 'origin/main' into caveLevel-27
+[33m|[m [35m|[m[33m\[m  
+[33m|[m [35m|[m[33m/[m  
+[33m|[m[33m/[m[35m|[m   
+* [35m|[m   [33m2a4afab[m Merge pull request #63 from Mini1Git/Leveling-System-17
+[1;31m|[m[1;32m\[m [35m\[m  
+[1;31m|[m * [35m|[m [33m823a0f2[m[33m ([m[1;31morigin/Leveling-System-17[m[33m)[m added some comments
+[1;31m|[m * [35m|[m [33mf20ec8c[m added UI for stats
+[1;31m|[m * [35m|[m [33m8fd649a[m added skill SO and updated systems to use dic
+[1;31m|[m * [35m|[m [33m429f93d[m added barebones leveling and skill system
+[1;31m|[m [1;32m|[m * [33m318306c[m Added a level layout for the cave level. Implemented dynamic lighting as well
+[1;31m|[m [1;32m|[m[1;31m/[m  
+[1;31m|[m[1;31m/[m[1;32m|[m   
+* [1;32m|[m   [33med61594[m Merge pull request #62 from Mini1Git/menuUI-23
+[1;33m|[m[1;34m\[m [1;32m\[m  
+[1;33m|[m * [1;32m|[m [33med5beac[m[33m ([m[1;31morigin/menuUI-23[m[33m)[m Added main menu and options
+[1;33m|[m * [1;32m|[m [33mdddcaad[m Added pause menu script and scene
+[1;33m|[m [1;32m|[m[1;32m/[m  
+* [1;32m|[m   [33m00fb8cf[m Merge pull request #60 from Mini1Git/melee-combat-review
+[1;32m|[m[1;36m\[m [1;32m\[m  
+[1;32m|[m [1;36m|[m[1;32m/[m  
+[1;32m|[m[1;32m/[m[1;36m|[m   
+[1;32m|[m * [33m71aaa1a[m Add placeholder for full charge sound effect
+[1;32m|[m * [33m9a552cd[m Optimize combat system
+[1;32m|[m[1;32m/[m  
+*   [33me876ab7[m Merge pull request #59 from Mini1Git/death
+[31m|[m[32m\[m  
+[31m|[m * [33m3cf125a[m[33m ([m[1;31morigin/death[m[33m)[m Implemented enemies dealing damage to player and upon death, scene resets.
+[31m|[m[31m/[m  
+*   [33m988cda5[m Merge pull request #58 from Mini1Git/Spell-Component-Update-57
+[33m|[m[34m\[m  
+[33m|[m * [33mbe62602[m[33m ([m[1;31morigin/Spell-Component-Update-57[m[33m)[m updated how core spell prefab system works.
+[33m|[m[33m/[m  
+* [33mbac9eba[m organized the scripts into subfolders
+*   [33mc75da69[m Merge pull request #56 from Mini1Git/melee-combat-review
+[35m|[m[36m\[m  
+[35m|[m * [33m6a00e72[m Implement basic light and heavy attacks
+[35m|[m[35m/[m  
+* [33mb73a5de[m Revert "Implement basic light and heavy attacks"
+* [33m66f0284[m Implement basic light and heavy attacks
+*   [33m9a4bc03[m Merge pull request #55 from Mini1Git/Spell-System-19
+[1;31m|[m[1;32m\[m  
+[1;31m|[m * [33md6092a5[m updated how spell cost used with mana system
+[1;31m|[m * [33m9079b4a[m updated spell system
+[1;31m|[m * [33m3621698[m added spell base + so
+[1;31m|[m * [33m65d8e52[m added spell SO template
+* [1;32m|[m [33m3aebb64[m disable the annoying welcome pop up
+* [1;32m|[m [33me5f16e7[m Revert "Implement melee combat and sword attack patterns"
+* [1;32m|[m [33m0dacd0b[m Revertng the revert "eevert "Merge melee combat into main"" because apparently it just reverts Raid's changes?
+* [1;32m|[m [33m04be767[m eevert "Merge melee combat into main"
+* [1;32m|[m [33m80ad6cc[m Merge melee combat into main
+[1;33m|[m[1;32m\[m[1;32m|[m 
+[1;33m|[m *   [33m7fba8a7[m Merge pull request #54 from Mini1Git/pickups-21
+[1;33m|[m [1;35m|[m[1;36m\[m  
+[1;33m|[m [1;35m|[m * [33m9d05770[m Added world pickups, enemy drop tables and item dropping (#21)
+[1;33m|[m [1;35m|[m[1;35m/[m  
+* [1;35m/[m [33mec49730[m Implement melee combat and sword attack patterns
+[1;35m|[m[1;35m/[m  
+*   [33m12bc812[m Merge pull request #53 from Mini1Git/hud-fix-13
+[31m|[m[32m\[m  
+[31m|[m * [33mf8a95b2[m Updated the UI so it scaled with screen size.
+[31m|[m * [33mba0b098[m Refactored the scripts into 1
+[31m|[m[31m/[m  
+* [33m39ed0c4[m Fixed merge conflict error altering testingarea scene. Readded navmesh and navigation
+* [33m507eb84[m Fixed merge conflict error altering testingarea scene. Readded navmesh and navigation
+*   [33m437534e[m Merge pull request #51 from Mini1Git/ResourceSystem-9
+[33m|[m[34m\[m  
+[33m|[m * [33m1e6667c[m Done stamina + mana system. + bug
+[33m|[m * [33mf96776d[m added stamina system
+* [34m|[m   [33m4e6f1c0[m Merge pull request #50 from Mini1Git/Enemy-ai-#36
+[34m|[m[36m\[m [34m\[m  
+[34m|[m [36m|[m[34m/[m  
+[34m|[m[34m/[m[36m|[m   
+[34m|[m *   [33m51bd83a[m Merge branch 'main' into Enemy-ai-#36
+[34m|[m [1;31m|[m[34m\[m  
+[34m|[m [1;31m|[m[34m/[m  
+[34m|[m[34m/[m[1;31m|[m   
+* [1;31m|[m   [33m421051c[m Merge pull request #49 from Mini1Git/player-hud-13
+[1;33m|[m[1;34m\[m [1;31m\[m  
+[1;33m|[m * [1;31m|[m [33mb2ab0b9[m Added player HUD with health, stamina and mana bars
+[1;33m|[m[1;33m/[m [1;31m/[m  
+* [1;31m|[m   [33m2847445[m Merge pull request #48 from Mini1Git/inventory-20
+[1;35m|[m[1;36m\[m [1;31m\[m  
+[1;35m|[m * [1;31m|[m [33m9dd7530[m ✨ Added Inventory logic and UI
+[1;35m|[m[1;35m/[m [1;31m/[m  
+[1;35m|[m * [33me639acd[m Implemented enemy attack. The basic framework for enemy roles, ai and attack is now available.
+[1;35m|[m * [33m4e0cdf6[m Basic comments
+[1;35m|[m * [33mb720af1[m Basic comments
+[1;35m|[m * [33m6544c33[m Created basic rusher and basic melee enemy
+[1;35m|[m * [33ma7c1bf4[m Added AI Navigation plugin and NavMeshPlus plugin
+[1;35m|[m * [33m71c5b79[m Fixed melee movement ai
+[1;35m|[m * [33me8db9e3[m Added aggro range and detection.
+[1;35m|[m * [33md6c19de[m Started working on the enemy role system. Fixed a few bugs too
+[1;35m|[m[1;35m/[m  
+*   [33mff50f8e[m sandbox area, will evolve over time (also added cinemachine)
+[31m|[m[32m\[m  
+[31m|[m * [33m427a94f[m added sandbox  scene+ cinemachine
+[31m|[m * [33m94ea632[m addedd stone wall tile
+[31m|[m * [33m1995aa9[m added grass tiles
+[31m|[m[31m/[m  
+* [33m374cd64[m mult updates
+* [33md4b14e0[m Added weapon swinging with placeholder weapon.
+* [33m7c5c0d0[m Did some stuff. Will have to do more once discussing with group on how we want to implement state machines, code, etc.
+* [33maea8309[m Started off the project with placeholder player, basic player movement and camera. Very basic and rudamentary, subject to change.
+* [33m02298c4[m Added .gitattributes and some folders. Test commit.
+* [33m1fcd7aa[m Initialize Project
+* [33m053d4d6[m Initial commit

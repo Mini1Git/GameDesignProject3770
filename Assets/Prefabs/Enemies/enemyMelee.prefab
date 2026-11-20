@@ -183,7 +183,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0.8746197, w: 0.4848096}
   m_LocalPosition: {x: 0.068, y: -0.144, z: 0}
-  m_LocalScale: {x: 0.16, y: 0.16, z: 0.79999995}
+  m_LocalScale: {x: 0.02, y: 0.02, z: 0.099999994}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 8952277074525040392}
@@ -237,7 +237,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -4809721396107502372, guid: 63cab9273b0b867489bf67d072df1503, type: 3}
+  m_Sprite: {fileID: 3258686426180307137, guid: 60b92a9d2b48a7b4f9682533fd3e0e23, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -307,14 +307,14 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.1}
-    oldSize: {x: 0.94, y: 1.1}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 5.06, y: 10.09}
     newSize: {x: 5.06, y: 10.09}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.82, y: 1.89}
+  m_Size: {x: 5.06, y: 10.09}
   m_EdgeRadius: 0
 --- !u!114 &5992820223309154074
 MonoBehaviour:
@@ -329,6 +329,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::enemyAttack
   damage: 1
+  cooldown: 0
+  armMotion: {fileID: 0}
+  swingSpeed: 1
 --- !u!1 &7229428138833805794
 GameObject:
   m_ObjectHideFlags: 0
@@ -345,7 +348,7 @@ GameObject:
   - component: {fileID: 1410639073385638716}
   - component: {fileID: 5520574070948903555}
   m_Layer: 0
-  m_Name: enemyMelee 1
+  m_Name: enemyMelee
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -361,8 +364,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 3.64, y: -1.17, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1, y: 1, z: 0.2}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 4834842163431593366}
   - {fileID: 7023891184486359731}
@@ -417,7 +420,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 2
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 7913978441645294415, guid: 225e18c1cf7e9384eb34a0cf63fa6029, type: 3}
+  m_Sprite: {fileID: -8254081279031059822, guid: 176c2cf8a7a62654cb0010add01f8339, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -466,7 +469,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.28, y: 0.39}
+    oldSize: {x: 0.17, y: 0.27}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -552,10 +555,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::enemyMelee
   rb: {fileID: 1132404722795667537}
   detection: {fileID: 8207412626006552956}
-  health: 10
+  health: 3
   aggroRange: 10
   turnSpeed: 1
   xpDrop: 0
+  facingAngleOffset: 0
 --- !u!195 &5520574070948903555
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -566,7 +570,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.1
-  m_Speed: 0.2
+  m_Speed: 0.6
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 0
