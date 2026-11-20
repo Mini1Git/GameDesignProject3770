@@ -191,7 +191,7 @@ GameObject:
   - component: {fileID: 8207412626006552956}
   - component: {fileID: 517092934202075266}
   m_Layer: 0
-  m_Name: enemyRusher 1
+  m_Name: enemyBat
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
