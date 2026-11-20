@@ -6,6 +6,7 @@ public class enemyMelee : enemyBase
 {
 
     private UnityEngine.AI.NavMeshAgent navAgent;
+    [SerializeField] private float facingAngleOffset;
 
     void Awake()
     {
@@ -15,33 +16,24 @@ public class enemyMelee : enemyBase
         navAgent.updateUpAxis = false;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     void FixedUpdate()
     {
-
-        if (aggroed)
+        if (!aggroed || player == null || !navAgent.isOnNavMesh) return;
+        Vector2 toPlayer = player.transform.position - transform.position;
+        if (toPlayer.magnitude > aggroRange)
         {
-            // makes enemy face where its going
-            Vector2 direction = navAgent.velocity;
-            float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-            Quaternion targetRotation = Quaternion.Euler(0, 0, angle);
-            transform.rotation = Quaternion.RotateTowards(
-                transform.rotation,
-                targetRotation,
-                180f * Time.deltaTime * turnSpeed
-            );
-
-            navAgent.destination = player.transform.position;
-
-            if (Vector2.Distance(player.transform.position, transform.position) > aggroRange)
-            {
-                aggroed = false;
-            }
+            navAgent.ResetPath();
+            aggroed = false;
+            return;
         }
+        bool inReach = toPlayer.magnitude <= navAgent.stoppingDistance;
+        navAgent.isStopped = inReach;
+        if (!inReach) navAgent.destination = player.transform.position;
+        Vector2 direction = inReach ? toPlayer : (Vector2)navAgent.velocity;
+        if (direction.sqrMagnitude < 0.0001f) direction = toPlayer;
+        if (direction.sqrMagnitude < 0.0001f) return;
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg + facingAngleOffset;
+        transform.rotation = Quaternion.RotateTowards(transform.rotation,
+            Quaternion.Euler(0, 0, angle), 180f * Time.fixedDeltaTime * turnSpeed);
     }
 }
