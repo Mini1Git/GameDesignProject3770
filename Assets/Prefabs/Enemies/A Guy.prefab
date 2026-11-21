@@ -16,6 +16,10 @@ PrefabInstance:
       propertyPath: xpDrop
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 1410639073385638716, guid: 823ad3afa9f9c0a46a291105c56cefac, type: 3}
+      propertyPath: aggroRange
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2978115783539038303, guid: 823ad3afa9f9c0a46a291105c56cefac, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -99,6 +103,18 @@ PrefabInstance:
     - target: {fileID: 7989636967002261640, guid: 823ad3afa9f9c0a46a291105c56cefac, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 0.82
+      objectReference: {fileID: 0}
+    - target: {fileID: 8207412626006552956, guid: 823ad3afa9f9c0a46a291105c56cefac, type: 3}
+      propertyPath: m_Size.y
+      value: 6.4781227
+      objectReference: {fileID: 0}
+    - target: {fileID: 8207412626006552956, guid: 823ad3afa9f9c0a46a291105c56cefac, type: 3}
+      propertyPath: m_Offset.y
+      value: -1.1018915
+      objectReference: {fileID: 0}
+    - target: {fileID: 8207412626006552956, guid: 823ad3afa9f9c0a46a291105c56cefac, type: 3}
+      propertyPath: m_Direction
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8952277074525040392, guid: 823ad3afa9f9c0a46a291105c56cefac, type: 3}
       propertyPath: m_LocalScale.x
