@@ -361,7 +361,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::enemyAttack
   damage: 1
+  cooldown: 0
   armMotion: {fileID: 8968704213446988171}
+  swingSpeed: 1
 --- !u!1 &7229428138833805794
 GameObject:
   m_ObjectHideFlags: 0
@@ -586,7 +588,7 @@ MonoBehaviour:
   rb: {fileID: 1132404722795667537}
   detection: {fileID: 8207412626006552956}
   health: 10
-  aggroRange: 2
+  aggroRange: 8
   turnSpeed: 1
   xpDrop: 10
   facingAngleOffset: 90

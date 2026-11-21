@@ -299,7 +299,7 @@ SpriteRenderer:
   m_Size: {x: 5.06, y: 10.09}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 0
   m_BlendShapeWeights: []
 --- !u!61 &7989636967002261640
@@ -361,6 +361,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::enemyAttack
   damage: 1
+  cooldown: 0
   armMotion: {fileID: 8968704213446988171}
   swingSpeed: 1.25
 --- !u!1 &7229428138833805794
@@ -587,7 +588,7 @@ MonoBehaviour:
   rb: {fileID: 1132404722795667537}
   detection: {fileID: 8207412626006552956}
   health: 10
-  aggroRange: 2
+  aggroRange: 8
   turnSpeed: 1
   xpDrop: 10
   facingAngleOffset: 90
