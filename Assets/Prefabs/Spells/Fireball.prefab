@@ -184,9 +184,9 @@ MonoBehaviour:
   speedIfProjectile: 1
   limit_Type: 0
   timeIfTimer: 1
-  rangeIfRange: 1
-  end_Type: 0
-  splitPrefab: {fileID: 0}
+  rangeIfRange: 10
+  end_Type: 2
+  splitPrefab: {fileID: 1517219750532181703, guid: 402091a9a55d5ad4684935923e2aa199, type: 3}
   splitCount: 3
   splitAngle: 30
   explosionParticleSystem: {fileID: 5548376738601414852, guid: 70755d032dab1f54e8419ee4fed7555b, type: 3}
