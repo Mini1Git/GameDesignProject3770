@@ -30,6 +30,7 @@ public class player : MonoBehaviour
     public bool isDashing = false;
     public int dashSpeed;
     public int dashStaminaCost = 2;
+    public float speedIncrement = 0.1f;
 
     PlayerInput playerInput;
     InputAction move;
@@ -53,12 +54,13 @@ public class player : MonoBehaviour
         meleeAttack = GetComponent<PlayerMeleeAttack>();
         inputFocused = Application.isFocused;
         playerInput = new PlayerInput();
+        
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        updatePlayerStats();
     }
     
     private void OnEnable() // when this script is enabled.
@@ -163,11 +165,12 @@ public class player : MonoBehaviour
 
     public void updatePlayerStats()
     {
+
         Debug.Log("UPDATE PLAYER STATS");
         maxHealth = LevelingSystem.Instance.getPlayerStat(Stats.Vitality) + 1;
         maxMana = LevelingSystem.Instance.getPlayerStat(Stats.Magic) + 1;
         maxStamina = LevelingSystem.Instance.getPlayerStat(Stats.Endurance) + 1;
-        originalSpeed = LevelingSystem.Instance.getPlayerStat(Stats.Agility) + 1;
+        originalSpeed = speed + LevelingSystem.Instance.getPlayerStat(Stats.Agility) + speedIncrement;
 
         // Damage scaling has already been implemented within weaponData.cs
         //clamp the current 

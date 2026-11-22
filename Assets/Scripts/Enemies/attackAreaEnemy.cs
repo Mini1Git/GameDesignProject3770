@@ -23,7 +23,7 @@ public class attackAreaEnemy : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("Something entered");
+       // Debug.Log("Something entered");
         if (collision.gameObject.tag == "Player")
         {
             canAttack = true;

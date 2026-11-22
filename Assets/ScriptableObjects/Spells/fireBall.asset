@@ -21,4 +21,5 @@ MonoBehaviour:
   spellDescription: Simple fireball as a test spell.
   spellElement: 1
   positionType: 0
-  manaCost: 5
+  damage: 1
+  manaCost: 0.1
