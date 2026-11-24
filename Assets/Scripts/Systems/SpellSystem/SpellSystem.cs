@@ -212,7 +212,7 @@ public class SpellSystem : MonoBehaviour
 
             Quaternion rotation = Quaternion.Euler(0, 0, angle);
 
-            Instantiate(gameObject,transform.position, transform.rotation * rotation);
+            Instantiate(splitPrefab,transform.position, transform.rotation * rotation);
         }
 
         Destroy(gameObject);
