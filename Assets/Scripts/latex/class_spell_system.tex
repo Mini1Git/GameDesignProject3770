@@ -1,0 +1,228 @@
+\doxysection{Spell\+System Class Reference}
+\hypertarget{class_spell_system}{}\label{class_spell_system}\index{SpellSystem@{SpellSystem}}
+Inheritance diagram for Spell\+System:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_spell_system}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \doxymbox{\hyperlink{class_spell_system_a514c65dc8b5d14eb427209398da5d9f4}{Attack\+Type}} \{ \doxymbox{\hyperlink{class_spell_system_a514c65dc8b5d14eb427209398da5d9f4a3a7895c8c072c10f8129110cd4984910}{No\+\_\+\+Move}}
+, \doxymbox{\hyperlink{class_spell_system_a514c65dc8b5d14eb427209398da5d9f4aae7968d26b598ce434958b0825b7a4ac}{Projectile}}
+ \}
+\item 
+enum \doxymbox{\hyperlink{class_spell_system_ad04789ee6b61bcc01a816c00844edeeb}{Limit\+Type}} \{ \doxymbox{\hyperlink{class_spell_system_ad04789ee6b61bcc01a816c00844edeeba87ba2ecc8b6915e8bd6f5089918229fd}{Range}}
+, \doxymbox{\hyperlink{class_spell_system_ad04789ee6b61bcc01a816c00844edeebaefb4777327e6f704fb1519c1882f93ec}{Timer}}
+ \}
+\item 
+enum \doxymbox{\hyperlink{class_spell_system_a2eadb9dbc5d43ec49a763bf81f777287}{End\+Type}} \{ \doxymbox{\hyperlink{class_spell_system_a2eadb9dbc5d43ec49a763bf81f777287adbaa996612e29808794416e923ada282}{Explode}}
+, \doxymbox{\hyperlink{class_spell_system_a2eadb9dbc5d43ec49a763bf81f777287af36b3f07552841a9755c19e478eab033}{Disappear}}
+, \doxymbox{\hyperlink{class_spell_system_a2eadb9dbc5d43ec49a763bf81f777287a8a9e64d86ed12ad40de129bc7f4683b2}{Split}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{class_spell_system_ab289628f6ca6556b5aa1afbd24c6e88c}{Start}} ()
+\item 
+void \doxymbox{\hyperlink{class_spell_system_acff9cb8151fc6257ae3c5d689690d54a}{Update}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_spell_system_a514c65dc8b5d14eb427209398da5d9f4}{Attack\+Type}} \doxymbox{\hyperlink{class_spell_system_a86feb53d0fc76c65d79fb923a5c41c21}{attack\+\_\+\+Type}}
+\item 
+float \doxymbox{\hyperlink{class_spell_system_a1fe770d9810f8332ee7f7b0a196ae33f}{speed\+If\+Projectile}} = 1f
+\item 
+\doxymbox{\hyperlink{class_spell_system_ad04789ee6b61bcc01a816c00844edeeb}{Limit\+Type}} \doxymbox{\hyperlink{class_spell_system_ab177badc16dcb729401f6c008538ffa8}{limit\+\_\+\+Type}}
+\item 
+float \doxymbox{\hyperlink{class_spell_system_a65dab6b48452d4a4d825ee8c5dde0007}{time\+If\+Timer}} = 5
+\item 
+float \doxymbox{\hyperlink{class_spell_system_a1729f8fa37b24b71ef0c2adb78792c9a}{range\+If\+Range}} = 3
+\item 
+\doxymbox{\hyperlink{class_spell_system_a2eadb9dbc5d43ec49a763bf81f777287}{End\+Type}} \doxymbox{\hyperlink{class_spell_system_a54e301c7a77eb5a4afc2bbbf550448a0}{end\+\_\+\+Type}}
+\item 
+Game\+Object \doxymbox{\hyperlink{class_spell_system_a6c69b4c32ca9fac574c131111a327f91}{split\+Prefab}}
+\item 
+int \doxymbox{\hyperlink{class_spell_system_ae035a5e3d52f8ed165c6c83e0c868922}{split\+Count}} = 3
+\item 
+float \doxymbox{\hyperlink{class_spell_system_a7aabd6b724e95c8a2ee03c2f98421e49}{split\+Angle}} = 30f
+\item 
+Particle\+System \doxymbox{\hyperlink{class_spell_system_a812aab4b7a6e9df26045b08d27765737}{explosion\+Particle\+System}}
+\item 
+float \doxymbox{\hyperlink{class_spell_system_a1631914544f9f242b8220bd757633720}{explosion\+Radius}}
+\item 
+\doxymbox{\hyperlink{classspell___s_o}{spell\+\_\+\+SO}} \doxymbox{\hyperlink{class_spell_system_ae5888e399676c46f484ce6420929d838}{spell\+Data}}
+\end{DoxyCompactItemize}
+
+
+\label{class_spell_system_doc-enum-members}
+\Hypertarget{class_spell_system_doc-enum-members}
+\doxysubsection{Member Enumeration Documentation}
+\Hypertarget{class_spell_system_a514c65dc8b5d14eb427209398da5d9f4}\index{SpellSystem@{SpellSystem}!AttackType@{AttackType}}
+\index{AttackType@{AttackType}!SpellSystem@{SpellSystem}}
+\doxysubsubsection{\texorpdfstring{AttackType}{AttackType}}
+{\footnotesize\ttfamily \label{class_spell_system_a514c65dc8b5d14eb427209398da5d9f4} 
+enum \doxymbox{\hyperlink{class_spell_system_a514c65dc8b5d14eb427209398da5d9f4}{Spell\+System.\+Attack\+Type}}}
+
+\begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{No\_Move@{No\_Move}!SpellSystem@{SpellSystem}}
+\index{SpellSystem@{SpellSystem}!No\_Move@{No\_Move}}
+}\Hypertarget{class_spell_system_a514c65dc8b5d14eb427209398da5d9f4a3a7895c8c072c10f8129110cd4984910}\label{class_spell_system_a514c65dc8b5d14eb427209398da5d9f4a3a7895c8c072c10f8129110cd4984910} 
+No\+\_\+\+Move&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Projectile@{Projectile}!SpellSystem@{SpellSystem}}
+\index{SpellSystem@{SpellSystem}!Projectile@{Projectile}}
+}\Hypertarget{class_spell_system_a514c65dc8b5d14eb427209398da5d9f4aae7968d26b598ce434958b0825b7a4ac}\label{class_spell_system_a514c65dc8b5d14eb427209398da5d9f4aae7968d26b598ce434958b0825b7a4ac} 
+Projectile&\\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{class_spell_system_a2eadb9dbc5d43ec49a763bf81f777287}\index{SpellSystem@{SpellSystem}!EndType@{EndType}}
+\index{EndType@{EndType}!SpellSystem@{SpellSystem}}
+\doxysubsubsection{\texorpdfstring{EndType}{EndType}}
+{\footnotesize\ttfamily \label{class_spell_system_a2eadb9dbc5d43ec49a763bf81f777287} 
+enum \doxymbox{\hyperlink{class_spell_system_a2eadb9dbc5d43ec49a763bf81f777287}{Spell\+System.\+End\+Type}}}
+
+\begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Explode@{Explode}!SpellSystem@{SpellSystem}}
+\index{SpellSystem@{SpellSystem}!Explode@{Explode}}
+}\Hypertarget{class_spell_system_a2eadb9dbc5d43ec49a763bf81f777287adbaa996612e29808794416e923ada282}\label{class_spell_system_a2eadb9dbc5d43ec49a763bf81f777287adbaa996612e29808794416e923ada282} 
+Explode&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Disappear@{Disappear}!SpellSystem@{SpellSystem}}
+\index{SpellSystem@{SpellSystem}!Disappear@{Disappear}}
+}\Hypertarget{class_spell_system_a2eadb9dbc5d43ec49a763bf81f777287af36b3f07552841a9755c19e478eab033}\label{class_spell_system_a2eadb9dbc5d43ec49a763bf81f777287af36b3f07552841a9755c19e478eab033} 
+Disappear&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Split@{Split}!SpellSystem@{SpellSystem}}
+\index{SpellSystem@{SpellSystem}!Split@{Split}}
+}\Hypertarget{class_spell_system_a2eadb9dbc5d43ec49a763bf81f777287a8a9e64d86ed12ad40de129bc7f4683b2}\label{class_spell_system_a2eadb9dbc5d43ec49a763bf81f777287a8a9e64d86ed12ad40de129bc7f4683b2} 
+Split&\\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{class_spell_system_ad04789ee6b61bcc01a816c00844edeeb}\index{SpellSystem@{SpellSystem}!LimitType@{LimitType}}
+\index{LimitType@{LimitType}!SpellSystem@{SpellSystem}}
+\doxysubsubsection{\texorpdfstring{LimitType}{LimitType}}
+{\footnotesize\ttfamily \label{class_spell_system_ad04789ee6b61bcc01a816c00844edeeb} 
+enum \doxymbox{\hyperlink{class_spell_system_ad04789ee6b61bcc01a816c00844edeeb}{Spell\+System.\+Limit\+Type}}}
+
+\begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Range@{Range}!SpellSystem@{SpellSystem}}
+\index{SpellSystem@{SpellSystem}!Range@{Range}}
+}\Hypertarget{class_spell_system_ad04789ee6b61bcc01a816c00844edeeba87ba2ecc8b6915e8bd6f5089918229fd}\label{class_spell_system_ad04789ee6b61bcc01a816c00844edeeba87ba2ecc8b6915e8bd6f5089918229fd} 
+Range&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Timer@{Timer}!SpellSystem@{SpellSystem}}
+\index{SpellSystem@{SpellSystem}!Timer@{Timer}}
+}\Hypertarget{class_spell_system_ad04789ee6b61bcc01a816c00844edeebaefb4777327e6f704fb1519c1882f93ec}\label{class_spell_system_ad04789ee6b61bcc01a816c00844edeebaefb4777327e6f704fb1519c1882f93ec} 
+Timer&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\label{class_spell_system_doc-func-members}
+\Hypertarget{class_spell_system_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_spell_system_ab289628f6ca6556b5aa1afbd24c6e88c}\index{SpellSystem@{SpellSystem}!Start@{Start}}
+\index{Start@{Start}!SpellSystem@{SpellSystem}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily \label{class_spell_system_ab289628f6ca6556b5aa1afbd24c6e88c} 
+void Spell\+System.\+Start (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_spell_system_acff9cb8151fc6257ae3c5d689690d54a}\index{SpellSystem@{SpellSystem}!Update@{Update}}
+\index{Update@{Update}!SpellSystem@{SpellSystem}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily \label{class_spell_system_acff9cb8151fc6257ae3c5d689690d54a} 
+void Spell\+System.\+Update (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\label{class_spell_system_doc-variable-members}
+\Hypertarget{class_spell_system_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_spell_system_a86feb53d0fc76c65d79fb923a5c41c21}\index{SpellSystem@{SpellSystem}!attack\_Type@{attack\_Type}}
+\index{attack\_Type@{attack\_Type}!SpellSystem@{SpellSystem}}
+\doxysubsubsection{\texorpdfstring{attack\_Type}{attack\_Type}}
+{\footnotesize\ttfamily \label{class_spell_system_a86feb53d0fc76c65d79fb923a5c41c21} 
+\doxymbox{\hyperlink{class_spell_system_a514c65dc8b5d14eb427209398da5d9f4}{Attack\+Type}} Spell\+System.\+attack\+\_\+\+Type}
+
+\Hypertarget{class_spell_system_a54e301c7a77eb5a4afc2bbbf550448a0}\index{SpellSystem@{SpellSystem}!end\_Type@{end\_Type}}
+\index{end\_Type@{end\_Type}!SpellSystem@{SpellSystem}}
+\doxysubsubsection{\texorpdfstring{end\_Type}{end\_Type}}
+{\footnotesize\ttfamily \label{class_spell_system_a54e301c7a77eb5a4afc2bbbf550448a0} 
+\doxymbox{\hyperlink{class_spell_system_a2eadb9dbc5d43ec49a763bf81f777287}{End\+Type}} Spell\+System.\+end\+\_\+\+Type}
+
+\Hypertarget{class_spell_system_a812aab4b7a6e9df26045b08d27765737}\index{SpellSystem@{SpellSystem}!explosionParticleSystem@{explosionParticleSystem}}
+\index{explosionParticleSystem@{explosionParticleSystem}!SpellSystem@{SpellSystem}}
+\doxysubsubsection{\texorpdfstring{explosionParticleSystem}{explosionParticleSystem}}
+{\footnotesize\ttfamily \label{class_spell_system_a812aab4b7a6e9df26045b08d27765737} 
+Particle\+System Spell\+System.\+explosion\+Particle\+System}
+
+\Hypertarget{class_spell_system_a1631914544f9f242b8220bd757633720}\index{SpellSystem@{SpellSystem}!explosionRadius@{explosionRadius}}
+\index{explosionRadius@{explosionRadius}!SpellSystem@{SpellSystem}}
+\doxysubsubsection{\texorpdfstring{explosionRadius}{explosionRadius}}
+{\footnotesize\ttfamily \label{class_spell_system_a1631914544f9f242b8220bd757633720} 
+float Spell\+System.\+explosion\+Radius}
+
+\Hypertarget{class_spell_system_ab177badc16dcb729401f6c008538ffa8}\index{SpellSystem@{SpellSystem}!limit\_Type@{limit\_Type}}
+\index{limit\_Type@{limit\_Type}!SpellSystem@{SpellSystem}}
+\doxysubsubsection{\texorpdfstring{limit\_Type}{limit\_Type}}
+{\footnotesize\ttfamily \label{class_spell_system_ab177badc16dcb729401f6c008538ffa8} 
+\doxymbox{\hyperlink{class_spell_system_ad04789ee6b61bcc01a816c00844edeeb}{Limit\+Type}} Spell\+System.\+limit\+\_\+\+Type}
+
+\Hypertarget{class_spell_system_a1729f8fa37b24b71ef0c2adb78792c9a}\index{SpellSystem@{SpellSystem}!rangeIfRange@{rangeIfRange}}
+\index{rangeIfRange@{rangeIfRange}!SpellSystem@{SpellSystem}}
+\doxysubsubsection{\texorpdfstring{rangeIfRange}{rangeIfRange}}
+{\footnotesize\ttfamily \label{class_spell_system_a1729f8fa37b24b71ef0c2adb78792c9a} 
+float Spell\+System.\+range\+If\+Range = 3}
+
+\Hypertarget{class_spell_system_a1fe770d9810f8332ee7f7b0a196ae33f}\index{SpellSystem@{SpellSystem}!speedIfProjectile@{speedIfProjectile}}
+\index{speedIfProjectile@{speedIfProjectile}!SpellSystem@{SpellSystem}}
+\doxysubsubsection{\texorpdfstring{speedIfProjectile}{speedIfProjectile}}
+{\footnotesize\ttfamily \label{class_spell_system_a1fe770d9810f8332ee7f7b0a196ae33f} 
+float Spell\+System.\+speed\+If\+Projectile = 1f}
+
+\Hypertarget{class_spell_system_ae5888e399676c46f484ce6420929d838}\index{SpellSystem@{SpellSystem}!spellData@{spellData}}
+\index{spellData@{spellData}!SpellSystem@{SpellSystem}}
+\doxysubsubsection{\texorpdfstring{spellData}{spellData}}
+{\footnotesize\ttfamily \label{class_spell_system_ae5888e399676c46f484ce6420929d838} 
+\doxymbox{\hyperlink{classspell___s_o}{spell\+\_\+\+SO}} Spell\+System.\+spell\+Data}
+
+\Hypertarget{class_spell_system_a7aabd6b724e95c8a2ee03c2f98421e49}\index{SpellSystem@{SpellSystem}!splitAngle@{splitAngle}}
+\index{splitAngle@{splitAngle}!SpellSystem@{SpellSystem}}
+\doxysubsubsection{\texorpdfstring{splitAngle}{splitAngle}}
+{\footnotesize\ttfamily \label{class_spell_system_a7aabd6b724e95c8a2ee03c2f98421e49} 
+float Spell\+System.\+split\+Angle = 30f}
+
+\Hypertarget{class_spell_system_ae035a5e3d52f8ed165c6c83e0c868922}\index{SpellSystem@{SpellSystem}!splitCount@{splitCount}}
+\index{splitCount@{splitCount}!SpellSystem@{SpellSystem}}
+\doxysubsubsection{\texorpdfstring{splitCount}{splitCount}}
+{\footnotesize\ttfamily \label{class_spell_system_ae035a5e3d52f8ed165c6c83e0c868922} 
+int Spell\+System.\+split\+Count = 3}
+
+\Hypertarget{class_spell_system_a6c69b4c32ca9fac574c131111a327f91}\index{SpellSystem@{SpellSystem}!splitPrefab@{splitPrefab}}
+\index{splitPrefab@{splitPrefab}!SpellSystem@{SpellSystem}}
+\doxysubsubsection{\texorpdfstring{splitPrefab}{splitPrefab}}
+{\footnotesize\ttfamily \label{class_spell_system_a6c69b4c32ca9fac574c131111a327f91} 
+Game\+Object Spell\+System.\+split\+Prefab}
+
+\Hypertarget{class_spell_system_a65dab6b48452d4a4d825ee8c5dde0007}\index{SpellSystem@{SpellSystem}!timeIfTimer@{timeIfTimer}}
+\index{timeIfTimer@{timeIfTimer}!SpellSystem@{SpellSystem}}
+\doxysubsubsection{\texorpdfstring{timeIfTimer}{timeIfTimer}}
+{\footnotesize\ttfamily \label{class_spell_system_a65dab6b48452d4a4d825ee8c5dde0007} 
+float Spell\+System.\+time\+If\+Timer = 5}
+
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+Systems/\+\+Spell\+System/\doxymbox{\hyperlink{_spell_system_8cs}{Spell\+System.\+cs}}\end{DoxyCompactItemize}

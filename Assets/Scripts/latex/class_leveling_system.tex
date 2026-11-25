@@ -1,0 +1,179 @@
+\doxysection{Leveling\+System Class Reference}
+\hypertarget{class_leveling_system}{}\label{class_leveling_system}\index{LevelingSystem@{LevelingSystem}}
+Inheritance diagram for Leveling\+System:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_leveling_system}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \doxymbox{\hyperlink{class_leveling_system_a44135ae3212a1b12c36e38b8791d3c56}{get\+Player\+Stat}} (\doxymbox{\hyperlink{_leveling_system_8cs_ad28c24e82986133459dee232a5360bc4}{Stats}} stat)
+\item 
+void \doxymbox{\hyperlink{class_leveling_system_a2b6f52c23a0ca3b11fefd7db18546444}{Awake}} ()
+\item 
+void \doxymbox{\hyperlink{class_leveling_system_a257b7411d6f71466fc21dfcc585bb9c5}{toggle\+Level\+System}} (Input\+Action.\+Callback\+Context ctx)
+\item 
+void \doxymbox{\hyperlink{class_leveling_system_a30c5e5fd864288ce8c03e2c24d056a05}{level\+Up}} ()
+\item 
+void \doxymbox{\hyperlink{class_leveling_system_a272ddc92d926a3e10d5983f8ff7380df}{increase\+Vitality}} ()
+\item 
+void \doxymbox{\hyperlink{class_leveling_system_a035ad7b5120cab64ecd2a59006937df0}{increase\+Endurance}} ()
+\item 
+void \doxymbox{\hyperlink{class_leveling_system_abc410e5e74eacf7fa78a3a7ab389ab5e}{increase\+Strength}} ()
+\item 
+void \doxymbox{\hyperlink{class_leveling_system_a7179b151f5187e89e90b10f213713c97}{increase\+Agility}} ()
+\item 
+void \doxymbox{\hyperlink{class_leveling_system_a32fa09e85af77beb7b2aee98ae0338de}{increase\+Magic}} ()
+\item 
+void \doxymbox{\hyperlink{class_leveling_system_a99bfd593fae0a1020c2034d366e4e94d}{gain\+XP}} (int xp\+Gained)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{classplayer}{player}} \doxymbox{\hyperlink{class_leveling_system_a89308f7105482e13bd20cda0d416a0df}{player}}
+\item 
+int \doxymbox{\hyperlink{class_leveling_system_a2804f6d7e3d1a0d5b496d05bbbcbb263}{current\+Level}} = 1
+\item 
+int \doxymbox{\hyperlink{class_leveling_system_a1d99a32109b1c8e815b11439e2fcfd04}{current\+XP}}
+\item 
+int \doxymbox{\hyperlink{class_leveling_system_a98a8fbf7869f5c5a3521cb88622b6a46}{xp\+To\+Next\+LVL}}
+\item 
+int \doxymbox{\hyperlink{class_leveling_system_a3dea7a25563c2a2e9af95c7866d93c3d}{available\+Stat\+Points}} = 0
+\item 
+Dictionary$<$ \doxymbox{\hyperlink{_leveling_system_8cs_ad28c24e82986133459dee232a5360bc4}{Stats}}, int $>$ \doxymbox{\hyperlink{class_leveling_system_ad7c53fd0bffea704269efa7f085723b4}{player\+Stats}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \doxymbox{\hyperlink{class_leveling_system}{Leveling\+System}} \doxymbox{\hyperlink{class_leveling_system_a315de42f506e53b99063197440757560}{Instance}}
+\end{DoxyCompactItemize}
+
+
+\label{class_leveling_system_doc-func-members}
+\Hypertarget{class_leveling_system_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_leveling_system_a2b6f52c23a0ca3b11fefd7db18546444}\index{LevelingSystem@{LevelingSystem}!Awake@{Awake}}
+\index{Awake@{Awake}!LevelingSystem@{LevelingSystem}}
+\doxysubsubsection{\texorpdfstring{Awake()}{Awake()}}
+{\footnotesize\ttfamily \label{class_leveling_system_a2b6f52c23a0ca3b11fefd7db18546444} 
+void Leveling\+System.\+Awake (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_leveling_system_a99bfd593fae0a1020c2034d366e4e94d}\index{LevelingSystem@{LevelingSystem}!gainXP@{gainXP}}
+\index{gainXP@{gainXP}!LevelingSystem@{LevelingSystem}}
+\doxysubsubsection{\texorpdfstring{gainXP()}{gainXP()}}
+{\footnotesize\ttfamily \label{class_leveling_system_a99bfd593fae0a1020c2034d366e4e94d} 
+void Leveling\+System.\+gain\+XP (\begin{DoxyParamCaption}\item[{int}]{xp\+Gained}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_leveling_system_a44135ae3212a1b12c36e38b8791d3c56}\index{LevelingSystem@{LevelingSystem}!getPlayerStat@{getPlayerStat}}
+\index{getPlayerStat@{getPlayerStat}!LevelingSystem@{LevelingSystem}}
+\doxysubsubsection{\texorpdfstring{getPlayerStat()}{getPlayerStat()}}
+{\footnotesize\ttfamily \label{class_leveling_system_a44135ae3212a1b12c36e38b8791d3c56} 
+int Leveling\+System.\+get\+Player\+Stat (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{_leveling_system_8cs_ad28c24e82986133459dee232a5360bc4}{Stats}}}]{stat}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_leveling_system_a7179b151f5187e89e90b10f213713c97}\index{LevelingSystem@{LevelingSystem}!increaseAgility@{increaseAgility}}
+\index{increaseAgility@{increaseAgility}!LevelingSystem@{LevelingSystem}}
+\doxysubsubsection{\texorpdfstring{increaseAgility()}{increaseAgility()}}
+{\footnotesize\ttfamily \label{class_leveling_system_a7179b151f5187e89e90b10f213713c97} 
+void Leveling\+System.\+increase\+Agility (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_leveling_system_a035ad7b5120cab64ecd2a59006937df0}\index{LevelingSystem@{LevelingSystem}!increaseEndurance@{increaseEndurance}}
+\index{increaseEndurance@{increaseEndurance}!LevelingSystem@{LevelingSystem}}
+\doxysubsubsection{\texorpdfstring{increaseEndurance()}{increaseEndurance()}}
+{\footnotesize\ttfamily \label{class_leveling_system_a035ad7b5120cab64ecd2a59006937df0} 
+void Leveling\+System.\+increase\+Endurance (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_leveling_system_a32fa09e85af77beb7b2aee98ae0338de}\index{LevelingSystem@{LevelingSystem}!increaseMagic@{increaseMagic}}
+\index{increaseMagic@{increaseMagic}!LevelingSystem@{LevelingSystem}}
+\doxysubsubsection{\texorpdfstring{increaseMagic()}{increaseMagic()}}
+{\footnotesize\ttfamily \label{class_leveling_system_a32fa09e85af77beb7b2aee98ae0338de} 
+void Leveling\+System.\+increase\+Magic (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_leveling_system_abc410e5e74eacf7fa78a3a7ab389ab5e}\index{LevelingSystem@{LevelingSystem}!increaseStrength@{increaseStrength}}
+\index{increaseStrength@{increaseStrength}!LevelingSystem@{LevelingSystem}}
+\doxysubsubsection{\texorpdfstring{increaseStrength()}{increaseStrength()}}
+{\footnotesize\ttfamily \label{class_leveling_system_abc410e5e74eacf7fa78a3a7ab389ab5e} 
+void Leveling\+System.\+increase\+Strength (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_leveling_system_a272ddc92d926a3e10d5983f8ff7380df}\index{LevelingSystem@{LevelingSystem}!increaseVitality@{increaseVitality}}
+\index{increaseVitality@{increaseVitality}!LevelingSystem@{LevelingSystem}}
+\doxysubsubsection{\texorpdfstring{increaseVitality()}{increaseVitality()}}
+{\footnotesize\ttfamily \label{class_leveling_system_a272ddc92d926a3e10d5983f8ff7380df} 
+void Leveling\+System.\+increase\+Vitality (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_leveling_system_a30c5e5fd864288ce8c03e2c24d056a05}\index{LevelingSystem@{LevelingSystem}!levelUp@{levelUp}}
+\index{levelUp@{levelUp}!LevelingSystem@{LevelingSystem}}
+\doxysubsubsection{\texorpdfstring{levelUp()}{levelUp()}}
+{\footnotesize\ttfamily \label{class_leveling_system_a30c5e5fd864288ce8c03e2c24d056a05} 
+void Leveling\+System.\+level\+Up (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_leveling_system_a257b7411d6f71466fc21dfcc585bb9c5}\index{LevelingSystem@{LevelingSystem}!toggleLevelSystem@{toggleLevelSystem}}
+\index{toggleLevelSystem@{toggleLevelSystem}!LevelingSystem@{LevelingSystem}}
+\doxysubsubsection{\texorpdfstring{toggleLevelSystem()}{toggleLevelSystem()}}
+{\footnotesize\ttfamily \label{class_leveling_system_a257b7411d6f71466fc21dfcc585bb9c5} 
+void Leveling\+System.\+toggle\+Level\+System (\begin{DoxyParamCaption}\item[{Input\+Action.\+Callback\+Context}]{ctx}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\label{class_leveling_system_doc-variable-members}
+\Hypertarget{class_leveling_system_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_leveling_system_a3dea7a25563c2a2e9af95c7866d93c3d}\index{LevelingSystem@{LevelingSystem}!availableStatPoints@{availableStatPoints}}
+\index{availableStatPoints@{availableStatPoints}!LevelingSystem@{LevelingSystem}}
+\doxysubsubsection{\texorpdfstring{availableStatPoints}{availableStatPoints}}
+{\footnotesize\ttfamily \label{class_leveling_system_a3dea7a25563c2a2e9af95c7866d93c3d} 
+int Leveling\+System.\+available\+Stat\+Points = 0}
+
+\Hypertarget{class_leveling_system_a2804f6d7e3d1a0d5b496d05bbbcbb263}\index{LevelingSystem@{LevelingSystem}!currentLevel@{currentLevel}}
+\index{currentLevel@{currentLevel}!LevelingSystem@{LevelingSystem}}
+\doxysubsubsection{\texorpdfstring{currentLevel}{currentLevel}}
+{\footnotesize\ttfamily \label{class_leveling_system_a2804f6d7e3d1a0d5b496d05bbbcbb263} 
+int Leveling\+System.\+current\+Level = 1}
+
+\Hypertarget{class_leveling_system_a1d99a32109b1c8e815b11439e2fcfd04}\index{LevelingSystem@{LevelingSystem}!currentXP@{currentXP}}
+\index{currentXP@{currentXP}!LevelingSystem@{LevelingSystem}}
+\doxysubsubsection{\texorpdfstring{currentXP}{currentXP}}
+{\footnotesize\ttfamily \label{class_leveling_system_a1d99a32109b1c8e815b11439e2fcfd04} 
+int Leveling\+System.\+current\+XP}
+
+\Hypertarget{class_leveling_system_a315de42f506e53b99063197440757560}\index{LevelingSystem@{LevelingSystem}!Instance@{Instance}}
+\index{Instance@{Instance}!LevelingSystem@{LevelingSystem}}
+\doxysubsubsection{\texorpdfstring{Instance}{Instance}}
+{\footnotesize\ttfamily \label{class_leveling_system_a315de42f506e53b99063197440757560} 
+\doxymbox{\hyperlink{class_leveling_system}{Leveling\+System}} Leveling\+System.\+Instance\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{class_leveling_system_a89308f7105482e13bd20cda0d416a0df}\index{LevelingSystem@{LevelingSystem}!player@{player}}
+\index{player@{player}!LevelingSystem@{LevelingSystem}}
+\doxysubsubsection{\texorpdfstring{player}{player}}
+{\footnotesize\ttfamily \label{class_leveling_system_a89308f7105482e13bd20cda0d416a0df} 
+\doxymbox{\hyperlink{classplayer}{player}} Leveling\+System.\+player}
+
+\Hypertarget{class_leveling_system_ad7c53fd0bffea704269efa7f085723b4}\index{LevelingSystem@{LevelingSystem}!playerStats@{playerStats}}
+\index{playerStats@{playerStats}!LevelingSystem@{LevelingSystem}}
+\doxysubsubsection{\texorpdfstring{playerStats}{playerStats}}
+{\footnotesize\ttfamily \label{class_leveling_system_ad7c53fd0bffea704269efa7f085723b4} 
+Dictionary$<$\doxymbox{\hyperlink{_leveling_system_8cs_ad28c24e82986133459dee232a5360bc4}{Stats}}, int$>$ Leveling\+System.\+player\+Stats}
+
+{\bfseries Initial value:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ \textcolor{keyword}{new}\ Dictionary<Stats,\ int>()\ \{}
+\DoxyCodeLine{\ \ \ \ \{\doxymbox{\hyperlink{_leveling_system_8cs_ad28c24e82986133459dee232a5360bc4}{Stats}}.Strength,\ 1\ \},}
+\DoxyCodeLine{\ \ \ \ \{\doxymbox{\hyperlink{_leveling_system_8cs_ad28c24e82986133459dee232a5360bc4}{Stats}}.Magic,\ 1\ \},}
+\DoxyCodeLine{\ \ \ \ \{\doxymbox{\hyperlink{_leveling_system_8cs_ad28c24e82986133459dee232a5360bc4}{Stats}}.Agility,\ 1\ \},}
+\DoxyCodeLine{\ \ \ \ \{\doxymbox{\hyperlink{_leveling_system_8cs_ad28c24e82986133459dee232a5360bc4}{Stats}}.Vitality,\ 1\ \},}
+\DoxyCodeLine{\ \ \ \ \{\doxymbox{\hyperlink{_leveling_system_8cs_ad28c24e82986133459dee232a5360bc4}{Stats}}.Endurance,\ 1\ \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\Hypertarget{class_leveling_system_a98a8fbf7869f5c5a3521cb88622b6a46}\index{LevelingSystem@{LevelingSystem}!xpToNextLVL@{xpToNextLVL}}
+\index{xpToNextLVL@{xpToNextLVL}!LevelingSystem@{LevelingSystem}}
+\doxysubsubsection{\texorpdfstring{xpToNextLVL}{xpToNextLVL}}
+{\footnotesize\ttfamily \label{class_leveling_system_a98a8fbf7869f5c5a3521cb88622b6a46} 
+int Leveling\+System.\+xp\+To\+Next\+LVL}
+
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+Systems/\+progression\+Manager/\doxymbox{\hyperlink{_leveling_system_8cs}{Leveling\+System.\+cs}}\end{DoxyCompactItemize}

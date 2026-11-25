@@ -1,0 +1,189 @@
+\doxysection{inventory\+UI Class Reference}
+\hypertarget{classinventory_u_i}{}\label{classinventory_u_i}\index{inventoryUI@{inventoryUI}}
+Inheritance diagram for inventory\+UI:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classinventory_u_i}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{classinventory_u_i_ab02b47bbc114ae413d60769dd7ebca70}{set\+Open}} (bool open)
+\item 
+void \doxymbox{\hyperlink{classinventory_u_i_ac4e78bbab2a257c70330c4b0eb1a0dbd}{refresh}} ()
+\item 
+void \doxymbox{\hyperlink{classinventory_u_i_aaa910b1e0cb9c4e3d286c3d6c3cba9ef}{begin\+Drag}} (\doxymbox{\hyperlink{classinventory_slot}{inventory\+Slot}} slot, Vector2 position)
+\item 
+void \doxymbox{\hyperlink{classinventory_u_i_acbfdfd9cbec5b6395691ebe83e6e60c8}{drag}} (Vector2 position)
+\item 
+void \doxymbox{\hyperlink{classinventory_u_i_a834066ff361072e8559bc47413f3ad85}{drop}} (\doxymbox{\hyperlink{classinventory_slot}{inventory\+Slot}} target)
+\item 
+void \doxymbox{\hyperlink{classinventory_u_i_a545250639676ae4b9e8514dd4ec35c14}{end\+Drag}} (Vector2 position)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{classinventory}{inventory}} \doxymbox{\hyperlink{classinventory_u_i_a2cdb2bd967ee26f739d8ae94c2dd6d8c}{player\+Inventory}}
+\item 
+Game\+Object \doxymbox{\hyperlink{classinventory_u_i_a449322ad8284b2b310e4a021407ff6d8}{panel}}
+\item 
+Image \doxymbox{\hyperlink{classinventory_u_i_a8fa27e8ad3877d7aa1e41db5ac6086c5}{drag\+Icon}}
+\item 
+float \doxymbox{\hyperlink{classinventory_u_i_adbf74880693db85646859a09f893780f}{weapon\+Icon\+Tilt}} = -\/45f
+\item 
+float \doxymbox{\hyperlink{classinventory_u_i_a345c58c4464ed6f207b30b3f85f5b325}{hover\+Scale}} = 1.\+05f
+\item 
+float \doxymbox{\hyperlink{classinventory_u_i_a57be7267bac8bb42fe0e5c16dba3ba93}{hover\+Alpha}} = 0.\+95f
+\item 
+float \doxymbox{\hyperlink{classinventory_u_i_a4f96f2dccd13babdd497bcfb622019c3}{hover\+Duration}} = 0.\+1f
+\item 
+Color \doxymbox{\hyperlink{classinventory_u_i_a4211256aab3d58654449de1e5fcb1f17}{slot\+Color}} = new Color(0.\+18f, 0.\+18f, 0.\+2f, 0.\+95f)
+\item 
+Color \doxymbox{\hyperlink{classinventory_u_i_a53eae2fc07889ea7009e738528b9ea6b}{quick\+Slot\+Color}} = new Color(0.\+32f, 0.\+25f, 0.\+16f, 0.\+95f)
+\item 
+Color \doxymbox{\hyperlink{classinventory_u_i_a3a5feb1bd5600a41ea7ede0ee1d92660}{spell\+Slot\+Color}} = new Color(0.\+17f, 0.\+2f, 0.\+36f, 0.\+95f)
+\item 
+Color \doxymbox{\hyperlink{classinventory_u_i_aedc1034a13724bedeacafe390fb05b24}{active\+Slot\+Color}} = new Color(0.\+85f, 0.\+68f, 0.\+3f, 1f)
+\item 
+Color \doxymbox{\hyperlink{classinventory_u_i_aa17e657bf68654e3c7a7f0943750d7d0}{blocked\+Slot\+Color}} = new Color(0.\+08f, 0.\+08f, 0.\+08f, 0.\+6f)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+bool \doxymbox{\hyperlink{classinventory_u_i_a08279b93235926649b2a1b46323dfb06}{is\+Open}}\hspace{0.3cm}{\ttfamily  \+[get]}
+\end{DoxyCompactItemize}
+
+
+\label{classinventory_u_i_doc-func-members}
+\Hypertarget{classinventory_u_i_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classinventory_u_i_aaa910b1e0cb9c4e3d286c3d6c3cba9ef}\index{inventoryUI@{inventoryUI}!beginDrag@{beginDrag}}
+\index{beginDrag@{beginDrag}!inventoryUI@{inventoryUI}}
+\doxysubsubsection{\texorpdfstring{beginDrag()}{beginDrag()}}
+{\footnotesize\ttfamily \label{classinventory_u_i_aaa910b1e0cb9c4e3d286c3d6c3cba9ef} 
+void inventory\+UI.\+begin\+Drag (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{classinventory_slot}{inventory\+Slot}}}]{slot}{, }\item[{Vector2}]{position}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classinventory_u_i_acbfdfd9cbec5b6395691ebe83e6e60c8}\index{inventoryUI@{inventoryUI}!drag@{drag}}
+\index{drag@{drag}!inventoryUI@{inventoryUI}}
+\doxysubsubsection{\texorpdfstring{drag()}{drag()}}
+{\footnotesize\ttfamily \label{classinventory_u_i_acbfdfd9cbec5b6395691ebe83e6e60c8} 
+void inventory\+UI.\+drag (\begin{DoxyParamCaption}\item[{Vector2}]{position}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classinventory_u_i_a834066ff361072e8559bc47413f3ad85}\index{inventoryUI@{inventoryUI}!drop@{drop}}
+\index{drop@{drop}!inventoryUI@{inventoryUI}}
+\doxysubsubsection{\texorpdfstring{drop()}{drop()}}
+{\footnotesize\ttfamily \label{classinventory_u_i_a834066ff361072e8559bc47413f3ad85} 
+void inventory\+UI.\+drop (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{classinventory_slot}{inventory\+Slot}}}]{target}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classinventory_u_i_a545250639676ae4b9e8514dd4ec35c14}\index{inventoryUI@{inventoryUI}!endDrag@{endDrag}}
+\index{endDrag@{endDrag}!inventoryUI@{inventoryUI}}
+\doxysubsubsection{\texorpdfstring{endDrag()}{endDrag()}}
+{\footnotesize\ttfamily \label{classinventory_u_i_a545250639676ae4b9e8514dd4ec35c14} 
+void inventory\+UI.\+end\+Drag (\begin{DoxyParamCaption}\item[{Vector2}]{position}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classinventory_u_i_ac4e78bbab2a257c70330c4b0eb1a0dbd}\index{inventoryUI@{inventoryUI}!refresh@{refresh}}
+\index{refresh@{refresh}!inventoryUI@{inventoryUI}}
+\doxysubsubsection{\texorpdfstring{refresh()}{refresh()}}
+{\footnotesize\ttfamily \label{classinventory_u_i_ac4e78bbab2a257c70330c4b0eb1a0dbd} 
+void inventory\+UI.\+refresh (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classinventory_u_i_ab02b47bbc114ae413d60769dd7ebca70}\index{inventoryUI@{inventoryUI}!setOpen@{setOpen}}
+\index{setOpen@{setOpen}!inventoryUI@{inventoryUI}}
+\doxysubsubsection{\texorpdfstring{setOpen()}{setOpen()}}
+{\footnotesize\ttfamily \label{classinventory_u_i_ab02b47bbc114ae413d60769dd7ebca70} 
+void inventory\+UI.\+set\+Open (\begin{DoxyParamCaption}\item[{bool}]{open}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\label{classinventory_u_i_doc-variable-members}
+\Hypertarget{classinventory_u_i_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classinventory_u_i_aedc1034a13724bedeacafe390fb05b24}\index{inventoryUI@{inventoryUI}!activeSlotColor@{activeSlotColor}}
+\index{activeSlotColor@{activeSlotColor}!inventoryUI@{inventoryUI}}
+\doxysubsubsection{\texorpdfstring{activeSlotColor}{activeSlotColor}}
+{\footnotesize\ttfamily \label{classinventory_u_i_aedc1034a13724bedeacafe390fb05b24} 
+Color inventory\+UI.\+active\+Slot\+Color = new Color(0.\+85f, 0.\+68f, 0.\+3f, 1f)}
+
+\Hypertarget{classinventory_u_i_aa17e657bf68654e3c7a7f0943750d7d0}\index{inventoryUI@{inventoryUI}!blockedSlotColor@{blockedSlotColor}}
+\index{blockedSlotColor@{blockedSlotColor}!inventoryUI@{inventoryUI}}
+\doxysubsubsection{\texorpdfstring{blockedSlotColor}{blockedSlotColor}}
+{\footnotesize\ttfamily \label{classinventory_u_i_aa17e657bf68654e3c7a7f0943750d7d0} 
+Color inventory\+UI.\+blocked\+Slot\+Color = new Color(0.\+08f, 0.\+08f, 0.\+08f, 0.\+6f)}
+
+\Hypertarget{classinventory_u_i_a8fa27e8ad3877d7aa1e41db5ac6086c5}\index{inventoryUI@{inventoryUI}!dragIcon@{dragIcon}}
+\index{dragIcon@{dragIcon}!inventoryUI@{inventoryUI}}
+\doxysubsubsection{\texorpdfstring{dragIcon}{dragIcon}}
+{\footnotesize\ttfamily \label{classinventory_u_i_a8fa27e8ad3877d7aa1e41db5ac6086c5} 
+Image inventory\+UI.\+drag\+Icon}
+
+\Hypertarget{classinventory_u_i_a57be7267bac8bb42fe0e5c16dba3ba93}\index{inventoryUI@{inventoryUI}!hoverAlpha@{hoverAlpha}}
+\index{hoverAlpha@{hoverAlpha}!inventoryUI@{inventoryUI}}
+\doxysubsubsection{\texorpdfstring{hoverAlpha}{hoverAlpha}}
+{\footnotesize\ttfamily \label{classinventory_u_i_a57be7267bac8bb42fe0e5c16dba3ba93} 
+float inventory\+UI.\+hover\+Alpha = 0.\+95f}
+
+\Hypertarget{classinventory_u_i_a4f96f2dccd13babdd497bcfb622019c3}\index{inventoryUI@{inventoryUI}!hoverDuration@{hoverDuration}}
+\index{hoverDuration@{hoverDuration}!inventoryUI@{inventoryUI}}
+\doxysubsubsection{\texorpdfstring{hoverDuration}{hoverDuration}}
+{\footnotesize\ttfamily \label{classinventory_u_i_a4f96f2dccd13babdd497bcfb622019c3} 
+float inventory\+UI.\+hover\+Duration = 0.\+1f}
+
+\Hypertarget{classinventory_u_i_a345c58c4464ed6f207b30b3f85f5b325}\index{inventoryUI@{inventoryUI}!hoverScale@{hoverScale}}
+\index{hoverScale@{hoverScale}!inventoryUI@{inventoryUI}}
+\doxysubsubsection{\texorpdfstring{hoverScale}{hoverScale}}
+{\footnotesize\ttfamily \label{classinventory_u_i_a345c58c4464ed6f207b30b3f85f5b325} 
+float inventory\+UI.\+hover\+Scale = 1.\+05f}
+
+\Hypertarget{classinventory_u_i_a449322ad8284b2b310e4a021407ff6d8}\index{inventoryUI@{inventoryUI}!panel@{panel}}
+\index{panel@{panel}!inventoryUI@{inventoryUI}}
+\doxysubsubsection{\texorpdfstring{panel}{panel}}
+{\footnotesize\ttfamily \label{classinventory_u_i_a449322ad8284b2b310e4a021407ff6d8} 
+Game\+Object inventory\+UI.\+panel}
+
+\Hypertarget{classinventory_u_i_a2cdb2bd967ee26f739d8ae94c2dd6d8c}\index{inventoryUI@{inventoryUI}!playerInventory@{playerInventory}}
+\index{playerInventory@{playerInventory}!inventoryUI@{inventoryUI}}
+\doxysubsubsection{\texorpdfstring{playerInventory}{playerInventory}}
+{\footnotesize\ttfamily \label{classinventory_u_i_a2cdb2bd967ee26f739d8ae94c2dd6d8c} 
+\doxymbox{\hyperlink{classinventory}{inventory}} inventory\+UI.\+player\+Inventory}
+
+\Hypertarget{classinventory_u_i_a53eae2fc07889ea7009e738528b9ea6b}\index{inventoryUI@{inventoryUI}!quickSlotColor@{quickSlotColor}}
+\index{quickSlotColor@{quickSlotColor}!inventoryUI@{inventoryUI}}
+\doxysubsubsection{\texorpdfstring{quickSlotColor}{quickSlotColor}}
+{\footnotesize\ttfamily \label{classinventory_u_i_a53eae2fc07889ea7009e738528b9ea6b} 
+Color inventory\+UI.\+quick\+Slot\+Color = new Color(0.\+32f, 0.\+25f, 0.\+16f, 0.\+95f)}
+
+\Hypertarget{classinventory_u_i_a4211256aab3d58654449de1e5fcb1f17}\index{inventoryUI@{inventoryUI}!slotColor@{slotColor}}
+\index{slotColor@{slotColor}!inventoryUI@{inventoryUI}}
+\doxysubsubsection{\texorpdfstring{slotColor}{slotColor}}
+{\footnotesize\ttfamily \label{classinventory_u_i_a4211256aab3d58654449de1e5fcb1f17} 
+Color inventory\+UI.\+slot\+Color = new Color(0.\+18f, 0.\+18f, 0.\+2f, 0.\+95f)}
+
+\Hypertarget{classinventory_u_i_a3a5feb1bd5600a41ea7ede0ee1d92660}\index{inventoryUI@{inventoryUI}!spellSlotColor@{spellSlotColor}}
+\index{spellSlotColor@{spellSlotColor}!inventoryUI@{inventoryUI}}
+\doxysubsubsection{\texorpdfstring{spellSlotColor}{spellSlotColor}}
+{\footnotesize\ttfamily \label{classinventory_u_i_a3a5feb1bd5600a41ea7ede0ee1d92660} 
+Color inventory\+UI.\+spell\+Slot\+Color = new Color(0.\+17f, 0.\+2f, 0.\+36f, 0.\+95f)}
+
+\Hypertarget{classinventory_u_i_adbf74880693db85646859a09f893780f}\index{inventoryUI@{inventoryUI}!weaponIconTilt@{weaponIconTilt}}
+\index{weaponIconTilt@{weaponIconTilt}!inventoryUI@{inventoryUI}}
+\doxysubsubsection{\texorpdfstring{weaponIconTilt}{weaponIconTilt}}
+{\footnotesize\ttfamily \label{classinventory_u_i_adbf74880693db85646859a09f893780f} 
+float inventory\+UI.\+weapon\+Icon\+Tilt = -\/45f}
+
+
+
+\label{classinventory_u_i_doc-property-members}
+\Hypertarget{classinventory_u_i_doc-property-members}
+\doxysubsection{Property Documentation}
+\Hypertarget{classinventory_u_i_a08279b93235926649b2a1b46323dfb06}\index{inventoryUI@{inventoryUI}!isOpen@{isOpen}}
+\index{isOpen@{isOpen}!inventoryUI@{inventoryUI}}
+\doxysubsubsection{\texorpdfstring{isOpen}{isOpen}}
+{\footnotesize\ttfamily \label{classinventory_u_i_a08279b93235926649b2a1b46323dfb06} 
+bool inventory\+UI.\+is\+Open\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+UI/\doxymbox{\hyperlink{inventory_u_i_8cs}{inventory\+UI.\+cs}}\end{DoxyCompactItemize}
