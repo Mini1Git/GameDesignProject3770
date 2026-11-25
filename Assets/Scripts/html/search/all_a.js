@@ -1,0 +1,24 @@
+var searchData=
+[
+  ['magic_0',['Magic',['../_leveling_system_8cs.html#ad28c24e82986133459dee232a5360bc4a02700e454d679f31f27c6f0768986dd1',1,'LevelingSystem.cs']]],
+  ['mainhand_1',['mainHand',['../classplayer.html#aec9a5da0e9aea3eab20f5a213c77cdec',1,'player']]],
+  ['mainhandrenderer_2',['mainHandRenderer',['../classinventory.html#a26ef001143761f822c11849b15d23ff7',1,'inventory']]],
+  ['mainmenu_3',['mainMenu',['../classmain_menu.html',1,'']]],
+  ['mainmenu_2ecs_4',['mainMenu.cs',['../main_menu_8cs.html',1,'']]],
+  ['mana_5',['Mana',['../class_mana___system.html#ab92c34187864aae246edfc63c2008cb1',1,'Mana_System']]],
+  ['mana_6',['mana',['../classplayer.html#a27a1687e3c7e8527e5ba6ffeae87ccb8',1,'player']]],
+  ['mana_5fsystem_7',['Mana_System',['../class_mana___system.html',1,'']]],
+  ['mana_5fsystem_2ecs_8',['Mana_System.cs',['../_mana___system_8cs.html',1,'']]],
+  ['manacost_9',['manaCost',['../classspell___s_o.html#a910f8981e2034d7058f2242664ab7968',1,'spell_SO']]],
+  ['manaregenmult_10',['manaRegenMult',['../class_mana___system.html#a683d1c08737a28debae251ece284d6fe',1,'Mana_System']]],
+  ['manaregenrate_11',['manaRegenRate',['../class_mana___system.html#a750d2e91402132778140923725f24a20',1,'Mana_System']]],
+  ['manaunlock_12',['manaUnlock',['../class_mana___system.html#a1520a5dbad226efc0047e1e3fb76d046',1,'Mana_System']]],
+  ['maxhealth_13',['maxHealth',['../classplayer.html#a5b32cadd8947bc13a7b816d96557d52e',1,'player']]],
+  ['maxmana_14',['maxMana',['../classplayer.html#a3b82720e57f07d53b10fddaa1be9d584',1,'player']]],
+  ['maxstamina_15',['maxStamina',['../classplayer.html#a3e1583f684db40df8795b0dbc83bae9e',1,'player']]],
+  ['meleehitboxoffset_16',['meleeHitboxOffset',['../classweapon_data.html#af286d2332fac32245180c38342442cdb',1,'weaponData']]],
+  ['meleehitboxsize_17',['meleeHitboxSize',['../classweapon_data.html#a5f197a412fb1330ab5d3619c51d2c7f9',1,'weaponData']]],
+  ['meleeswinganimation_18',['meleeSwingAnimation',['../classweapon_data.html#a6ad5104a00a46d597f2bedb789d1e2be',1,'weaponData']]],
+  ['mouse_19',['Mouse',['../_spell_system_8cs.html#aa80fe4e9a559009407475c9587214b48af2a47c6809d88e175dade0ef7b16aa13',1,'SpellSystem.cs']]],
+  ['moveitem_20',['moveItem',['../classinventory.html#a07faef438c9c608957024bb1d3d7a011',1,'inventory']]]
+];

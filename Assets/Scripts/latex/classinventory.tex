@@ -1,0 +1,197 @@
+\doxysection{inventory Class Reference}
+\hypertarget{classinventory}{}\label{classinventory}\index{inventory@{inventory}}
+Inheritance diagram for inventory:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classinventory}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{classitem_data}{item\+Data}}\+[$\,$] \doxymbox{\hyperlink{classinventory_a9842a3c4cbbd2dda54f5db8061bce1a6}{get\+Slots}} (\doxymbox{\hyperlink{inventory_8cs_a2f6908f55571d1546753c303ebfc61f8}{slot\+Group}} group)
+\item 
+\doxymbox{\hyperlink{classitem_data}{item\+Data}} \doxymbox{\hyperlink{classinventory_a6cc76a9aff727fd412214cea7258b462}{get\+Item}} (\doxymbox{\hyperlink{inventory_8cs_a2f6908f55571d1546753c303ebfc61f8}{slot\+Group}} group, int index)
+\item 
+\doxymbox{\hyperlink{classitem_data}{item\+Data}} \doxymbox{\hyperlink{classinventory_a69f1264b2d4e3458e3359fd86ae768c7}{get\+Active\+Quick\+Item}} ()
+\item 
+\doxymbox{\hyperlink{classitem_data}{item\+Data}} \doxymbox{\hyperlink{classinventory_a9bbc8107477a9b7c0eddf20a3d330d81}{get\+Active\+Spell}} ()
+\item 
+bool \doxymbox{\hyperlink{classinventory_a316c8458a91c075576dfe9ecff297df8}{can\+Place}} (\doxymbox{\hyperlink{inventory_8cs_a2f6908f55571d1546753c303ebfc61f8}{slot\+Group}} group, \doxymbox{\hyperlink{classitem_data}{item\+Data}} item)
+\item 
+bool \doxymbox{\hyperlink{classinventory_a2a7226d41f3ca70e4237aa412afab7cc}{can\+Move}} (\doxymbox{\hyperlink{inventory_8cs_a2f6908f55571d1546753c303ebfc61f8}{slot\+Group}} from\+Group, int from\+Index, \doxymbox{\hyperlink{inventory_8cs_a2f6908f55571d1546753c303ebfc61f8}{slot\+Group}} to\+Group, int to\+Index)
+\item 
+bool \doxymbox{\hyperlink{classinventory_a5193871cfcdc33cab289a52b8c544838}{add\+Item}} (\doxymbox{\hyperlink{classitem_data}{item\+Data}} item)
+\item 
+void \doxymbox{\hyperlink{classinventory_a07faef438c9c608957024bb1d3d7a011}{move\+Item}} (\doxymbox{\hyperlink{inventory_8cs_a2f6908f55571d1546753c303ebfc61f8}{slot\+Group}} from\+Group, int from\+Index, \doxymbox{\hyperlink{inventory_8cs_a2f6908f55571d1546753c303ebfc61f8}{slot\+Group}} to\+Group, int to\+Index)
+\item 
+void \doxymbox{\hyperlink{classinventory_a58f905a62ea4dd8afbe58e3c57b01bad}{drop\+Item}} (\doxymbox{\hyperlink{inventory_8cs_a2f6908f55571d1546753c303ebfc61f8}{slot\+Group}} group, int index)
+\item 
+void \doxymbox{\hyperlink{classinventory_a54963ba4823cd2f4a697597df8974202}{cycle\+Quick\+Slots}} (int direction)
+\item 
+void \doxymbox{\hyperlink{classinventory_a89e125a5ee3a1241bb3db9898be4c7bb}{cycle\+Spell\+Slots}} (int direction)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{classitem_data}{item\+Data}}\+[$\,$] \doxymbox{\hyperlink{classinventory_aef43a4e0a482ec93017832554d9557b7}{inventory\+Slots}} = new \doxymbox{\hyperlink{classitem_data}{item\+Data}}\+[12]
+\item 
+\doxymbox{\hyperlink{classitem_data}{item\+Data}}\+[$\,$] \doxymbox{\hyperlink{classinventory_a15ab31e7727df462b1a115889b1e488f}{quick\+Slots}} = new \doxymbox{\hyperlink{classitem_data}{item\+Data}}\+[4]
+\item 
+\doxymbox{\hyperlink{classitem_data}{item\+Data}}\+[$\,$] \doxymbox{\hyperlink{classinventory_ac3237a708ea3cf8edf4874b50d6aab83}{spell\+Slots}} = new \doxymbox{\hyperlink{classitem_data}{item\+Data}}\+[3]
+\item 
+int \doxymbox{\hyperlink{classinventory_a264b98fcbfaa6262366877f2f20ac3fd}{active\+Quick\+Slot}}
+\item 
+int \doxymbox{\hyperlink{classinventory_a279c2757c8ad65b97e6a4cd70d336f3e}{active\+Spell\+Slot}}
+\item 
+Sprite\+Renderer \doxymbox{\hyperlink{classinventory_a26ef001143761f822c11849b15d23ff7}{main\+Hand\+Renderer}}
+\item 
+\doxymbox{\hyperlink{classitem_pickup}{item\+Pickup}} \doxymbox{\hyperlink{classinventory_a0ea1c2cdc851abdfaa1249de664f4d73}{pickup\+Prefab}}
+\item 
+float \doxymbox{\hyperlink{classinventory_aa1b6067baef1891743113a77bd9b9d80}{drop\+Distance}} = 0.\+6f
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Events}
+\begin{DoxyCompactItemize}
+\item 
+Action \doxymbox{\hyperlink{classinventory_a5187d97d845f772808979a8e0681f20b}{on\+Changed}}
+\end{DoxyCompactItemize}
+
+
+\label{classinventory_doc-func-members}
+\Hypertarget{classinventory_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classinventory_a5193871cfcdc33cab289a52b8c544838}\index{inventory@{inventory}!addItem@{addItem}}
+\index{addItem@{addItem}!inventory@{inventory}}
+\doxysubsubsection{\texorpdfstring{addItem()}{addItem()}}
+{\footnotesize\ttfamily \label{classinventory_a5193871cfcdc33cab289a52b8c544838} 
+bool inventory.\+add\+Item (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{classitem_data}{item\+Data}}}]{item}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classinventory_a2a7226d41f3ca70e4237aa412afab7cc}\index{inventory@{inventory}!canMove@{canMove}}
+\index{canMove@{canMove}!inventory@{inventory}}
+\doxysubsubsection{\texorpdfstring{canMove()}{canMove()}}
+{\footnotesize\ttfamily \label{classinventory_a2a7226d41f3ca70e4237aa412afab7cc} 
+bool inventory.\+can\+Move (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{inventory_8cs_a2f6908f55571d1546753c303ebfc61f8}{slot\+Group}}}]{from\+Group}{, }\item[{int}]{from\+Index}{, }\item[{\doxymbox{\hyperlink{inventory_8cs_a2f6908f55571d1546753c303ebfc61f8}{slot\+Group}}}]{to\+Group}{, }\item[{int}]{to\+Index}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classinventory_a316c8458a91c075576dfe9ecff297df8}\index{inventory@{inventory}!canPlace@{canPlace}}
+\index{canPlace@{canPlace}!inventory@{inventory}}
+\doxysubsubsection{\texorpdfstring{canPlace()}{canPlace()}}
+{\footnotesize\ttfamily \label{classinventory_a316c8458a91c075576dfe9ecff297df8} 
+bool inventory.\+can\+Place (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{inventory_8cs_a2f6908f55571d1546753c303ebfc61f8}{slot\+Group}}}]{group}{, }\item[{\doxymbox{\hyperlink{classitem_data}{item\+Data}}}]{item}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classinventory_a54963ba4823cd2f4a697597df8974202}\index{inventory@{inventory}!cycleQuickSlots@{cycleQuickSlots}}
+\index{cycleQuickSlots@{cycleQuickSlots}!inventory@{inventory}}
+\doxysubsubsection{\texorpdfstring{cycleQuickSlots()}{cycleQuickSlots()}}
+{\footnotesize\ttfamily \label{classinventory_a54963ba4823cd2f4a697597df8974202} 
+void inventory.\+cycle\+Quick\+Slots (\begin{DoxyParamCaption}\item[{int}]{direction}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classinventory_a89e125a5ee3a1241bb3db9898be4c7bb}\index{inventory@{inventory}!cycleSpellSlots@{cycleSpellSlots}}
+\index{cycleSpellSlots@{cycleSpellSlots}!inventory@{inventory}}
+\doxysubsubsection{\texorpdfstring{cycleSpellSlots()}{cycleSpellSlots()}}
+{\footnotesize\ttfamily \label{classinventory_a89e125a5ee3a1241bb3db9898be4c7bb} 
+void inventory.\+cycle\+Spell\+Slots (\begin{DoxyParamCaption}\item[{int}]{direction}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classinventory_a58f905a62ea4dd8afbe58e3c57b01bad}\index{inventory@{inventory}!dropItem@{dropItem}}
+\index{dropItem@{dropItem}!inventory@{inventory}}
+\doxysubsubsection{\texorpdfstring{dropItem()}{dropItem()}}
+{\footnotesize\ttfamily \label{classinventory_a58f905a62ea4dd8afbe58e3c57b01bad} 
+void inventory.\+drop\+Item (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{inventory_8cs_a2f6908f55571d1546753c303ebfc61f8}{slot\+Group}}}]{group}{, }\item[{int}]{index}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classinventory_a69f1264b2d4e3458e3359fd86ae768c7}\index{inventory@{inventory}!getActiveQuickItem@{getActiveQuickItem}}
+\index{getActiveQuickItem@{getActiveQuickItem}!inventory@{inventory}}
+\doxysubsubsection{\texorpdfstring{getActiveQuickItem()}{getActiveQuickItem()}}
+{\footnotesize\ttfamily \label{classinventory_a69f1264b2d4e3458e3359fd86ae768c7} 
+\doxymbox{\hyperlink{classitem_data}{item\+Data}} inventory.\+get\+Active\+Quick\+Item (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classinventory_a9bbc8107477a9b7c0eddf20a3d330d81}\index{inventory@{inventory}!getActiveSpell@{getActiveSpell}}
+\index{getActiveSpell@{getActiveSpell}!inventory@{inventory}}
+\doxysubsubsection{\texorpdfstring{getActiveSpell()}{getActiveSpell()}}
+{\footnotesize\ttfamily \label{classinventory_a9bbc8107477a9b7c0eddf20a3d330d81} 
+\doxymbox{\hyperlink{classitem_data}{item\+Data}} inventory.\+get\+Active\+Spell (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classinventory_a6cc76a9aff727fd412214cea7258b462}\index{inventory@{inventory}!getItem@{getItem}}
+\index{getItem@{getItem}!inventory@{inventory}}
+\doxysubsubsection{\texorpdfstring{getItem()}{getItem()}}
+{\footnotesize\ttfamily \label{classinventory_a6cc76a9aff727fd412214cea7258b462} 
+\doxymbox{\hyperlink{classitem_data}{item\+Data}} inventory.\+get\+Item (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{inventory_8cs_a2f6908f55571d1546753c303ebfc61f8}{slot\+Group}}}]{group}{, }\item[{int}]{index}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classinventory_a9842a3c4cbbd2dda54f5db8061bce1a6}\index{inventory@{inventory}!getSlots@{getSlots}}
+\index{getSlots@{getSlots}!inventory@{inventory}}
+\doxysubsubsection{\texorpdfstring{getSlots()}{getSlots()}}
+{\footnotesize\ttfamily \label{classinventory_a9842a3c4cbbd2dda54f5db8061bce1a6} 
+\doxymbox{\hyperlink{classitem_data}{item\+Data}}\+[$\,$]\+ inventory.\+get\+Slots (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{inventory_8cs_a2f6908f55571d1546753c303ebfc61f8}{slot\+Group}}}]{group}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classinventory_a07faef438c9c608957024bb1d3d7a011}\index{inventory@{inventory}!moveItem@{moveItem}}
+\index{moveItem@{moveItem}!inventory@{inventory}}
+\doxysubsubsection{\texorpdfstring{moveItem()}{moveItem()}}
+{\footnotesize\ttfamily \label{classinventory_a07faef438c9c608957024bb1d3d7a011} 
+void inventory.\+move\+Item (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{inventory_8cs_a2f6908f55571d1546753c303ebfc61f8}{slot\+Group}}}]{from\+Group}{, }\item[{int}]{from\+Index}{, }\item[{\doxymbox{\hyperlink{inventory_8cs_a2f6908f55571d1546753c303ebfc61f8}{slot\+Group}}}]{to\+Group}{, }\item[{int}]{to\+Index}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\label{classinventory_doc-variable-members}
+\Hypertarget{classinventory_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classinventory_a264b98fcbfaa6262366877f2f20ac3fd}\index{inventory@{inventory}!activeQuickSlot@{activeQuickSlot}}
+\index{activeQuickSlot@{activeQuickSlot}!inventory@{inventory}}
+\doxysubsubsection{\texorpdfstring{activeQuickSlot}{activeQuickSlot}}
+{\footnotesize\ttfamily \label{classinventory_a264b98fcbfaa6262366877f2f20ac3fd} 
+int inventory.\+active\+Quick\+Slot}
+
+\Hypertarget{classinventory_a279c2757c8ad65b97e6a4cd70d336f3e}\index{inventory@{inventory}!activeSpellSlot@{activeSpellSlot}}
+\index{activeSpellSlot@{activeSpellSlot}!inventory@{inventory}}
+\doxysubsubsection{\texorpdfstring{activeSpellSlot}{activeSpellSlot}}
+{\footnotesize\ttfamily \label{classinventory_a279c2757c8ad65b97e6a4cd70d336f3e} 
+int inventory.\+active\+Spell\+Slot}
+
+\Hypertarget{classinventory_aa1b6067baef1891743113a77bd9b9d80}\index{inventory@{inventory}!dropDistance@{dropDistance}}
+\index{dropDistance@{dropDistance}!inventory@{inventory}}
+\doxysubsubsection{\texorpdfstring{dropDistance}{dropDistance}}
+{\footnotesize\ttfamily \label{classinventory_aa1b6067baef1891743113a77bd9b9d80} 
+float inventory.\+drop\+Distance = 0.\+6f}
+
+\Hypertarget{classinventory_aef43a4e0a482ec93017832554d9557b7}\index{inventory@{inventory}!inventorySlots@{inventorySlots}}
+\index{inventorySlots@{inventorySlots}!inventory@{inventory}}
+\doxysubsubsection{\texorpdfstring{inventorySlots}{inventorySlots}}
+{\footnotesize\ttfamily \label{classinventory_aef43a4e0a482ec93017832554d9557b7} 
+\doxymbox{\hyperlink{classitem_data}{item\+Data}} \+[$\,$]\+ inventory.\+inventory\+Slots = new \doxymbox{\hyperlink{classitem_data}{item\+Data}}\+[12]}
+
+\Hypertarget{classinventory_a26ef001143761f822c11849b15d23ff7}\index{inventory@{inventory}!mainHandRenderer@{mainHandRenderer}}
+\index{mainHandRenderer@{mainHandRenderer}!inventory@{inventory}}
+\doxysubsubsection{\texorpdfstring{mainHandRenderer}{mainHandRenderer}}
+{\footnotesize\ttfamily \label{classinventory_a26ef001143761f822c11849b15d23ff7} 
+Sprite\+Renderer inventory.\+main\+Hand\+Renderer}
+
+\Hypertarget{classinventory_a0ea1c2cdc851abdfaa1249de664f4d73}\index{inventory@{inventory}!pickupPrefab@{pickupPrefab}}
+\index{pickupPrefab@{pickupPrefab}!inventory@{inventory}}
+\doxysubsubsection{\texorpdfstring{pickupPrefab}{pickupPrefab}}
+{\footnotesize\ttfamily \label{classinventory_a0ea1c2cdc851abdfaa1249de664f4d73} 
+\doxymbox{\hyperlink{classitem_pickup}{item\+Pickup}} inventory.\+pickup\+Prefab}
+
+\Hypertarget{classinventory_a15ab31e7727df462b1a115889b1e488f}\index{inventory@{inventory}!quickSlots@{quickSlots}}
+\index{quickSlots@{quickSlots}!inventory@{inventory}}
+\doxysubsubsection{\texorpdfstring{quickSlots}{quickSlots}}
+{\footnotesize\ttfamily \label{classinventory_a15ab31e7727df462b1a115889b1e488f} 
+\doxymbox{\hyperlink{classitem_data}{item\+Data}} \+[$\,$]\+ inventory.\+quick\+Slots = new \doxymbox{\hyperlink{classitem_data}{item\+Data}}\+[4]}
+
+\Hypertarget{classinventory_ac3237a708ea3cf8edf4874b50d6aab83}\index{inventory@{inventory}!spellSlots@{spellSlots}}
+\index{spellSlots@{spellSlots}!inventory@{inventory}}
+\doxysubsubsection{\texorpdfstring{spellSlots}{spellSlots}}
+{\footnotesize\ttfamily \label{classinventory_ac3237a708ea3cf8edf4874b50d6aab83} 
+\doxymbox{\hyperlink{classitem_data}{item\+Data}} \+[$\,$]\+ inventory.\+spell\+Slots = new \doxymbox{\hyperlink{classitem_data}{item\+Data}}\+[3]}
+
+
+
+\label{classinventory_doc-event-members}
+\Hypertarget{classinventory_doc-event-members}
+\doxysubsection{Event Documentation}
+\Hypertarget{classinventory_a5187d97d845f772808979a8e0681f20b}\index{inventory@{inventory}!onChanged@{onChanged}}
+\index{onChanged@{onChanged}!inventory@{inventory}}
+\doxysubsubsection{\texorpdfstring{onChanged}{onChanged}}
+{\footnotesize\ttfamily \label{classinventory_a5187d97d845f772808979a8e0681f20b} 
+Action inventory.\+on\+Changed}
+
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+inventory/\doxymbox{\hyperlink{inventory_8cs}{inventory.\+cs}}\end{DoxyCompactItemize}

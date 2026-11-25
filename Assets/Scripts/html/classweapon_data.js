@@ -1,0 +1,27 @@
+var classweapon_data =
+[
+    [ "GetDamage", "classweapon_data.html#a31ad69850564b509ceb83731aeed55f4", null ],
+    [ "attackShape", "classweapon_data.html#afe24151dde7a1fbce9300ce105869028", null ],
+    [ "baseDamage", "classweapon_data.html#a9be6a0a12cd734b74815933e6d95d9c1", null ],
+    [ "chargedHitWindows", "classweapon_data.html#a7ff0883cf2bfe6f77f594b1ee39a2402", null ],
+    [ "chargedMinStamina", "classweapon_data.html#ac5939990f8e77e4c2ba74c196ee8809b", null ],
+    [ "chargedSwingAnimation", "classweapon_data.html#aad5a93f296d9c0a6c600307ca5c89ce5", null ],
+    [ "fullChargeDamageMultiplier", "classweapon_data.html#ac50d33a11e90208f7a484fdbc44ac3e6", null ],
+    [ "lightHitStaminaRestore", "classweapon_data.html#a7348fc5ac33b0dc70093d668a08fb35f", null ],
+    [ "meleeSwingAnimation", "classweapon_data.html#a6ad5104a00a46d597f2bedb789d1e2be", null ],
+    [ "staminaCost", "classweapon_data.html#afc3b4efc0f0446e8652c64790f82b331", null ],
+    [ "statScaling", "classweapon_data.html#ae83d6fd2613f93ebe7a578442cc4b39d", null ],
+    [ "areaRadius", "classweapon_data.html#aaffe23519b9998006aa78a2be6a1d406", null ],
+    [ "attackSpeed", "classweapon_data.html#a625ab4cc72931fa03d83c1a4d058d319", null ],
+    [ "chargedAttackThreshold", "classweapon_data.html#aef03cfb18e1eab8002ebffa6274413fc", null ],
+    [ "chargedDamageMultiplier", "classweapon_data.html#a79d5c0282d8fe49f290f3660d217367d", null ],
+    [ "chargedHitEnd", "classweapon_data.html#ac0588758217c91a17a97b0ed3756ab76", null ],
+    [ "chargedHitStart", "classweapon_data.html#a36cfb64b9d6685c483534de971f68ade", null ],
+    [ "chargePoseTime", "classweapon_data.html#a9b767d28acbf0a3089b023b4cef1e5d7", null ],
+    [ "chargeRaiseDuration", "classweapon_data.html#a08891230db777eabe7d2a60635d04125", null ],
+    [ "fullChargeDuration", "classweapon_data.html#afcc8cf181ba51b1b24e1925b38f4c5eb", null ],
+    [ "hitEnd", "classweapon_data.html#a5237bdcb955439c004383582e3560401", null ],
+    [ "hitStart", "classweapon_data.html#a35ccfdc880d049e64f9afd59bcfcf795", null ],
+    [ "meleeHitboxOffset", "classweapon_data.html#af286d2332fac32245180c38342442cdb", null ],
+    [ "meleeHitboxSize", "classweapon_data.html#a5f197a412fb1330ab5d3619c51d2c7f9", null ]
+];

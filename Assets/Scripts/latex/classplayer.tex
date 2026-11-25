@@ -1,0 +1,253 @@
+\doxysection{player Class Reference}
+\hypertarget{classplayer}{}\label{classplayer}\index{player@{player}}
+Inheritance diagram for player:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classplayer}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{classplayer_ab833dadd3c85dd920953ffd169aced01}{update\+Player\+Stats}} ()
+\item 
+void \doxymbox{\hyperlink{classplayer_a0cce1e68ed03f2709ef53c8290e868ad}{take\+Dmg}} (int dmg)
+\item 
+void \doxymbox{\hyperlink{classplayer_a23ea0027f5675ffb51c3871546d1c96a}{heal}} (float value)
+\item 
+void \doxymbox{\hyperlink{classplayer_a6b46c71fc603af094046a58e75c7f88f}{activate\+Skills}} ()
+\item 
+void \doxymbox{\hyperlink{classplayer_acfe2324cceed6edaf6506760d37bb4a8}{Dash}} (Input\+Action.\+Callback\+Context ctx)
+\item 
+void \doxymbox{\hyperlink{classplayer_ab806bd942109c266eae8d0eb0b940d44}{held\+Sprint}} (Input\+Action.\+Callback\+Context ctx)
+\item 
+void \doxymbox{\hyperlink{classplayer_a0464a101faac3545f8558b739483585a}{release\+Sprint}} (Input\+Action.\+Callback\+Context ctx)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_spell_casting}{Spell\+Casting}} \doxymbox{\hyperlink{classplayer_a5891c9ca75ba2d64207c0418c47b41ce}{caster}}
+\item 
+\doxymbox{\hyperlink{classspell___s_o}{spell\+\_\+\+SO}} \doxymbox{\hyperlink{classplayer_a1c251a6df2d5268514e1c2d7c4522f03}{active\+Spell}}
+\item 
+float \doxymbox{\hyperlink{classplayer_afda80debb72be6cd1e6d9f05f1d2b94d}{speed}} = 10
+\item 
+bool \doxymbox{\hyperlink{classplayer_a2f5b866c842df680746156e7ac5cde23}{is\+Sprinting}}
+\item 
+float \doxymbox{\hyperlink{classplayer_a6e3e60ce8a1b5433050ca6fc3c2e011b}{sprint\+Multiplier}}
+\item 
+float \doxymbox{\hyperlink{classplayer_abeb871a09b210ec50594a5078b8d429a}{sprint\+Stamina\+Cost}}
+\item 
+float \doxymbox{\hyperlink{classplayer_aea63d969d43930d3e23b05c483474de8}{health}} = 10
+\item 
+float \doxymbox{\hyperlink{classplayer_a5b32cadd8947bc13a7b816d96557d52e}{max\+Health}} = 10
+\item 
+float \doxymbox{\hyperlink{classplayer_a8e75b3ed30301d35528c5352b497b7e0}{stamina}} = 10
+\item 
+float \doxymbox{\hyperlink{classplayer_a3e1583f684db40df8795b0dbc83bae9e}{max\+Stamina}} = 10
+\item 
+float \doxymbox{\hyperlink{classplayer_a27a1687e3c7e8527e5ba6ffeae87ccb8}{mana}} = 10
+\item 
+float \doxymbox{\hyperlink{classplayer_a3b82720e57f07d53b10fddaa1be9d584}{max\+Mana}} = 10
+\item 
+Game\+Object \doxymbox{\hyperlink{classplayer_aec9a5da0e9aea3eab20f5a213c77cdec}{main\+Hand}}
+\item 
+Game\+Object \doxymbox{\hyperlink{classplayer_a7dfec7cb2472c1188689f5f530710643}{off\+Hand}}
+\item 
+bool \doxymbox{\hyperlink{classplayer_a89fe3c1c2ec55aa777ce1213fae49d2f}{can\+Act}} = true
+\item 
+bool \doxymbox{\hyperlink{classplayer_ab0a21a27fa2eb3c7f08604f2fdd134f4}{is\+Dashing}} = false
+\item 
+int \doxymbox{\hyperlink{classplayer_a428beb358528b57cc68ea4c8b85b37ed}{dash\+Speed}}
+\item 
+int \doxymbox{\hyperlink{classplayer_a67b19133733ebd8a501a6b51230cf4e2}{dash\+Stamina\+Cost}} = 2
+\item 
+float \doxymbox{\hyperlink{classplayer_a02ae8d2d11a51c9096502d5d2ec32628}{speed\+Increment}} = 0.\+1f
+\item 
+bool \doxymbox{\hyperlink{classplayer_a0a23b41f86d0de8af4f3c8a438af8a00}{regen\+Health}} = false
+\item 
+float \doxymbox{\hyperlink{classplayer_a9e102575bb374df3e8a34ce442b2de1a}{health\+Regen\+Amount}} = 1
+\end{DoxyCompactItemize}
+
+
+\label{classplayer_doc-func-members}
+\Hypertarget{classplayer_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classplayer_a6b46c71fc603af094046a58e75c7f88f}\index{player@{player}!activateSkills@{activateSkills}}
+\index{activateSkills@{activateSkills}!player@{player}}
+\doxysubsubsection{\texorpdfstring{activateSkills()}{activateSkills()}}
+{\footnotesize\ttfamily \label{classplayer_a6b46c71fc603af094046a58e75c7f88f} 
+void player.\+activate\+Skills (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classplayer_acfe2324cceed6edaf6506760d37bb4a8}\index{player@{player}!Dash@{Dash}}
+\index{Dash@{Dash}!player@{player}}
+\doxysubsubsection{\texorpdfstring{Dash()}{Dash()}}
+{\footnotesize\ttfamily \label{classplayer_acfe2324cceed6edaf6506760d37bb4a8} 
+void player.\+Dash (\begin{DoxyParamCaption}\item[{Input\+Action.\+Callback\+Context}]{ctx}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classplayer_a23ea0027f5675ffb51c3871546d1c96a}\index{player@{player}!heal@{heal}}
+\index{heal@{heal}!player@{player}}
+\doxysubsubsection{\texorpdfstring{heal()}{heal()}}
+{\footnotesize\ttfamily \label{classplayer_a23ea0027f5675ffb51c3871546d1c96a} 
+void player.\+heal (\begin{DoxyParamCaption}\item[{float}]{value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classplayer_ab806bd942109c266eae8d0eb0b940d44}\index{player@{player}!heldSprint@{heldSprint}}
+\index{heldSprint@{heldSprint}!player@{player}}
+\doxysubsubsection{\texorpdfstring{heldSprint()}{heldSprint()}}
+{\footnotesize\ttfamily \label{classplayer_ab806bd942109c266eae8d0eb0b940d44} 
+void player.\+held\+Sprint (\begin{DoxyParamCaption}\item[{Input\+Action.\+Callback\+Context}]{ctx}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classplayer_a0464a101faac3545f8558b739483585a}\index{player@{player}!releaseSprint@{releaseSprint}}
+\index{releaseSprint@{releaseSprint}!player@{player}}
+\doxysubsubsection{\texorpdfstring{releaseSprint()}{releaseSprint()}}
+{\footnotesize\ttfamily \label{classplayer_a0464a101faac3545f8558b739483585a} 
+void player.\+release\+Sprint (\begin{DoxyParamCaption}\item[{Input\+Action.\+Callback\+Context}]{ctx}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classplayer_a0cce1e68ed03f2709ef53c8290e868ad}\index{player@{player}!takeDmg@{takeDmg}}
+\index{takeDmg@{takeDmg}!player@{player}}
+\doxysubsubsection{\texorpdfstring{takeDmg()}{takeDmg()}}
+{\footnotesize\ttfamily \label{classplayer_a0cce1e68ed03f2709ef53c8290e868ad} 
+void player.\+take\+Dmg (\begin{DoxyParamCaption}\item[{int}]{dmg}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classplayer_ab833dadd3c85dd920953ffd169aced01}\index{player@{player}!updatePlayerStats@{updatePlayerStats}}
+\index{updatePlayerStats@{updatePlayerStats}!player@{player}}
+\doxysubsubsection{\texorpdfstring{updatePlayerStats()}{updatePlayerStats()}}
+{\footnotesize\ttfamily \label{classplayer_ab833dadd3c85dd920953ffd169aced01} 
+void player.\+update\+Player\+Stats (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\label{classplayer_doc-variable-members}
+\Hypertarget{classplayer_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classplayer_a1c251a6df2d5268514e1c2d7c4522f03}\index{player@{player}!activeSpell@{activeSpell}}
+\index{activeSpell@{activeSpell}!player@{player}}
+\doxysubsubsection{\texorpdfstring{activeSpell}{activeSpell}}
+{\footnotesize\ttfamily \label{classplayer_a1c251a6df2d5268514e1c2d7c4522f03} 
+\doxymbox{\hyperlink{classspell___s_o}{spell\+\_\+\+SO}} player.\+active\+Spell}
+
+\Hypertarget{classplayer_a89fe3c1c2ec55aa777ce1213fae49d2f}\index{player@{player}!canAct@{canAct}}
+\index{canAct@{canAct}!player@{player}}
+\doxysubsubsection{\texorpdfstring{canAct}{canAct}}
+{\footnotesize\ttfamily \label{classplayer_a89fe3c1c2ec55aa777ce1213fae49d2f} 
+bool player.\+can\+Act = true}
+
+\Hypertarget{classplayer_a5891c9ca75ba2d64207c0418c47b41ce}\index{player@{player}!caster@{caster}}
+\index{caster@{caster}!player@{player}}
+\doxysubsubsection{\texorpdfstring{caster}{caster}}
+{\footnotesize\ttfamily \label{classplayer_a5891c9ca75ba2d64207c0418c47b41ce} 
+\doxymbox{\hyperlink{class_spell_casting}{Spell\+Casting}} player.\+caster}
+
+\Hypertarget{classplayer_a428beb358528b57cc68ea4c8b85b37ed}\index{player@{player}!dashSpeed@{dashSpeed}}
+\index{dashSpeed@{dashSpeed}!player@{player}}
+\doxysubsubsection{\texorpdfstring{dashSpeed}{dashSpeed}}
+{\footnotesize\ttfamily \label{classplayer_a428beb358528b57cc68ea4c8b85b37ed} 
+int player.\+dash\+Speed}
+
+\Hypertarget{classplayer_a67b19133733ebd8a501a6b51230cf4e2}\index{player@{player}!dashStaminaCost@{dashStaminaCost}}
+\index{dashStaminaCost@{dashStaminaCost}!player@{player}}
+\doxysubsubsection{\texorpdfstring{dashStaminaCost}{dashStaminaCost}}
+{\footnotesize\ttfamily \label{classplayer_a67b19133733ebd8a501a6b51230cf4e2} 
+int player.\+dash\+Stamina\+Cost = 2}
+
+\Hypertarget{classplayer_aea63d969d43930d3e23b05c483474de8}\index{player@{player}!health@{health}}
+\index{health@{health}!player@{player}}
+\doxysubsubsection{\texorpdfstring{health}{health}}
+{\footnotesize\ttfamily \label{classplayer_aea63d969d43930d3e23b05c483474de8} 
+float player.\+health = 10}
+
+\Hypertarget{classplayer_a9e102575bb374df3e8a34ce442b2de1a}\index{player@{player}!healthRegenAmount@{healthRegenAmount}}
+\index{healthRegenAmount@{healthRegenAmount}!player@{player}}
+\doxysubsubsection{\texorpdfstring{healthRegenAmount}{healthRegenAmount}}
+{\footnotesize\ttfamily \label{classplayer_a9e102575bb374df3e8a34ce442b2de1a} 
+float player.\+health\+Regen\+Amount = 1}
+
+\Hypertarget{classplayer_ab0a21a27fa2eb3c7f08604f2fdd134f4}\index{player@{player}!isDashing@{isDashing}}
+\index{isDashing@{isDashing}!player@{player}}
+\doxysubsubsection{\texorpdfstring{isDashing}{isDashing}}
+{\footnotesize\ttfamily \label{classplayer_ab0a21a27fa2eb3c7f08604f2fdd134f4} 
+bool player.\+is\+Dashing = false}
+
+\Hypertarget{classplayer_a2f5b866c842df680746156e7ac5cde23}\index{player@{player}!isSprinting@{isSprinting}}
+\index{isSprinting@{isSprinting}!player@{player}}
+\doxysubsubsection{\texorpdfstring{isSprinting}{isSprinting}}
+{\footnotesize\ttfamily \label{classplayer_a2f5b866c842df680746156e7ac5cde23} 
+bool player.\+is\+Sprinting}
+
+\Hypertarget{classplayer_aec9a5da0e9aea3eab20f5a213c77cdec}\index{player@{player}!mainHand@{mainHand}}
+\index{mainHand@{mainHand}!player@{player}}
+\doxysubsubsection{\texorpdfstring{mainHand}{mainHand}}
+{\footnotesize\ttfamily \label{classplayer_aec9a5da0e9aea3eab20f5a213c77cdec} 
+Game\+Object player.\+main\+Hand}
+
+\Hypertarget{classplayer_a27a1687e3c7e8527e5ba6ffeae87ccb8}\index{player@{player}!mana@{mana}}
+\index{mana@{mana}!player@{player}}
+\doxysubsubsection{\texorpdfstring{mana}{mana}}
+{\footnotesize\ttfamily \label{classplayer_a27a1687e3c7e8527e5ba6ffeae87ccb8} 
+float player.\+mana = 10}
+
+\Hypertarget{classplayer_a5b32cadd8947bc13a7b816d96557d52e}\index{player@{player}!maxHealth@{maxHealth}}
+\index{maxHealth@{maxHealth}!player@{player}}
+\doxysubsubsection{\texorpdfstring{maxHealth}{maxHealth}}
+{\footnotesize\ttfamily \label{classplayer_a5b32cadd8947bc13a7b816d96557d52e} 
+float player.\+max\+Health = 10}
+
+\Hypertarget{classplayer_a3b82720e57f07d53b10fddaa1be9d584}\index{player@{player}!maxMana@{maxMana}}
+\index{maxMana@{maxMana}!player@{player}}
+\doxysubsubsection{\texorpdfstring{maxMana}{maxMana}}
+{\footnotesize\ttfamily \label{classplayer_a3b82720e57f07d53b10fddaa1be9d584} 
+float player.\+max\+Mana = 10}
+
+\Hypertarget{classplayer_a3e1583f684db40df8795b0dbc83bae9e}\index{player@{player}!maxStamina@{maxStamina}}
+\index{maxStamina@{maxStamina}!player@{player}}
+\doxysubsubsection{\texorpdfstring{maxStamina}{maxStamina}}
+{\footnotesize\ttfamily \label{classplayer_a3e1583f684db40df8795b0dbc83bae9e} 
+float player.\+max\+Stamina = 10}
+
+\Hypertarget{classplayer_a7dfec7cb2472c1188689f5f530710643}\index{player@{player}!offHand@{offHand}}
+\index{offHand@{offHand}!player@{player}}
+\doxysubsubsection{\texorpdfstring{offHand}{offHand}}
+{\footnotesize\ttfamily \label{classplayer_a7dfec7cb2472c1188689f5f530710643} 
+Game\+Object player.\+off\+Hand}
+
+\Hypertarget{classplayer_a0a23b41f86d0de8af4f3c8a438af8a00}\index{player@{player}!regenHealth@{regenHealth}}
+\index{regenHealth@{regenHealth}!player@{player}}
+\doxysubsubsection{\texorpdfstring{regenHealth}{regenHealth}}
+{\footnotesize\ttfamily \label{classplayer_a0a23b41f86d0de8af4f3c8a438af8a00} 
+bool player.\+regen\+Health = false}
+
+\Hypertarget{classplayer_afda80debb72be6cd1e6d9f05f1d2b94d}\index{player@{player}!speed@{speed}}
+\index{speed@{speed}!player@{player}}
+\doxysubsubsection{\texorpdfstring{speed}{speed}}
+{\footnotesize\ttfamily \label{classplayer_afda80debb72be6cd1e6d9f05f1d2b94d} 
+float player.\+speed = 10}
+
+\Hypertarget{classplayer_a02ae8d2d11a51c9096502d5d2ec32628}\index{player@{player}!speedIncrement@{speedIncrement}}
+\index{speedIncrement@{speedIncrement}!player@{player}}
+\doxysubsubsection{\texorpdfstring{speedIncrement}{speedIncrement}}
+{\footnotesize\ttfamily \label{classplayer_a02ae8d2d11a51c9096502d5d2ec32628} 
+float player.\+speed\+Increment = 0.\+1f}
+
+\Hypertarget{classplayer_a6e3e60ce8a1b5433050ca6fc3c2e011b}\index{player@{player}!sprintMultiplier@{sprintMultiplier}}
+\index{sprintMultiplier@{sprintMultiplier}!player@{player}}
+\doxysubsubsection{\texorpdfstring{sprintMultiplier}{sprintMultiplier}}
+{\footnotesize\ttfamily \label{classplayer_a6e3e60ce8a1b5433050ca6fc3c2e011b} 
+float player.\+sprint\+Multiplier}
+
+\Hypertarget{classplayer_abeb871a09b210ec50594a5078b8d429a}\index{player@{player}!sprintStaminaCost@{sprintStaminaCost}}
+\index{sprintStaminaCost@{sprintStaminaCost}!player@{player}}
+\doxysubsubsection{\texorpdfstring{sprintStaminaCost}{sprintStaminaCost}}
+{\footnotesize\ttfamily \label{classplayer_abeb871a09b210ec50594a5078b8d429a} 
+float player.\+sprint\+Stamina\+Cost}
+
+\Hypertarget{classplayer_a8e75b3ed30301d35528c5352b497b7e0}\index{player@{player}!stamina@{stamina}}
+\index{stamina@{stamina}!player@{player}}
+\doxysubsubsection{\texorpdfstring{stamina}{stamina}}
+{\footnotesize\ttfamily \label{classplayer_a8e75b3ed30301d35528c5352b497b7e0} 
+float player.\+stamina = 10}
+
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+Player/\doxymbox{\hyperlink{player_8cs}{player.\+cs}}\end{DoxyCompactItemize}
