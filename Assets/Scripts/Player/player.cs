@@ -46,6 +46,12 @@ public class player : MonoBehaviour
     public bool regenHealth = false;
     public float healthRegenAmount = 1;
 
+    [Header("Camera Controls")]
+    public bool newCamControls = true;
+    private float mouseSensitivity = 0.15f; 
+    private float mouseDeadzone = 0.5f;      
+    Vector2 accumulatedMouseDelta;
+
     private void Awake()
     {
         originalSpeed = speed;
@@ -54,13 +60,18 @@ public class player : MonoBehaviour
         meleeAttack = GetComponent<PlayerMeleeAttack>();
         inputFocused = Application.isFocused;
         playerInput = new PlayerInput();
-        
+
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         updatePlayerStats();
+        if (newCamControls)
+        {
+            Cursor.lockState = CursorLockMode.Locked; // centers and locks the cursor
+            Cursor.visible = false;
+        }
     }
     
     private void OnEnable() // when this script is enabled.
@@ -119,6 +130,12 @@ public class player : MonoBehaviour
     {
         moveDirection = move.ReadValue<Vector2>();
 
+        if (newCamControls && Mouse.current != null)
+        {
+            // accumulate every frame so no movement is lost between physics steps
+            accumulatedMouseDelta += Mouse.current.delta.ReadValue();
+        }
+
         //sprinting logic 
         if (isSprinting && 0 < Stamina_System.Instance.Stamina)
         {
@@ -143,11 +160,29 @@ public class player : MonoBehaviour
     {
         //note, this movement code uses new input system
 
-        //makes the player face the mouse
-        Vector3 mousePos = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
-        Vector2 direction = mousePos - transform.position;
-        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        if (canAct) transform.rotation = Quaternion.Euler(0, 0, angle);
+
+        if (newCamControls)
+        {
+            Vector2 delta = accumulatedMouseDelta;
+            accumulatedMouseDelta = Vector2.zero;
+
+            if (canAct && delta.magnitude > mouseDeadzone)
+            {
+                float directionAngle = Mathf.Atan2(delta.y, delta.x) * Mathf.Rad2Deg;
+                float turnAmount = delta.magnitude * mouseSensitivity; // more movement = bigger turn
+
+                float newAngle = Mathf.MoveTowardsAngle(rb.rotation, directionAngle, turnAmount);
+                rb.MoveRotation(newAngle);
+            }
+        }
+        else
+        {
+            //makes the player face the mouse
+            Vector3 mousePos = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
+            Vector2 direction = mousePos - transform.position;
+            float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+            if (canAct) transform.rotation = Quaternion.Euler(0, 0, angle);
+        }
 
         if (isDashing)
         {
